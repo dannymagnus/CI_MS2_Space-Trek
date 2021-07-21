@@ -1,16 +1,167 @@
 /* Import Trekkie Font for logo */
+
 @font-face {
     font-family: 'Star Trek Enterprise Future';
-    src: url('StarTrekEnterpriseFuture-Italic.woff2') format('woff2'),
-        url('StarTrekEnterpriseFuture-Italic.woff') format('woff');
+    src: url('../../StarTrekEnterpriseFuture-Italic.woff') format('woff2'),
+        url('../../StarTrekEnterpriseFuture-Italic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
 }
 
+/* Import fonts for main body */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Rambla:ital@0;1&display=swap');
 /* Logo */
 
-.logo-font {
-    font-family: "Star Trek Enterprise Future" ;
+:root {
+    background-color: black;
+    --logo-font: "Star Trek Enterprise Future";
+    --heading-font: 'Rambla', sans-serif;
+    --off-yellow: rgb(252, 252, 189);
+    --light-grey:lightgray;
 }
 
+body {
+    background-color: var(--off-white);
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var (--heading-font);
+    text-transform: uppercase;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Background */
+
+body {
+    background-image: url(../images/background2.jpeg);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/*Nav bar */
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+/* Flex to display nav list horizontally */
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    font-weight: bold;
+}
+
+/* Burger icon nav */
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--off-yellow);
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+        margin: .75rem;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    #logo img {
+        display: none;
+    }
+}
+/*Styling Logo text*/
+
+#logo a {
+    font-family: var(--logo-font);
+    font-size: 36px;
+    font-family: "Star Trek Enterprise Future";
+    color: var(--off-yellow);
+}
+
+/* Main Text */
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 10px;
+    background-image: linear-gradient(rgba(0, 0, 0,.05),rgba(0,0,0,.5));
+}
