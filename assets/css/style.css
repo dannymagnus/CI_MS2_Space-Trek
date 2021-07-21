@@ -1,0 +1,16 @@
+/* Import Trekkie Font for logo */
+@font-face {
+    font-family: 'Star Trek Enterprise Future';
+    src: url('StarTrekEnterpriseFuture-Italic.woff2') format('woff2'),
+        url('StarTrekEnterpriseFuture-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Logo */
+
+.logo-font {
+    font-family: "Star Trek Enterprise Future" ;
+}
+
