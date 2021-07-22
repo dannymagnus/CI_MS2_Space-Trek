@@ -6,3 +6,6 @@ toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active')
 })
 
+
+//css rule for nav button highlight//
+

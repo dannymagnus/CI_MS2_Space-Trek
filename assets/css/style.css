@@ -1,5 +1,6 @@
 /* Import Trekkie Font for logo */
 
+/* Font courtesy of font Face - https://www.fontspace.com/category/star-trek */
 @font-face {
     font-family: 'Star Trek Enterprise Future';
     src: url('../../StarTrekEnterpriseFuture-Italic.woff') format('woff2'),
@@ -9,7 +10,7 @@
     font-display: swap;
 }
 
-/* Import fonts for main body */
+/* Import fonts from google fonts for main body */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Rambla:ital@0;1&display=swap');
 /* Logo */
@@ -86,8 +87,13 @@ body {
     padding: 1rem;
 }
 
-.navbar-links li:hover {
-    font-weight: bold;
+.navbar-links button:hover {
+    background-color:grey;
+    color: var(--off-yellow);
+}
+
+.navbar-links button:focus{
+    color: var(--off-yellow);
 }
 
 /* Burger icon nav */
@@ -110,7 +116,18 @@ body {
     border-radius: 10px;
 }
 
-@media (max-width: 800px) {
+.active:after{
+    display: block;
+    text-align: center;
+    width:100%;
+    height:40px;
+    background-image: url(../images/spaceman-icon.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat:no-repeat;
+    content:'';
+}
+@media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -142,14 +159,25 @@ body {
     .navbar-links.active {
         display: flex;
     }
+    .navbarlinks i {
+        display:none;
+    }
+
+    .bk-clear {background-color: rgba(255, 255, 255, 0);
+    border:none;}
+
+    .active:after {
+        display:none;
+    }
 }
 /*Styling Logo text*/
 
 #logo a {
     font-family: var(--logo-font);
-    font-size: 36px;
+    font-size: 50px;
     font-family: "Star Trek Enterprise Future";
     color: var(--off-yellow);
+    margin-left: 10px;
 }
 
 /* Main Text */
@@ -162,4 +190,10 @@ body {
 
 #main-content {
     width: 320px;
+}
+
+@media (min-width:768px) {
+#main-content {
+    width: 380px;
+}
 }
