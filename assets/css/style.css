@@ -15,6 +15,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Rambla:ital@0;1&display=swap');
 /* Logo */
 
+/* To ensure boxes display properly (Web Dev Simplified) */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
     background-color: black;
     --logo-font: "Star Trek Enterprise Future";
@@ -32,7 +37,6 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    box-sizing: border-box;
 }
 
 
@@ -196,4 +200,12 @@ body {
 #main-content {
     width: 380px;
 }
+}
+
+#quiz-outer {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
 }
