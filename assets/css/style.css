@@ -47,7 +47,7 @@ h1 {
 /* Background */
 
 body {
-    background-image: url(../images/background2.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0,.05),rgba(0,0,0,.5)), url(../images/background2.jpeg);
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -142,10 +142,6 @@ body {
     .navbar-links.active {
         display: flex;
     }
-
-    #logo img {
-        display: none;
-    }
 }
 /*Styling Logo text*/
 
@@ -158,10 +154,12 @@ body {
 
 /* Main Text */
 
-#main {
+#main-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     padding: 50px 10px;
-    background-image: linear-gradient(rgba(0, 0, 0,.05),rgba(0,0,0,.5));
+}
+
+#main-content {
+    width: 320px;
 }
