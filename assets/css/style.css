@@ -26,9 +26,9 @@
     --heading-font: 'Rambla', sans-serif;
     --off-yellow: rgb(252, 252, 189);
     --light-grey:lightgray;
-    --hue-correct: 145;
-    --hue-wrong:0;
-    --hue-neutral:200;
+    --hue-correct: 7,200,0;
+    --hue-incorrect:224,0,0;
+    --hue-neutral: 0,138,201;
 }
 
 body {
@@ -205,11 +205,50 @@ body {
 }
 }
 
+/* Quiz Outer Styling */
+
 #quiz-outer {
-    width: 100vw;
+    width: 90%;
+    margin:auto;
     height: 80vh;
     display: flex;
     align-items: center;
     justify-content:center;
     --hue: var(--hue-neutral);
+    background-color: rgba(var(--hue),.5);
+    border-radius: 20px;
+}
+
+/* Classes assigned for correct and incorrect - to be called by js later */
+
+#quiz-outer.correct {
+    --hue: var(--hue-correct);
+}
+
+#quiz-outer.incorrect {
+    --hue: var(--hue-incorrect);
+}
+
+/* Style for questions container */
+
+.quiz-container {
+    width: 400px;
+    max-width: 80%;
+    background-color: rgb(194, 179, 178);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.answers-grid{
+    display:grid;
+    gap:10px;
+    grid-template-columns: repeat(2,auto);
+    margin: 20px auto;
+}
+
+
+
+
+.btn-quiz {
+    background-color: grey;
 }
