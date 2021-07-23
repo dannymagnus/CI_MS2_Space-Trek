@@ -251,6 +251,29 @@ body {
 /*Button Styling*/
 
 .btn-quiz {
-    background-color: grey;
+    --hue: var(--hue-neutral);
+    background-color: rgba(var(--hue),.5);
     border: 1px solid black;
+}
+
+.btn-quiz:hover {
+    color: var(--off-yellow);
+}
+
+.btn-quiz.correct {
+    --hue: var(--hue-correct);
+}
+
+.btn-quiz.incorrect {
+    --hue: var(--hue-incorrect);
+}
+
+.controls-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display:none;
 }

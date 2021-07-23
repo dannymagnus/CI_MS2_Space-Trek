@@ -7,5 +7,17 @@ toggleButton.addEventListener('click', () => {
 })
 
 
-//css rule for nav button highlight//
+//Variable declarations for quiz page //
+
+let beginButton = document.getElementById('begin-btn');
+beginButton.addEventListener('click', startQuiz);
+let quesContainer = document.getElementById('ques-container');
+
+// Function to remove and add start and question box //
+function startQuiz(){
+console.log("quiz-started");
+beginButton.classList.add('hidden');
+quesContainer.classList.remove('hidden');
+}
+
 
