@@ -12,7 +12,7 @@ toggleButton.addEventListener('click', () => {
 let beginButton = document.getElementById('begin-btn');
 beginButton.addEventListener('click', startQuiz);
 let quesContainer = document.getElementById('ques-container');
-let question = document.getElementById('question');
+let questionElement = document.getElementById('question');
 let answers = document.getElementById('answers');
 
 // Declare  variables to be used for random question generation in function//
@@ -38,14 +38,18 @@ function startQuiz(){
   console.log(shuffledQuestions[0].answer[0].option)
   currentQuestionIndex = 0;
   nextQuestion();
+  console.log('next question called');
 }
 
 function nextQuestion(){
+  console.log('call recieved');
   revealQuestion(shuffledQuestions[currentQuestionIndex]);
+  console.log(shuffledQuestions[currentQuestionIndex].question)
 }
 
 function revealQuestion(question){
-  question.innerText = question.question;
+  console.log(question.question + "this is reveal question call");
+  questionElement.innerText = question.question;
 }
 //Question Randomiser //
 
