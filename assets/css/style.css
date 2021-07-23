@@ -243,12 +243,14 @@ body {
     display:grid;
     gap:10px;
     grid-template-columns: repeat(2,auto);
-    margin: 20px auto;
+    margin: 20px 0;
 }
 
 
 
+/*Button Styling*/
 
 .btn-quiz {
     background-color: grey;
+    border: 1px solid black;
 }
