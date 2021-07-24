@@ -15,6 +15,12 @@ let shootButton = document.querySelector('#shoot-btn')
 let quesContainer = document.getElementById('ques-container');
 let questionElement = document.getElementById('question');
 let answersHTMLElement = document.getElementById('answers');
+//Used for 
+let quizOuter = document.querySelector('#quiz-outer');
+// Used for chooseAnswer function
+let selectedButton;
+// Variable assignment for chooseAnswer to check if correct answer selected
+let correct
 
 // Declare  variables to be used for random question generation in function//
 let shuffledQuestions = new Array;
@@ -72,8 +78,23 @@ function clearState(){
 }
 
 function chooseAnswer(event){
-
+    selectedButton = event.target;
+    correct = selectedButton.dataset.correct;
+    console.log(correct);
+    setStatusClass(quizOuter, correct);
+    Array.from(answersHTMLElement.children).forEach(button => {
+      setStatusClass(button, button.dataset.correct)
+    })
 };
+
+//
+//
+
+
+
+
+//
+//
 
 // Function to create buttons for answers //
 
