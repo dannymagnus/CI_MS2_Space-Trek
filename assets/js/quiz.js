@@ -66,7 +66,10 @@ function revealQuestion(question){
   console.log(answersHTMLElement);
 }
 
-
+function clearState(){
+  shootButton.classList.add('hidden');
+  answersHTMLElement.innerHTML = '';
+}
 
 function chooseAnswer(event){
 
