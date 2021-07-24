@@ -11,9 +11,10 @@ toggleButton.addEventListener('click', () => {
 
 let beginButton = document.getElementById('begin-btn');
 beginButton.addEventListener('click', startQuiz);
+let shootButton = document.querySelector('#shoot-btn')
 let quesContainer = document.getElementById('ques-container');
 let questionElement = document.getElementById('question');
-let answers = document.getElementById('answers');
+let answersHTMLElement = document.getElementById('answers');
 
 // Declare  variables to be used for random question generation in function//
 let shuffledQuestions = new Array;
@@ -42,6 +43,7 @@ function startQuiz(){
 }
 
 function nextQuestion(){
+  clearState();
   console.log('call recieved');
   revealQuestion(shuffledQuestions[currentQuestionIndex]);
   console.log(shuffledQuestions[currentQuestionIndex].question)
@@ -50,7 +52,33 @@ function nextQuestion(){
 function revealQuestion(question){
   console.log(question.question + "this is reveal question call");
   questionElement.innerText = question.question;
+  for (let i = 0; i < question.answer.length; i++) {
+    console.log(question.answer[i]);
+    var button = document.createElement('button');
+    button.innerText = question.answer[i].option;
+    button.classList.add('btn-quiz', 'btn');
+    button.addEventListener('click', chooseAnswer);
+    if(question.answer[i].correct === true){
+      button.dataset.correct = question.answer[i].correct;
+    }
+    answersHTMLElement.appendChild(button);
+  }
+  console.log(answersHTMLElement);
 }
+
+function clearState(){
+  shootButton.classList.add('hidden');
+  answersHTMLElement.innerHTML = '';
+}
+
+function chooseAnswer(event){
+
+};
+
+// Function to create buttons for answers //
+
+
+
 //Question Randomiser //
 
 function shuffle() {
