@@ -16,6 +16,8 @@ shootButton.addEventListener('click', incrementQuestion);
 let quesContainer = document.getElementById('ques-container');
 let questionElement = document.getElementById('question');
 let answersHTMLElement = document.getElementById('answers');
+let quizWelcome= document.getElementById('quiz-welcome');
+let scoresWrapper = document.getElementById('scores-wrapper');
 //Used for 
 let quizOuter = document.querySelector('#quiz-outer');
 // Used for chooseAnswer function
@@ -43,6 +45,9 @@ function incrementQuestion(){
 function startQuiz(){
   console.log("quiz-started");
   beginButton.classList.add('hidden');
+  quizWelcome.classList.add('hidden');
+  scoresWrapper.classList.remove('hidden');
+  scoresWrapper.classList.add('scores-wrapper');
   quesContainer.classList.remove('hidden');
   shuffle();
   console.log(shuffledQuestions[0].answer[0].option)
@@ -90,18 +95,18 @@ function chooseAnswer(event){
     selectedButton = event.target;
     correct = selectedButton.dataset.correct;
     if (correct){
-      enemyShields -= 10
-    }else{yourShields -= 10};
+      enemyShields -= 20
+    }else{yourShields -= 20};
     setStatusClass(quizOuter, correct);
     Array.from(answersHTMLElement.children).forEach(button => {
       setStatusClass(button, button.dataset.correct)
     })
-    if (yourShields === 0 ){
+    if (yourShields <= 0 ){
       alert('Your ship was destroyed');
       beginButton.classList.remove('hidden')
       beginButton.innerText = 'Play again'
     }
-    else if(enemyShields === 0){
+    else if(enemyShields <= 0){
       alert('You destroyed Khan and saved the federation!')
       beginButton.classList.remove('hidden')
       beginButton.innerText = 'Play again'
@@ -133,7 +138,9 @@ function setStatusClass(element,correct) {
 //Question Randomiser //
 
 function shuffle() {
-  let cloneQuestions = JSON.parse(JSON.stringify(questions));
+  let cloneQuestions = Array.from(questions);
+  console.log('cloneQuestions is ' + cloneQuestions.length);
+  console.log(cloneQuestions);
 
   for (let i=0; i < cloneQuestions.length ; i++){
       let randomIndex = Math.floor(Math.random() * cloneQuestions.length);
@@ -151,7 +158,7 @@ let questions = [
   {option:'Kobiyashi Teng', correct:false},
   {option:'Warbird Krath', correct:false},
   {option:'Warbird Warf', correct:false}]},
-  {question: 'Which of the followin are not part of the Enterprise crew',
+  {question: 'Which of the following are not part of the Enterprise crew',
   answer:[
   {option:'Enson Crusher', correct:false},
   {option:'Leuitenent Warf', correct:false},
@@ -177,7 +184,7 @@ let questions = [
   {option:'15.99', correct:false}]},
   {question: 'For what does the T in James T. Kirk stand?',
   answer:[
-  {option:'Trevor', correct:true},
+  {option:'Trevor', correct:false},
   {option:'Titan', correct:false},
   {option:'Titherium', correct:false},
   {option:'Tiberius', correct:true}]},
@@ -195,7 +202,7 @@ let questions = [
   {option:'Scott Montgommery', correct:false}]},
   {question: "On what planet did James Kirk 'abandon' Khan? ",
   answer:[
-  {option:'Ceti Alpha III', correct:true},
+  {option:'Ceti Alpha III', correct:false},
   {option:'Ceti Alpha IV', correct:false},
   {option:'Ceti Alpha V', correct:true},
   {option:'Ceti Alpha VI', correct:false}]},
@@ -205,7 +212,6 @@ let questions = [
   {option:'Genenis', correct:true},
   {option:'Armegedon', correct:false},
   {option:'Apocalypse', correct:false}]},
-// Updated to here
   {question: 'The Romulans are species related to.....',
   answer:[
   {option:'Vulcans', correct:true},
@@ -244,7 +250,7 @@ let questions = [
   {option:'Argon', correct:false}]},
   {question: 'The name of Mr Spock\'s firs commanding officer was Captian...',
   answer:[
-  {option:'Rogers', correct:true},
+  {option:'Rogers', correct:false},
   {option:'Sisco', correct:false},
   {option:'Peters', correct:false},
   {option:'Pike', correct:true}]},

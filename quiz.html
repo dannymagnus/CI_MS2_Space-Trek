@@ -51,19 +51,29 @@
     </header>
     <div id="quiz-outer">
         <div class="quiz-container">
-            <div id="scores-wrapper">
-                <div id = "your-ship">
+            <div id="scores-wrapper" class = "hidden">
+                <div id="your-ship">
                     Your Ship
-                <div class="shields-result"><span id = "your-shield">100</span>%</div>
+                    <div class="shields-result"><span id="your-shield">100</span>%</div>
                 </div>
-                <div id = "enemy-ship">
+                <div id="enemy-ship">
                     USS Reliant
-                <div class="shields-result"><span id = "enemy-shield">100</span>%</div>
+                    <div class="shields-result"><span id="enemy-shield">100</span>%</div>
                 </div>
+            </div>
+            <div id="quiz-welcome">
+                <p>
+                    Welcome <span>Expendanable Space Employee</span>. You are now appointed as the captain and chief
+                    flesh working of this mega gun in space!
+                </p>
+                <p>Khan Noonien Singh has escaped from the planet you imprisoned him on and is now ready to avenge
+                    himself upon you!</p>
+                <p>He has challenged you to a battle of intellect on all things space and Star - Trek</p>
+                <p>The rules? Simple.  For each correct answer, you damage his ship, for each incorrect, yours takes damage.</p>
             </div>
             <div id="ques-container" class="hidden">
                 <div id="question">Question</div>
-                <div id = "answers" class="answers-grid">
+                <div id="answers" class="answers-grid">
                     <button class="btn btn-quiz">Answer 1</button>
                     <button class="btn btn-quiz">Answer 2</button>
                     <button class="btn btn-quiz">Answer 3</button>
