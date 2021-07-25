@@ -12,6 +12,7 @@ toggleButton.addEventListener('click', () => {
 let beginButton = document.getElementById('begin-btn');
 beginButton.addEventListener('click', startQuiz);
 let shootButton = document.querySelector('#shoot-btn')
+shootButton.addEventListener('click', incrementQuestion);
 let quesContainer = document.getElementById('ques-container');
 let questionElement = document.getElementById('question');
 let answersHTMLElement = document.getElementById('answers');
@@ -33,10 +34,27 @@ let questions = [
   {option:'Kobiyashi Maru', correct:true},
   {option:'Kobiyashi Teng', correct:false},
   {option:'Warbird Krath', correct:false},
+  {option:'Warbird Warf', correct:false}]},
+  {question: 'What was the name of the computer simulation beaten by James T. Kirk?',
+  answer:[
+  {option:'Kobiyashi Maru', correct:true},
+  {option:'Kobiyashi Teng', correct:false},
+  {option:'Warbird Krath', correct:false},
+  {option:'Warbird Warf', correct:false}]},
+  {question: 'What was the name of the computer simulation beaten by James T. Kirk?',
+  answer:[
+  {option:'Kobiyashi Maru', correct:true},
+  {option:'Kobiyashi Teng', correct:false},
+  {option:'Warbird Krath', correct:false},
   {option:'Warbird Warf', correct:false}]}
 ];
 
 // Function to remove and add start and question box //
+
+function incrementQuestion(){
+  currentQuestionIndex ++;
+  nextQuestion()};
+
 
 function startQuiz(){
   console.log("quiz-started");
@@ -74,6 +92,8 @@ function revealQuestion(question){
 }
 
 function clearState(){
+  quizOuter.classList.remove('correct');
+  quizOuter.classList.remove('incorrect');
   shootButton.classList.add('hidden');
   answersHTMLElement.innerHTML = '';
 }
