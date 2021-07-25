@@ -17,6 +17,7 @@ let quesContainer = document.getElementById('ques-container');
 let questionElement = document.getElementById('question');
 let answersHTMLElement = document.getElementById('answers');
 let correctCounter = 0;
+let score = 0;
 //Used for 
 let quizOuter = document.querySelector('#quiz-outer');
 // Used for chooseAnswer function
@@ -101,7 +102,10 @@ function clearState(){
 function chooseAnswer(event){
     selectedButton = event.target;
     correct = selectedButton.dataset.correct;
-    console.log(correct);
+    if (correct){
+      score ++
+    }
+    console.log(correct, score);
     setStatusClass(quizOuter, correct);
     Array.from(answersHTMLElement.children).forEach(button => {
       setStatusClass(button, button.dataset.correct)
@@ -116,8 +120,6 @@ function setStatusClass(element,correct) {
   element.classList.remove('incorrect');
   if (correct){
     element.classList.add('correct');
-    correctCounter += .5;
-    console.log(correctCounter);
   }else{
     element.classList.add('incorrect');
   }
