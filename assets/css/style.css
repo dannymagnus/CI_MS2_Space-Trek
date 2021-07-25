@@ -216,6 +216,7 @@ body {
     margin:auto;
     height: 80vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content:center;
     --hue: var(--hue-neutral);
@@ -244,17 +245,21 @@ body {
 }
 
 #scores-wrapper {
-    display: flex;
-    flex-direction: row;
     width: 100%;
-    margin:auto;
+    display: flex;
+    margin:0 auto 25px;
     justify-content: space-between;
-    flex-wrap: nowrap;
+
 }
 
 .shields-result {
     height: 50px;
-    border-radius:20px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-justify: center;
+    border-radius:50%;
+    margin:auto;
     --hue: var(--hue-correct);
     background-color:rgb(var(--hue));
 }
