@@ -22,33 +22,16 @@ let quizOuter = document.querySelector('#quiz-outer');
 let selectedButton;
 // Variable assignment for chooseAnswer to check if correct answer selected
 let correct;
-let score;
-let shields;
+let enemyShields;
+let yourShields;
+//Variable assignment for your shield percentage
+let yourShieldPercent = document.querySelector('#your-shield');
+//Variable for enemy shield percentage
+let enemyShieldPercent = document.querySelector('#enemy-shield');
 
 // Declare  variables to be used for random question generation in function//
 let shuffledQuestions = new Array;
 let currentQuestionIndex;
-
-let questions = [
-  {question: 'What was the name of the computer simulation beaten by James T. Kirk?',
-  answer:[
-  {option:'Kobiyashi Maru', correct:true},
-  {option:'Kobiyashi Teng', correct:false},
-  {option:'Warbird Krath', correct:false},
-  {option:'Warbird Warf', correct:false}]},
-  {question: 'What was the name of the computer simulation beaten by James T. Kirk?',
-  answer:[
-  {option:'Kobiyashi Maru', correct:true},
-  {option:'Kobiyashi Teng', correct:false},
-  {option:'Warbird Krath', correct:false},
-  {option:'Warbird Warf', correct:false}]},
-  {question: 'What was the name of the computer simulation beaten by James T. Kirk?',
-  answer:[
-  {option:'Kobiyashi Maru', correct:true},
-  {option:'Kobiyashi Teng', correct:false},
-  {option:'Warbird Krath', correct:false},
-  {option:'Warbird Warf', correct:false}]}
-];
 
 // Function to remove and add start and question box //
 
@@ -66,8 +49,10 @@ function startQuiz(){
   currentQuestionIndex = 0;
   nextQuestion();
   console.log('next question called');
-  score = 0;
-  shields = 5;
+  yourShields = 100;
+  enemyShields = 100;
+  yourShieldPercent.innerText = yourShields;
+  enemyShieldPercent.innerText = enemyShields;
 }
 
 function nextQuestion(){
@@ -105,20 +90,25 @@ function chooseAnswer(event){
     selectedButton = event.target;
     correct = selectedButton.dataset.correct;
     if (correct){
-      score ++
-    }else{shields --};
-    console.log(correct, score, shields);
+      enemyShields -= 10
+    }else{yourShields -= 10};
     setStatusClass(quizOuter, correct);
     Array.from(answersHTMLElement.children).forEach(button => {
       setStatusClass(button, button.dataset.correct)
     })
-    if (shields === 0 ){
+    if (yourShields === 0 ){
       alert('Your ship was destroyed');
       beginButton.classList.remove('hidden')
       beginButton.innerText = 'Play again'
     }
-    else if(score === 5){}
-    else{shootButton.classList.remove('hidden')}   
+    else if(enemyShields === 0){
+      alert('You destroyed Khan and saved the federation!')
+      beginButton.classList.remove('hidden')
+      beginButton.innerText = 'Play again'
+    }
+    else{shootButton.classList.remove('hidden')}
+    yourShieldPercent.innerText = yourShields;
+    enemyShieldPercent.innerText = enemyShields;
 };
 
 //
@@ -151,3 +141,26 @@ function shuffle() {
       cloneQuestions.splice(randomIndex,1);
   }
 }
+
+//Question Bank
+
+let questions = [
+  {question: 'What was the name of the computer simulation beaten by James T. Kirk?',
+  answer:[
+  {option:'Kobiyashi Maru', correct:true},
+  {option:'Kobiyashi Teng', correct:false},
+  {option:'Warbird Krath', correct:false},
+  {option:'Warbird Warf', correct:false}]},
+  {question: 'What was the name of the computer simulation beaten by James T. Kirk?',
+  answer:[
+  {option:'Kobiyashi Maru', correct:true},
+  {option:'Kobiyashi Teng', correct:false},
+  {option:'Warbird Krath', correct:false},
+  {option:'Warbird Warf', correct:false}]},
+  {question: 'What was the name of the computer simulation beaten by James T. Kirk?',
+  answer:[
+  {option:'Kobiyashi Maru', correct:true},
+  {option:'Kobiyashi Teng', correct:false},
+  {option:'Warbird Krath', correct:false},
+  {option:'Warbird Warf', correct:false}]}
+];
