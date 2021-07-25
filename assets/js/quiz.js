@@ -15,6 +15,7 @@ let shootButton = document.querySelector('#shoot-btn')
 let quesContainer = document.getElementById('ques-container');
 let questionElement = document.getElementById('question');
 let answersHTMLElement = document.getElementById('answers');
+let correctCounter = 0;
 //Used for 
 let quizOuter = document.querySelector('#quiz-outer');
 // Used for chooseAnswer function
@@ -85,6 +86,7 @@ function chooseAnswer(event){
     Array.from(answersHTMLElement.children).forEach(button => {
       setStatusClass(button, button.dataset.correct)
     })
+    shootButton.classList.remove('hidden');
 };
 
 //
@@ -94,6 +96,8 @@ function setStatusClass(element,correct) {
   element.classList.remove('incorrect');
   if (correct){
     element.classList.add('correct');
+    correctCounter += .5;
+    console.log(correctCounter);
   }else{
     element.classList.add('incorrect');
   }
