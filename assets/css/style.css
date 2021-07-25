@@ -29,6 +29,10 @@
     --hue-correct: 7,200,0;
     --hue-incorrect:224,0,0;
     --hue-neutral: 0,138,201;
+    --hue-seventy: 172, 179, 52;
+    --hue-fifty: 250, 183, 51;
+    --hue-twenty: 255, 142, 21;
+    --hue-ten: 255, 78, 17;
 }
 
 body {
@@ -237,6 +241,26 @@ body {
     background-color: rgb(194, 179, 178);
     border-radius: 20px;
     padding: 20px;
+}
+
+#scores-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin:auto;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.shields-result {
+    height: 50px;
+    border-radius:20px;
+    --hue: var(--hue-correct);
+    background-color:rgb(var(--hue));
+}
+
+.shields-result.incorrect{
+    --hue:var(--hue-incorrect);
 }
 
 .answers-grid{

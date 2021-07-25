@@ -16,14 +16,14 @@ shootButton.addEventListener('click', incrementQuestion);
 let quesContainer = document.getElementById('ques-container');
 let questionElement = document.getElementById('question');
 let answersHTMLElement = document.getElementById('answers');
-let score = 0;
-let shields = 1;
 //Used for 
 let quizOuter = document.querySelector('#quiz-outer');
 // Used for chooseAnswer function
 let selectedButton;
 // Variable assignment for chooseAnswer to check if correct answer selected
-let correct
+let correct;
+let score;
+let shields;
 
 // Declare  variables to be used for random question generation in function//
 let shuffledQuestions = new Array;
@@ -66,6 +66,8 @@ function startQuiz(){
   currentQuestionIndex = 0;
   nextQuestion();
   console.log('next question called');
+  score = 0;
+  shields = 5;
 }
 
 function nextQuestion(){
