@@ -117,7 +117,15 @@ function chooseAnswer(event){
     else if(enemyShields <= 0){
       alert('You destroyed Khan and saved the federation!')
       beginButton.classList.remove('hidden')
-      beginButton.innerText = 'Play again'
+      beginButton.innerText = 'Play again';
+      /*
+      quizWelcome.innerHTML = `
+      <video width="320" height="240">
+      <source src="../assets/video/khan-last-breath.webm" type="video/webm">
+      Your browser does not support the video tag.
+      </video> 
+      `
+      quizWelcome.classList.remove('hidden');*/
     }
     else{shootButton.classList.remove('hidden')}
     yourShieldPercent.innerText = yourShields;
