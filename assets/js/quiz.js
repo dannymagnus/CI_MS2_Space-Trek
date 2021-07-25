@@ -90,9 +90,14 @@ function chooseAnswer(event){
 //
 //
 function setStatusClass(element,correct) {
-  
+  element.classList.remove('correct');
+  element.classList.remove('incorrect');
+  if (correct){
+    element.classList.add('correct');
+  }else{
+    element.classList.add('incorrect');
+  }
 }
-
 
 
 //
