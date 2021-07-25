@@ -26,8 +26,12 @@ let selectedButton;
 let correct;
 let enemyShields;
 let yourShields;
+//Variable to change color of your shield blob
+let yourShieldPercentContainer = document.getElementById('your-ship')
 //Variable assignment for your shield percentage
 let yourShieldPercent = document.querySelector('#your-shield');
+//Variable to change color of enemy shield blob
+let enemyShieldPercentContainer = document.getElementById('enemy-ship');
 //Variable for enemy shield percentage
 let enemyShieldPercent = document.querySelector('#enemy-shield');
 
@@ -49,6 +53,8 @@ function startQuiz(){
   scoresWrapper.classList.remove('hidden');
   scoresWrapper.classList.add('scores-wrapper');
   quesContainer.classList.remove('hidden');
+  yourShieldPercentContainer.className = 'shields-result';
+  enemyShieldPercentContainer.className = 'shields-result';
   shuffle();
   console.log(shuffledQuestions[0].answer[0].option)
   currentQuestionIndex = 0;
@@ -101,6 +107,8 @@ function chooseAnswer(event){
     Array.from(answersHTMLElement.children).forEach(button => {
       setStatusClass(button, button.dataset.correct)
     })
+    changeYourShieldColor();
+    changeEnemyShieldColor();
     if (yourShields <= 0 ){
       alert('Your ship was destroyed');
       beginButton.classList.remove('hidden')
@@ -115,6 +123,46 @@ function chooseAnswer(event){
     yourShieldPercent.innerText = yourShields;
     enemyShieldPercent.innerText = enemyShields;
 };
+
+function changeYourShieldColor(){
+  switch(yourShields){
+    case 80:
+      yourShieldPercentContainer.classList.add('eighty');
+      break;
+    case 60:
+      yourShieldPercentContainer.classList.add('sixty');
+      break;
+    case 40:
+      yourShieldPercentContainer.classList.add('fourty');
+       break;
+    case 20:
+      yourShieldPercentContainer.classList.add('twenty');
+      break;
+    case 0:
+      yourShieldPercentContainer.classList.add('incorrect');
+      break;
+  }
+}
+
+function changeEnemyShieldColor(){
+  switch(enemyShields){
+    case 80:
+      enemyShieldPercentContainer.classList.add('eighty');
+      break;
+    case 60:
+      enemyShieldPercentContainer.classList.add('sixty');
+      break;
+    case 40:
+      enemyShieldPercentContainer.classList.add('fourty');
+       break;
+    case 20:
+      enemyShieldPercentContainer.classList.add('twenty');
+      break;
+    case 0:
+      enemyShieldPercentContainer.classList.add('incorrect');
+      break;
+  }
+}
 
 //
 //
