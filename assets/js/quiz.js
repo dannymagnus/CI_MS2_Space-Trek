@@ -89,7 +89,9 @@ function chooseAnswer(event){
 
 //
 //
-
+function setStatusClass(element,correct) {
+  
+}
 
 
 
