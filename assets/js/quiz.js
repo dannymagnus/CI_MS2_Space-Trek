@@ -16,8 +16,8 @@ shootButton.addEventListener('click', incrementQuestion);
 let quesContainer = document.getElementById('ques-container');
 let questionElement = document.getElementById('question');
 let answersHTMLElement = document.getElementById('answers');
-let correctCounter = 0;
 let score = 0;
+let shields = 1;
 //Used for 
 let quizOuter = document.querySelector('#quiz-outer');
 // Used for chooseAnswer function
@@ -104,13 +104,19 @@ function chooseAnswer(event){
     correct = selectedButton.dataset.correct;
     if (correct){
       score ++
-    }
-    console.log(correct, score);
+    }else{shields --};
+    console.log(correct, score, shields);
     setStatusClass(quizOuter, correct);
     Array.from(answersHTMLElement.children).forEach(button => {
       setStatusClass(button, button.dataset.correct)
     })
-    shootButton.classList.remove('hidden');
+    if (shields === 0 ){
+      alert('Your ship was destroyed');
+      beginButton.classList.remove('hidden')
+      beginButton.innerText = 'Play again'
+    }
+    else if(score === 5){}
+    else{shootButton.classList.remove('hidden')}   
 };
 
 //
@@ -124,7 +130,6 @@ function setStatusClass(element,correct) {
     element.classList.add('incorrect');
   }
 }
-
 
 //
 //
