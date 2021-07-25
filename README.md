@@ -199,12 +199,12 @@ Each page contains the following structure
 - Font awesome was used to generate the social media footer icons on each page.
 6. [Google Fonts](https://fonts.google.com/)
 - Cormorant Garamond and Playfair Display were the fonts taken from Google for headings and body respectively.
-7. [Bootstrap v5.0](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+7. [Bootstrap v5.02](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - Bootstrap was used for the landing carousel, responsive nav bar, contact form modal, privacy policy and general terms and conditions modals.
 8. [Am I Responsive](http://ami.responsivedesign.is/)
 - The mockup image was created using Am I Responsive
-9. [Gitpod](https://gitpod.io/)
-- Gitpod was used in part to write the code for this project.
+9. [transfonter](https://transfonter.org/)
+- transfonter was used to convert the Logo text to fontface.
 10. [Visual Studio Code (VSCode)](https://code.visualstudio.com/)
 - VSCode was the IDE used to write the remainder of the project code.
 11. [Google Maps](https://www.google.co.uk/maps)
