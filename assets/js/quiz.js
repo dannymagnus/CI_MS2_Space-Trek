@@ -99,6 +99,8 @@ function incrementQuestion(){
   }  
 
 function startQuiz(){
+  $ ( "#enemy-ship-img" ).fadeIn(1);
+  $ ( "#your-ship-img" ).fadeIn(1);
   ships[1].classList.remove('hidden');
   console.log("quiz-started");
   beginButton.classList.add('hidden');
@@ -171,6 +173,7 @@ function chooseAnswer(event){
       `
       quizWelcome.classList.remove('hidden');
       quesContainer.classList.add('hidden');
+      $ ( "#your-ship-img" ).fadeOut(1000);
     }
     else if(enemyShields <= 0){
       beginButton.classList.remove('hidden')
@@ -181,12 +184,13 @@ function chooseAnswer(event){
       `
       quizWelcome.classList.remove('hidden');
       quesContainer.classList.add('hidden');
+      $ ( "#enemy-ship-img" ).fadeOut(1000);
     }
     else{shootButton.classList.remove('hidden')}
     yourShieldPercent.innerText = yourShields;
     enemyShieldPercent.innerText = enemyShields;
 };
-
+//Function to switch shields color (you)
 function changeYourShieldColor(){
   switch(yourShields){
     case 80:
@@ -207,6 +211,8 @@ function changeYourShieldColor(){
   }
 }
 
+
+//Function to switch shields color (enemy)
 function changeEnemyShieldColor(){
   switch(enemyShields){
     case 80:
@@ -238,9 +244,6 @@ function setStatusClass(element,correct) {
     element.classList.add('incorrect');
   }
 }
-
-//
-//
 
 // Function to create buttons for answers //
 
