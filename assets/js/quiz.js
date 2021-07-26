@@ -162,8 +162,8 @@ function chooseAnswer(event){
       beginButton.classList.remove('hidden')
       beginButton.innerText = 'Play again'
       quizWelcome.innerHTML = `
-      <p>Congratulations ${userName}!</p>
-      <p>You have successfully dispatched your enemy and rid the universe of this no good space filth!</p>
+      <p>You are defeated.. ${userName}!</p>
+      <p>Your legacy will be a mere whisper through space, as your adversary tosses your bones across the cosmos.</p>
       `
       quizWelcome.classList.remove('hidden');
       quesContainer.classList.add('hidden');
