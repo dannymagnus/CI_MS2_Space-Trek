@@ -17,7 +17,7 @@
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <!--Custom CSS styles-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Super-Trek | Quiz</title>
+    <title>Space-Trek | Quiz</title>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
         <!--Responsive nav bar styled using bootstrap library with custom CSS-->
         <nav class="navbar">
             <div id="logo">
-                <a href="index.html">Star-Turk</a>
+                <a href="index.html">Space-Trek</a>
             </div>
             <!--Toggle menu burger icon for mobile devices credit to Webdev simplified youtube channel-->
             <a href="#" class="toggle-button" aria-label="Toggle navigation">
@@ -53,13 +53,13 @@
         <div id = "quiz-register" class="quiz-container">
             <p>Congratulations in graduating from Space Fleet Academy</p>
             <p>You have been give your first commission and are required to register your captancy aboard your new vessel.</p>
-            <form>
+            <form id = "quiz-form" method="post" action="/login/">
                 <label for="name-input">What is your name?</label>
                 <input id="name-input" type="text">
                 <label for="ship-input">What would you like to call your ship?</label>
                 <input id="ship-input" type="text">
                 <p>Are you ready for your assignment?</p>
-                <button id="register-ship" class="btn btn-quiz">Ahead warp factor 5!</button>
+                <input type="submit" value="Sign up!" id="register-ship" class="btn btn-quiz">
             </form>
         </div>
         <div id = "quiz-container" class="quiz-container hidden">
@@ -74,14 +74,6 @@
                 </div>
             </div>
             <div id="quiz-welcome">
-                <p>
-                    Welcome <span>Expendable Space Employee</span>. <span class="sm">You are now appointed as the captain and chief
-                    flesh working of this mega gun in space!</span>
-                </p>
-                <p>Khan Noonien Singh has escaped <span class="sm">from the planet you imprisoned him on</span> and is now ready to avenge
-                    himself upon you!</p>
-                <p>He has challenged you to a battle of intellect on all things space and Star - Trek</p>
-                <p>The rules? Simple.  For each correct answer, you damage his ship, for each incorrect, yours takes damage.</p>
             </div>
             <div id="ques-container" class="hidden">
                 <div id="question">Question</div>

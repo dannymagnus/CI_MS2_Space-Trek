@@ -10,6 +10,9 @@ toggleButton.addEventListener('click', () => {
 //Variable declarations for quiz page //
 // Variable to grab quiz form
 let quizRegister = document.getElementById('quiz-register');
+// Variable to handle form submission
+let quizForm = document.getElementById('quiz-form');
+quizForm.addEventListener('submit', registerUserShip);
 // To grab name input element for quiz page 
 let nameInput = document.getElementById('name-input');
 // To grab ship input element for quiz page 
@@ -53,8 +56,6 @@ let enemyShieldPercentContainer = document.getElementById('enemy-ship');
 //Variable for enemy shield percentage
 let enemyShieldPercent = document.querySelector('#enemy-shield');
 //Variable taken from user form submission
-let userNameElement = document.querySelector('#user-name');
-let shipNameElement = document.querySelector('#ship-name');
 // Variables declared to be assigned on user input
 let userName;
 let shipName;
@@ -69,9 +70,30 @@ function incrementQuestion(){
   currentQuestionIndex ++;
   nextQuestion()};
 
-  function registerUserShip(){
+  function registerUserShip(event){
+    event.preventDefault();
     console.log('register ship called');
-  }
+    userName = document.querySelector('#name-input').value;
+    shipName = document.querySelector('#ship-input').value;
+    console.log(userName, shipName);
+    quizWelcome.innerHTML = `
+    <p>
+    Welcome <strong>${userName}</strong>. You are now appointed as the captain of the <strong>USS ${shipName}</strong>
+    </p>
+    <p>
+    Khan <span class="sm">Noonien Singh</span> has escaped <span class="sm">from the planet you imprisoned him on</span> and is now ready to avenge
+    himself upon you!
+    </p>
+    <p>
+    He has challenged you to a battle of intellect on all things space and Star - Trek
+    </p>
+    <p>
+    The rules? Simple.  For each correct answer, you damage his ship, for each incorrect, yours takes damage.
+    </p>
+    `;
+    quizRegister.classList.add('hidden');
+    quizContainer.classList.remove('hidden');
+  }  
 
 function startQuiz(){
   console.log("quiz-started");
@@ -137,9 +159,14 @@ function chooseAnswer(event){
     changeYourShieldColor();
     changeEnemyShieldColor();
     if (yourShields <= 0 ){
-      alert('Your ship was destroyed');
       beginButton.classList.remove('hidden')
       beginButton.innerText = 'Play again'
+      quizWelcome.innerHTML = `
+      <p>Congratulations ${userName}!</p>
+      <p>You have successfully dispatched your enemy and rid the universe of this no good space filth!</p>
+      `
+      quizWelcome.classList.remove('hidden');
+      quesContainer.classList.add('hidden');
     }
     else if(enemyShields <= 0){
       beginButton.classList.remove('hidden')
@@ -212,8 +239,6 @@ function setStatusClass(element,correct) {
 //
 
 // Function to create buttons for answers //
-
-
 
 //Question Randomiser //
 
