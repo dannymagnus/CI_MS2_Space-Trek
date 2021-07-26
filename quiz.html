@@ -50,7 +50,19 @@
         </nav>
     </header>
     <div id="quiz-outer">
-        <div class="quiz-container">
+        <div id = "quiz-register" class="quiz-container">
+            <p>Congratulations in graduating from Space Fleet Academy</p>
+            <p>You have been give your first commission and are required to register your captancy aboard your new vessel.</p>
+            <form>
+                <label for="name-input">What is your name?</label>
+                <input id="name-input" type="text">
+                <label for="ship-input">What would you like to call your ship?</label>
+                <input id="ship-input" type="text">
+                <p>Are you ready for your assignment?</p>
+                <button id="register-ship" class="btn btn-quiz">Ahead warp factor 5!</button>
+            </form>
+        </div>
+        <div id = "quiz-container" class="quiz-container hidden">
             <div id="scores-wrapper" class = "hidden">
                 <div>
                     Your Ship

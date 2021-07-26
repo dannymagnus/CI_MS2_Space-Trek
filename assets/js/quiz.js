@@ -8,15 +8,32 @@ toggleButton.addEventListener('click', () => {
 
 
 //Variable declarations for quiz page //
-
+// Variable to grab quiz form
+let quizRegister = document.getElementById('quiz-register');
+// To grab name input element for quiz page 
+let nameInput = document.getElementById('name-input');
+// To grab ship input element for quiz page 
+let shipInput = document.getElementById('ship-input');
+// To grab button on ship register
+let registerShipButton = document.getElementById('register-ship');
+registerShipButton.addEventListener('click', registerUserShip);
+// To grab whole text and question area
+let quizContainer = document.getElementById('quiz-container');
+// To grab start button
 let beginButton = document.getElementById('begin-btn');
 beginButton.addEventListener('click', startQuiz);
+// To grab next button
 let shootButton = document.querySelector('#shoot-btn')
 shootButton.addEventListener('click', incrementQuestion);
+// To grab question area only - used to hide on game end
 let quesContainer = document.getElementById('ques-container');
+// To grab question only used when setting next question
 let questionElement = document.getElementById('question');
+// To grab answers grid element - to be used to create next questions
 let answersHTMLElement = document.getElementById('answers');
+// To grab welcome and intro only to hide on start
 let quizWelcome= document.getElementById('quiz-welcome');
+//To grab scores and hide during intro
 let scoresWrapper = document.getElementById('scores-wrapper');
 //Used for 
 let quizOuter = document.querySelector('#quiz-outer');
@@ -24,6 +41,7 @@ let quizOuter = document.querySelector('#quiz-outer');
 let selectedButton;
 // Variable assignment for chooseAnswer to check if correct answer selected
 let correct;
+// Variable to change shield percentages
 let enemyShields;
 let yourShields;
 //Variable to change color of your shield blob
@@ -34,6 +52,12 @@ let yourShieldPercent = document.querySelector('#your-shield');
 let enemyShieldPercentContainer = document.getElementById('enemy-ship');
 //Variable for enemy shield percentage
 let enemyShieldPercent = document.querySelector('#enemy-shield');
+//Variable taken from user form submission
+let userNameElement = document.querySelector('#user-name');
+let shipNameElement = document.querySelector('#ship-name');
+// Variables declared to be assigned on user input
+let userName;
+let shipName;
 
 // Declare  variables to be used for random question generation in function//
 let shuffledQuestions = new Array;
@@ -45,6 +69,9 @@ function incrementQuestion(){
   currentQuestionIndex ++;
   nextQuestion()};
 
+  function registerUserShip(){
+    console.log('register ship called');
+  }
 
 function startQuiz(){
   console.log("quiz-started");
@@ -115,17 +142,14 @@ function chooseAnswer(event){
       beginButton.innerText = 'Play again'
     }
     else if(enemyShields <= 0){
-      alert('You destroyed Khan and saved the federation!')
       beginButton.classList.remove('hidden')
       beginButton.innerText = 'Play again';
-      /*
       quizWelcome.innerHTML = `
-      <video width="320" height="240">
-      <source src="../assets/video/khan-last-breath.webm" type="video/webm">
-      Your browser does not support the video tag.
-      </video> 
+      <p>Congratulations ${userName}!</p>
+      <p>You have successfully dispatched your enemy and rid the universe of this no good space filth!</p>
       `
-      quizWelcome.classList.remove('hidden');*/
+      quizWelcome.classList.remove('hidden');
+      quesContainer.classList.add('hidden');
     }
     else{shootButton.classList.remove('hidden')}
     yourShieldPercent.innerText = yourShields;
