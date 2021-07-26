@@ -217,12 +217,21 @@ body {
     margin:auto;
     height: 90vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content:center;
+    justify-content:space-around;
     --hue: var(--hue-neutral);
     background-color: rgba(var(--hue),.5);
     border-radius: 20px;
+}
+
+.ship-container {
+    display: flex;
+    align-items: center;
+}
+
+.ship-container img {
+    width:100%;
+    margin: 20px;
 }
 
 /* Classes assigned for correct and incorrect - to be called by js later */

@@ -59,6 +59,7 @@ let enemyShieldPercent = document.querySelector('#enemy-shield');
 // Variables declared to be assigned on user input
 let userName;
 let shipName;
+let ships = Array.from(document.querySelectorAll('.ship-container'));
 
 // Declare  variables to be used for random question generation in function//
 let shuffledQuestions = new Array;
@@ -93,9 +94,12 @@ function incrementQuestion(){
     `;
     quizRegister.classList.add('hidden');
     quizContainer.classList.remove('hidden');
+    ships[0].classList.remove('hidden');
+    scoresWrapper.firstElementChild.firstElementChild.innerText = "USS " + shipName;
   }  
 
 function startQuiz(){
+  ships[1].classList.remove('hidden');
   console.log("quiz-started");
   beginButton.classList.add('hidden');
   quizWelcome.classList.add('hidden');
