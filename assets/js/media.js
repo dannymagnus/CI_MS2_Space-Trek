@@ -144,17 +144,75 @@ const UIController = (function() {
             <label for ="Genre" class = "form label col-sm-12">${title}</label>
             </div>
             <div class = "row col-sm-12 px-0">
+            <label for ="artist" class="form-label col-sm-12">By ${arstist}:</label>
             </div>
+            `;
 
-            `
+            detailDiv.insertAdjacentHTML('beforeend, html');
         
+        },
+
+        resetTrackDetail() {
+            this.inputField().songDetail.innerHTML = '';
+        },
+
+        resetTracks() {
+            this.inputField().songs.innerHTML = '';
+            this.resetTrackDetail();
+        },
+
+        resetPlaylist() {
+            this.inputField().playlists.innerHTML = '';
+            this.resetTracks();
         }
-
-
-
-
-
 }
+})();
 
+const APPController = (function(UICtrl, APICtrl) {
+
+    //Get input field object ref
+    const DOMInputs = UICtrl.inputField();
+
+    //get genres on page load
+    const loadGenres = async () => {
+        //get the token
+        const token = await APICtrl.getToken();
+        //get the genres
+        const genres = await APICtrl.getGenres(token);
+        //populate our genres select element
+        genres.forEach(element => UICtrl.createGenre(element.name, element.id));
+    }
+
+    // create genre change event listener
+
+    DOMInputs.genre.addEventListener('change', async () => {
+        //when user changes genre we need to reset the subsequent fields
+        UICtrl.resetPlaylist();
+        // get the token .add method to store the token on the page so we dont have to keep hitting the API
+        const token = UICtrl.getStoredToken().token;
+        // get the genre select fields
+        const genreSelect = UICtrl.inputField().genre;
+        //get the selcted genreId
+        const genreId = genreSelect.options[genreSelect.selectedIndex].value;
+        //get the playlist data from spotify based on the genre
+        const playlist = await APICtrl.getPlaylistByGenre(token.genreId);
+        // load the playlist
+        console.log(playlist)
+
+    });
+
+    //create submit button click event listener
+    DOMInputs.submit.addEventListener('click', async (e) => {
+        //prevent page reset
+        e.preventDefault();
+    
+    });
+
+    //create song selection click event addEventListener
+    DOMInputs.songs.addEventListener('click', async (e) => {
+        //prevent page reset
+        e.preventDefault();
+
+    });
 
 })();
