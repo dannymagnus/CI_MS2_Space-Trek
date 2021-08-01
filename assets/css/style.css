@@ -435,16 +435,58 @@ footer {
     display:flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 70vh;
     width:100%;
+    flex-direction: column;
 }
 
-#contact-form-container {
+#contact-form-outer h1 {
+    font-family: 'Star Trek Enterprise Future';
+    color: var(--off-yellow);
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+#contact-inner {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-img-container {
     background-image: url(../images/star-trek-communicator.webp);
-    width:560px;
+    width:300px;
     background-position: center center;
     background-repeat: no-repeat;
     display:flex;
     justify-content: center;
-    height:800px;
+    height:500px;
+    background-size: contain;
+}
+
+#contact-form {
+    width:320px;
+    font-size: 1.5rem;
+}
+
+#contact-background {
+    background-image: linear-gradient(rgba(0, 0, 0,.05),rgba(0,0,0,.5)), url(../images/contact-bk.jpeg);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#contact-submit {
+    --hue: var(--off-yellow);
+    background-color: var(--hue);
+    border: 1px solid black;
+    width: 200px;
+}
+
+#contact-submit:hover {
+    color: rgba(var(--hue-neutral),.99);
+    border: 1px solid black;
+    font-weight: bold;
+
 }
