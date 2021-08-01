@@ -197,18 +197,56 @@ body {
 #main-container {
     display: flex;
     justify-content: center;
+    align-items:center;
     padding: 50px 10px;
+    height:80vh;
 }
 
 #main-content {
     width: 320px;
+    max-width: 80%;
 }
 
 @media (min-width:768px) {
 #main-content {
-    width: 380px;
+    width: 600px;
+}
+
+#main-content p {
+    font-size: 1.5rem;
+}
+#main-content h1 {
+    padding: 0 0 50px;
 }
 }
+
+/* Footer Styling */
+
+footer {
+    width: 100vw;
+}
+
+#footer-container {
+    width: 100%;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.social-media ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.social-media a {
+    text-decoration: none;
+}
+
+
+
+
+
+
 
 /* Quiz Outer Styling */
 
@@ -390,3 +428,4 @@ body {
     padding: 50px 0;
     font-size: 1.5rem;
 }
+
