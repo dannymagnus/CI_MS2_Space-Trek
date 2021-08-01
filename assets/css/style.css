@@ -429,3 +429,22 @@ footer {
     font-size: 1.5rem;
 }
 
+/* Contact form */
+
+#contact-form-outer {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width:100%;
+}
+
+#contact-form-container {
+    background-image: url(../images/star-trek-communicator.webp);
+    width:560px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content: center;
+    height:800px;
+}
