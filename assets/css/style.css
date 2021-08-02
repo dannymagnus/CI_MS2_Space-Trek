@@ -224,7 +224,6 @@ body {
 
 footer {
     width: 100vw;
-    position: fixed;
     bottom: 0;
 }
 
@@ -243,12 +242,6 @@ footer {
 .social-media a {
     text-decoration: none;
 }
-
-
-
-
-
-
 
 /* Quiz Outer Styling */
 
@@ -433,13 +426,23 @@ footer {
 
 /* Contact form */
 
-#contact-form-outer {
+.contact-outer {
     display:flex;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+    height: 100vh;
     width:100%;
     flex-direction: column;
+    position:fixed;
+    top: 0;
+    background-image: linear-gradient(rgba(0, 0, 0,.05),rgba(0,0,0,.5)), url(../images/contact-bk.jpeg);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+.contact-outer.hidden {
+    display: none;
 }
 
 #contact-form-outer h1 {
@@ -471,14 +474,6 @@ footer {
     font-size: 1.5rem;
 }
 
-.contact-background {
-    background-image: linear-gradient(rgba(0, 0, 0,.05),rgba(0,0,0,.5)), url(../images/contact-bk.jpeg);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 #contact-submit {
     --hue: var(--off-yellow);
     background-color: var(--hue);
@@ -490,5 +485,4 @@ footer {
     color: rgba(var(--hue-neutral),.99);
     border: 1px solid black;
     font-weight: bold;
-
 }

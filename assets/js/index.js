@@ -1,6 +1,8 @@
 // For navbar toggle//
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+const contactLaunch = document.querySelector('#contact-launch')
+
 
 toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active')

@@ -1,4 +1,4 @@
-const APIController = (function() {
+/* const APIController = (function() {
     
     const clientId = 'ae235349e1674b5e9e58be306525e246';
     const clientSecret = 'e838b394f6c74e74aa2163513248cee9';
@@ -261,4 +261,4 @@ const APPController = (function(UICtrl, APICtrl) {
 })(UIController, APIController);
 
 // will need to call a method to load the genres on page load
-APPController.init();
+APPController.init(); */
