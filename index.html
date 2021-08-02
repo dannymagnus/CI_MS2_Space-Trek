@@ -73,14 +73,31 @@
                 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content contact-background">
                       <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
-                        ...
+                        <div id = "contact-form-outer">
+                            <h1>Communicate with us..</h1>
+                            <div id="contact-inner">
+                            <div id = "contact-img-container">  
+                            </div>
+                            <div id = "form-wrapper">
+                                <form id="contact-form">
+                                    <label for = "contact-name">Name</label><br>
+                                    <input id = "contact-name" type="text" name="user_name"><br>
+                                    <label for = "contact-email">Email</label><br>
+                                    <input id = "contact-email" type="text" name="user_email"><br>
+                                    <label for = "contact-message">Message</label><br>
+                                    <textarea id = "contact-message" name="message"></textarea><br>
+                                    <input type="submit" id="contact-submit" class="btn contact-btn" value="Contact Space-Fleet">
+                                </form>
+                            </div>
+                        </div>
+                        </div>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
