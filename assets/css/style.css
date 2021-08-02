@@ -3,7 +3,7 @@
 /* Font courtesy of font Face - https://www.fontspace.com/category/star-trek */
 @font-face {
     font-family: 'Star Trek Enterprise Future';
-    src: url('../../StarTrekEnterpriseFuture-Italic.woff') format('woff2'),
+    src: url('../../StarTrekEnterpriseFuture-Italic.woff2') format('woff2'),
         url('../../StarTrekEnterpriseFuture-Italic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
@@ -213,7 +213,7 @@ body {
 }
 
 #main-content p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 #main-content h1 {
     padding: 0 0 50px;
@@ -224,6 +224,8 @@ body {
 
 footer {
     width: 100vw;
+    position: fixed;
+    bottom: 0;
 }
 
 #footer-container {
