@@ -72,6 +72,7 @@ function incrementQuestion(){
 
   function registerUserShip(event){
     event.preventDefault();
+    $('#contact-launch').fadeOut(1000);
     console.log('register ship called');
     userName = document.querySelector('#name-input').value;
     shipName = document.querySelector('#ship-input').value;
@@ -118,7 +119,7 @@ function startQuiz(){
   enemyShields = 100;
   yourShieldPercent.innerText = yourShields;
   enemyShieldPercent.innerText = enemyShields;
-  
+
 }
 
 function nextQuestion(){
@@ -380,9 +381,9 @@ const contactLaunch = document.querySelector('#contact-launch');
 //To add listener for own modal
 const contactFormOuter = document.querySelector('#contact-form-outer');
 //To grab main divs for sucess message fade in and out
-const mainContent = document.getElementById('main-content');
+const mainContent = document.getElementById('quiz-register');
 // Grab to add and remove function created child
-const mainContainer = document.getElementById('main-container');
+const mainContainer = document.getElementById('quiz-outer');
 //To use variable with Jquery to hide and reveal main content
 const mainContentId = mainContent.getAttribute('id');
 

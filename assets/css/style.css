@@ -470,6 +470,16 @@ footer {
     font-size: 1.5rem;
 }
 
+@media (max-width: 768px) {
+    #contact-img-container {
+        display: none;
+}
+    #contact-form{
+        margin-left:10%;
+        margin-right: 10%;
+    }
+}
+
 .btn.contact-btn{
     --hue: var(--off-yellow);
     background-color: var(--hue);
