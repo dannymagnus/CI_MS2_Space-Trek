@@ -427,7 +427,7 @@ footer {
 /* Contact form */
 
 .contact-outer {
-    display:flex;
+    display:none;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -439,10 +439,6 @@ footer {
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
-}
-
-.contact-outer.hidden {
-    display: none;
 }
 
 #contact-form-outer h1 {
@@ -474,15 +470,20 @@ footer {
     font-size: 1.5rem;
 }
 
-#contact-submit {
+.btn.contact-btn{
     --hue: var(--off-yellow);
     background-color: var(--hue);
     border: 1px solid black;
     width: 200px;
 }
 
-#contact-submit:hover {
+.btn.contact-btn:hover {
     color: rgba(var(--hue-neutral),.99);
     border: 1px solid black;
     font-weight: bold;
+}
+
+.btn.contact-btn.ack {
+    max-width: 30%;
+    margin:0 35%;
 }
