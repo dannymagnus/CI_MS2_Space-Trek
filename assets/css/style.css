@@ -34,6 +34,7 @@
     --hue-sixty: 250, 183, 51;
     --hue-fourty: 255, 142, 21;
     --hue-twenty: 255, 78, 17;
+    --hue-footer-icons: 80, 126, 156;
 }
 
 body {
@@ -66,7 +67,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
 
 /*Nav bar */
 
@@ -222,25 +222,26 @@ body {
 
 /* Footer Styling */
 
-footer {
-    width: 100vw;
-    bottom: 0;
-}
-
 #footer-container {
-    width: 100%;
+    width: 90%;
     display: flex;
-    height: 100px;
     justify-content: space-between;
+    margin: 0 auto;
+    padding:10px;
 }
 
 .social-media ul {
     display: flex;
     list-style-type: none;
+    justify-content:space-evenly;
+    padding: 0;
+    margin: 0;
+    width: 120px;
 }
 
 .social-media a {
     text-decoration: none;
+    color:rgb(var(--hue-footer-icons));
 }
 
 /* Quiz Outer Styling */
@@ -431,10 +432,11 @@ footer {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    width:100%;
+    width:100vw;
     flex-direction: column;
     position:fixed;
     top: 0;
+    left: 0;
     background-image: linear-gradient(rgba(0, 0, 0,.05),rgba(0,0,0,.5)), url(../images/contact-bk.jpeg);
     background-size: cover;
     background-position-x: center;
@@ -468,6 +470,12 @@ footer {
 #contact-form {
     width:320px;
     font-size: 1.5rem;
+}
+
+#contact-launch {
+    --hue: var(--hue-footer-icons);
+    background-color:rgb(var(--hue));
+    border:none;
 }
 
 @media (max-width: 768px) {
