@@ -196,7 +196,6 @@ h1 {
 #main-content {
     width: 320px;
     max-width: 80%;
-    text-justify: center;
 }
 
 @media (min-width:768px) {
