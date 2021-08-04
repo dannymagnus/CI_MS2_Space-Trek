@@ -46,6 +46,12 @@ body {
     margin: 0;
     padding: 0;
     color: white;
+    background-image: linear-gradient(rgba(0, 0, 0,.05),rgba(0,0,0,.5)), url(../images/background2.jpeg);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position:relative;
 }
 
 
@@ -56,16 +62,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     text-align: center;
-}
-
-/* Background */
-
-body {
-    background-image: linear-gradient(rgba(0, 0, 0,.05),rgba(0,0,0,.5)), url(../images/background2.jpeg);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 /*Nav bar */
@@ -222,6 +218,12 @@ body {
 }
 
 /* Footer Styling */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}
 
 #footer-container {
     width: 90%;
