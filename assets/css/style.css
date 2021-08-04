@@ -238,7 +238,7 @@ footer {
 
 .social-media a {
     text-decoration: none;
-    color:rgb(var(--hue-footer-icons));
+    color:RGB(var(--hue-footer-icons));
 }
 
 /* Quiz Outer Styling */
