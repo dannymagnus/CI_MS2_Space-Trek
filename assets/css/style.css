@@ -92,15 +92,12 @@ h1 {
 .navbar-links li a {
     display: block;
     text-decoration: none;
-    padding: 1rem;
+    padding: .5rem;
+    margin-right:1rem;
 }
 
-.navbar-links button:hover {
+.navbar-links a:hover {
     background-color:grey;
-    color: var(--off-yellow);
-}
-
-.navbar-links button:focus{
     color: var(--off-yellow);
 }
 
