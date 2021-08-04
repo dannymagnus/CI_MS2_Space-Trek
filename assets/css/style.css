@@ -66,6 +66,7 @@ body {
     background-position-x: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height:100vh;
 }
 
 /*Nav bar */
