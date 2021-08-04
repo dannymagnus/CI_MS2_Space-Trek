@@ -239,6 +239,7 @@ footer {
 
 .social-media a {
     text-decoration: none;
+    var(--hue)
     color:RGB(var(--hue-footer-icons));
 }
 
