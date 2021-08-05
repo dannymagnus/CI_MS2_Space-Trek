@@ -1,10 +1,10 @@
 // For navbar toggle//
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+const toggleButton = document.getElementsByClassName('toggle-button')[0];
+const navbarLinks = document.getElementsByClassName('navbar-links')[0];
 
 toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active')
-})
+  navbarLinks.classList.toggle('active');
+});
 
 //Variable declarations for quiz page //
 // Variable to grab quiz form
@@ -25,7 +25,7 @@ let quizContainer = document.getElementById('quiz-container');
 let beginButton = document.getElementById('begin-btn');
 beginButton.addEventListener('click', startQuiz);
 // To grab next button
-let shootButton = document.querySelector('#shoot-btn')
+let shootButton = document.querySelector('#shoot-btn');
 shootButton.addEventListener('click', incrementQuestion);
 // To grab question area only - used to hide on game end
 let quesContainer = document.getElementById('ques-container');
@@ -47,7 +47,7 @@ let correct;
 let enemyShields;
 let yourShields;
 //Variable to change color of your shield blob
-let yourShieldPercentContainer = document.getElementById('your-ship')
+let yourShieldPercentContainer = document.getElementById('your-ship');
 //Variable assignment for your shield percentage
 let yourShieldPercent = document.querySelector('#your-shield');
 //Variable to change color of enemy shield blob
@@ -61,14 +61,15 @@ let shipName;
 let ships = Array.from(document.querySelectorAll('.ship-container'));
 
 // Declare  variables to be used for random question generation in function//
-let shuffledQuestions = new Array;
+let shuffledQuestions = [];
 let currentQuestionIndex;
 
 // Function to remove and add start and question box //
 
 function incrementQuestion(){
   currentQuestionIndex ++;
-  nextQuestion()};
+  nextQuestion();
+}
 
   function registerUserShip(event){
     event.preventDefault();
@@ -111,7 +112,7 @@ function startQuiz(){
   yourShieldPercentContainer.className = 'shields-result';
   enemyShieldPercentContainer.className = 'shields-result';
   shuffle();
-  console.log(shuffledQuestions[0].answer[0].option)
+  console.log(shuffledQuestions[0].answer[0].option);
   currentQuestionIndex = 0;
   nextQuestion();
   console.log('next question called');
@@ -126,7 +127,7 @@ function nextQuestion(){
   clearState();
   console.log(' function call recieved');
   revealQuestion(shuffledQuestions[currentQuestionIndex]);
-  console.log(shuffledQuestions[currentQuestionIndex].question)
+  console.log(shuffledQuestions[currentQuestionIndex].question);
 }
 
 function revealQuestion(question){
@@ -157,40 +158,42 @@ function chooseAnswer(event){
     selectedButton = event.target;
     correct = selectedButton.dataset.correct;
     if (correct){
-      enemyShields -= 20
-    }else{yourShields -= 20};
+      enemyShields -= 20;
+    }else{yourShields -= 20;
+    }
     setStatusClass(quizOuter, correct);
     Array.from(answersHTMLElement.children).forEach(button => {
-      setStatusClass(button, button.dataset.correct)
-    })
+      setStatusClass(button, button.dataset.correct);
+    });
     changeYourShieldColor();
     changeEnemyShieldColor();
     if (yourShields <= 0 ){
-      beginButton.classList.remove('hidden')
-      beginButton.innerText = 'Play again'
+      beginButton.classList.remove('hidden');
+      beginButton.innerText = 'Play again';
       quizWelcome.innerHTML = `
       <p>You are defeated.. ${userName}!</p>
       <p>Your legacy will be a mere whisper through space, as your adversary tosses your bones across the cosmos.</p>
-      `
+      `;
       quizWelcome.classList.remove('hidden');
       quesContainer.classList.add('hidden');
       $ ( "#your-ship-img" ).fadeOut(1000);
     }
     else if(enemyShields <= 0){
-      beginButton.classList.remove('hidden')
+      beginButton.classList.remove('hidden');
       beginButton.innerText = 'Play again';
       quizWelcome.innerHTML = `
       <p>Congratulations ${userName}!</p>
       <p>You have successfully dispatched your enemy and rid the universe of this no good space filth!</p>
-      `
+      `;
       quizWelcome.classList.remove('hidden');
       quesContainer.classList.add('hidden');
       $ ( "#enemy-ship-img" ).fadeOut(1000);
     }
-    else{shootButton.classList.remove('hidden')}
+    else{shootButton.classList.remove('hidden');
+  }
     yourShieldPercent.innerText = yourShields;
     enemyShieldPercent.innerText = enemyShields;
-};
+}
 //Function to switch shields color (you)
 function changeYourShieldColor(){
   switch(yourShields){
@@ -211,7 +214,6 @@ function changeYourShieldColor(){
       break;
   }
 }
-
 
 //Function to switch shields color (enemy)
 function changeEnemyShieldColor(){
@@ -234,7 +236,6 @@ function changeEnemyShieldColor(){
   }
 }
 
-//
 //
 function setStatusClass(element,correct) {
   element.classList.remove('correct');
@@ -392,7 +393,7 @@ const mainContentId = mainContent.getAttribute('id');
 contactLaunch.addEventListener('click', () => {
   $("#contact-form-outer").fadeIn(1000);
   contactFormOuter.style.display = 'flex';
-})
+});
 
 //for contact form button and use mailjs API
 window.onload = function () {
@@ -415,7 +416,7 @@ window.onload = function () {
     function createSuccessMessage(outer, inner) {
       var contactSuccessElement = document.createElement('div');
       contactSuccessElement.setAttribute('id', 'contact-success');
-      contactSuccessElement.style.cssText = "display:none; border: 1px solid darkblue; background-color: rgba(var(--hue-neutral),.5); padding:30px; border-radius:30px; text-align:center;"
+      contactSuccessElement.style.cssText = "display:none; border: 1px solid darkblue; background-color: rgba(var(--hue-neutral),.5); padding:30px; border-radius:30px; text-align:center;";
       var contactSuccessHTML =
         `
   <div>
@@ -443,4 +444,4 @@ window.onload = function () {
       });
     }
   });
-}
+};
