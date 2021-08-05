@@ -3,7 +3,7 @@
 
 ![Mockup of Star-Turk](docs/mockup/mockup.png)
 
-[View live site](https://dannymagnus.github.io/CI_MS2_Trekkiefans/)
+[View live site](https://dannymagnus.github.io/CI_MS2_Space-Trek/)
 
 ## Table of Content
 

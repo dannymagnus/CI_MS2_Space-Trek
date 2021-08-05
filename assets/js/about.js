@@ -1,6 +1,6 @@
 // For navbar toggle//
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+const toggleButton = document.getElementsByClassName('toggle-button')[0];
+const navbarLinks = document.getElementsByClassName('navbar-links')[0];
 //To add launch button for own modal
 const contactLaunch = document.querySelector('#contact-launch');
 //To add listener for own modal
@@ -14,14 +14,14 @@ const mainContentId = mainContent.getAttribute('id');
 
 //Toggle for main nav bar
 toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active')
-})
+  navbarLinks.classList.toggle('active');
+});
 
 //Toggle to reveal self made modal
 contactLaunch.addEventListener('click', () => {
   $("#contact-form-outer").fadeIn(1000);
   contactFormOuter.style.display = 'flex';
-})
+});
 
 //for contact form button and use mailjs API
 window.onload = function () {
@@ -44,7 +44,7 @@ window.onload = function () {
     function createSuccessMessage(outer, inner) {
       var contactSuccessElement = document.createElement('div');
       contactSuccessElement.setAttribute('id', 'contact-success');
-      contactSuccessElement.style.cssText = "display:none; border: 1px solid darkblue; background-color: rgba(var(--hue-neutral),.5); padding:30px; border-radius:30px; text-align:center;"
+      contactSuccessElement.style.cssText = "display:none; border: 1px solid darkblue; background-color: rgba(var(--hue-neutral),.5); padding:30px; border-radius:30px; text-align:center;";
       var contactSuccessHTML =
         `
   <div>
@@ -75,4 +75,4 @@ window.onload = function () {
       });
     }
   });
-}
+};
