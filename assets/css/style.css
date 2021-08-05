@@ -240,7 +240,7 @@ footer {
 .social-media a {
     text-decoration: none;
     color: var(--hue);
-    color:RGB(var(--hue-footer-icons));
+    color:rgb(var(--hue-footer-icons));
 }
 
 /* Quiz Outer Styling */
