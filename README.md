@@ -1,7 +1,7 @@
-# Star-Turk
+# Space-Trek
 (Developer: Daniel Richards)
 
-![Mockup of Star-Turk](https://github.com/dannymagnus/)
+![Mockup of Star-Turk](docs/mockup/mockup.png)
 
 [View live site](https://dannymagnus.github.io/CI_MS2_Trekkiefans/)
 
