@@ -31,7 +31,7 @@
     --hue-sixty:250,183,51;
     --hue-fourty:255,142,21;
     --hue-twenty:255,78,17;
-    --hue-footer-icons: rgb(80,126,156);
+    --hue-footer-icons:80,126,156;
 }
 
 body {
@@ -237,7 +237,12 @@ footer {
 
 .social-media a {
     text-decoration: none;
-    color:var(--hue-footer-icons);
+    --hue: var(--hue-footer-icons);    
+    color: rgb(var(--hue));
+}
+
+.social-media a:hover{
+    color: var(--off-yellow);
 }
 
 /* Quiz Outer Styling */
@@ -299,7 +304,6 @@ footer {
     display: flex;
     margin:0 auto 25px;
     justify-content: space-between;
-
 }
 
 .your-score-inner {
@@ -474,6 +478,11 @@ footer {
     border:none;
 }
 
+#contact-launch:hover {
+    background-color:grey;
+    color: var(--off-yellow);
+}
+
 @media (max-width: 768px) {
     #contact-img-container {
         display: none;
@@ -484,11 +493,22 @@ footer {
     }
 }
 
+.form-buttons{
+    display:flex;
+    justify-content: space-between;
+}
+
 .btn.contact-btn{
     --hue: var(--off-yellow);
     background-color: var(--hue);
     border: 1px solid black;
     width: 200px;
+    display: inline-block;
+}
+
+.btn.contact-btn.close {
+    width:50px;
+    margin-right: 37px;
 }
 
 .btn.contact-btn:hover {

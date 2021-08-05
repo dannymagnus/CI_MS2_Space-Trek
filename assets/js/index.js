@@ -14,11 +14,13 @@ const mainContentId = mainContent.getAttribute('id');
 
 //Toggle for main nav bar
 toggleButton.addEventListener('click', () => {
+  "use strict";
   navbarLinks.classList.toggle('active');
 });
 
 //Toggle to reveal self made modal
 contactLaunch.addEventListener('click', () => {
+  "use strict";
   $("#contact-form-outer").fadeIn(1000);
   contactFormOuter.style.display = 'flex';
 });
