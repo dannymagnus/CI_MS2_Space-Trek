@@ -11,6 +11,8 @@ const mainContent = document.getElementById('main-content');
 const mainContainer = document.getElementById('main-container');
 //To use variable with Jquery to hide and reveal main content
 const mainContentId = mainContent.getAttribute('id');
+const modalClose = document.querySelector('#modal-close');
+
 
 //Toggle for main nav bar
 toggleButton.addEventListener('click', () => {
@@ -75,3 +77,8 @@ window.onload = function () {
     }
   });
 };
+
+modalClose.addEventListener('click', () => {
+  "use strict";
+  $("#contact-form-outer").fadeOut(1000);
+});
