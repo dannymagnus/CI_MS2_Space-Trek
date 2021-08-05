@@ -26,12 +26,12 @@
     --light-grey:lightgray;
     --hue-correct: 7,200,0;
     --hue-incorrect:224,0,0;
-    --hue-neutral: 0,138,201;
-    --hue-eighty: 172, 179, 52;
-    --hue-sixty: 250, 183, 51;
-    --hue-fourty: 255, 142, 21;
-    --hue-twenty: 255, 78, 17;
-    --hue-footer-icons: 80, 126, 156;
+    --hue-neutral:0,138,201;
+    --hue-eighty:172,179,52;
+    --hue-sixty:250,183,51;
+    --hue-fourty:255,142,21;
+    --hue-twenty:255,78,17;
+    --hue-footer-icons:80,126,156;
 }
 
 body {
@@ -237,8 +237,7 @@ footer {
 
 .social-media a {
     text-decoration: none;
-    color: var(--hue);
-    color:rgb(var(--hue-footer-icons));
+    color:RGBA(var(--hue-footer-icons));
 }
 
 /* Quiz Outer Styling */
@@ -251,7 +250,7 @@ footer {
     align-items: center;
     justify-content:space-evenly;
     --hue: var(--hue-neutral);
-    background-color: rgba(var(--hue),.5);
+    background-color: RGBA(var(--hue),.5);
     border-radius: 20px;
     padding:20px;
 }
