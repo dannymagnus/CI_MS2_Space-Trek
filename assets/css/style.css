@@ -468,7 +468,7 @@ footer {
 }
 
 #contact-form {
-    width:320px;
+    width:280px;
     font-size: 1.5rem;
 }
 
@@ -487,10 +487,6 @@ footer {
     #contact-img-container {
         display: none;
 }
-    #contact-form{
-        margin-left:10%;
-        margin-right: 10%;
-    }
 }
 
 .form-buttons{
@@ -508,7 +504,6 @@ footer {
 
 .btn.contact-btn.close {
     width:50px;
-    margin-right: 37px;
 }
 
 .btn.contact-btn:hover {
