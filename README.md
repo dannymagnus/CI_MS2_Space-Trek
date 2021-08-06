@@ -70,7 +70,7 @@
 
 #### First-time User 
 1. As a user I want to be able to contact the site owner easily
-2. As a first time user; I want to be able to get ideas and inspiration for my wedding stationery.
+2. As a first time user I want to be able to navigate the site quickly and easily
 3. As a first time user; I want to see that the businesses values match my own.
 4. As a first time user; I want to find some wedding stationery that will set the tone of my wedding and give that ‘wow’ factor.
 5. As a first time user; I want to be able to see some indication of prices and timescales so I know whether this product is right for me.
@@ -568,15 +568,14 @@ All devices were able to pass all tests.
 <img src="/docs/testing/user-story-1b.png">
 </details>
 
-2. As a first time user; I want to be able to get ideas and inspiration for my wedding stationery.
+2. As a first time user I want to be able to navigate the site quickly and easily
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Find links to Pinterest and Instagram in page footer  |   Click on link   | Opens Pinterest board for RR Weddings or RRWeddings Instagram respectively | Works as expected |
-| Find link to products page in nav bar       |      Click link and scroll page peony and anemone gallery OR click internal links to customisable and scroll      |To see images of stationery designs | Works as expected |
+| Find navigation links in page header  |   Click on link   | Opens respective site page | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-2-4-9.png">
+<img src="docs/testing/user-story-2.png">
 </details>
 
 
