@@ -446,9 +446,9 @@ The HTML of the each page of the site was validated using [W3C Markup Validation
 <img src="docs/validation/html-validation/html-validation-index.png">
 </details>
 <details><summary>About</summary>
-<img src="docs/validation/html-validation/html-validation-about_us.png">
+<img src="docs/validation/html-validation/html-validation-about.png">
 </details>
-<details><summary>Products</summary>
+<details><summary>Quiz</summary>
 <img src="docs/validation/html-validation/html-validation-products.png">
 </details>
 <details><summary>Contact</summary>
@@ -467,7 +467,7 @@ The custom CSS file passed with 0 errors
 <img src="docs/validation/css-validation/css-validation.png">
 </details>
 
-Whole site validation returned 2 errors on third party resources
+Whole site validation returned 13 errors on third party resources and 6 errors on my custom css where variables have been used to change background and foreground colors dynamically with my js in the quiz.  Given that the implementation works without fault, that the file validation returned no errors, and following constultation with CI tutor, the css was not changed as to prevent functional failure with the site, as this would likely be issue with the validator, not the code itself.. 
 
 <details><summary>Whole site</summary>
 <img src="docs/validation/css-validation/css-validation-site.png">
