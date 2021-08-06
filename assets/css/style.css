@@ -4,8 +4,8 @@
 /* Font courtesy of font Face - https://www.fontspace.com/category/star-trek */
 @font-face {
     font-family: 'Star Trek Enterprise Future';
-    src: url('../../StarTrekEnterpriseFuture-Italic.woff2') format('woff2'),
-        url('../../StarTrekEnterpriseFuture-Italic.woff') format('woff');
+    src: url('../fonts/StarTrekEnterpriseFuture-Italic.woff2') format('woff2'),
+        url('../fonts/StarTrekEnterpriseFuture-Italic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
