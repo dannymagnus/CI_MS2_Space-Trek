@@ -41,23 +41,20 @@
 ## Project Goals 
 
 ### User Goals
-- Finding station3ry products and services for wedding events.
-- See example products and be able to contact the company.
-- Find information about the restaurant.
-- Get ideas and inspiration for wedding stationery.
+- Play a fun and engaging Star-Trek and Space Quiz
+- Explore fun Earth and Surrounding planet facts
+- Test your Star_Trek and general space knowledge.
 
 ### Site Owner Goals
-- To generate leads for sales of the different wedding stationery packages. 
-- To create a brand identity which stands out in a crowded market by showing the unique creation methods.
-- To reach a wider audience base outside of local wedding fayres and wedding venue network
+- Create an fun and interactive space-adventure microsite
+- The site quiz and about page should be interactive and responsive across devices.
+- The game should encourage user interaction by providing feedback to the user.
 
 ## User Experience
 
 ### Target Audience
-- Brides
-- Grooms
-- Wedding planners
-- Wedding venues
+- Star-Trek and Space enthusiasts
+- Casual gamers
 
 ### User Requirements and Expectations
 
@@ -65,14 +62,14 @@
 - Able to navigate the site quickly and easily.
 - No broken links.
 - Responsive and visually appealing on all devices.
-- An easy way to contact the business.
-- Easy access to content through links but not too deep into site.
+- Easy way to contact site owner.
+- Fun to play, interactive and engaging.
 - Accessibility.
 
 ### User Stories
 
 #### First-time User 
-1. As a first time user; I want to be able to navigate the site and access the information easily.
+1. As a user I want to be able to contact the site owner easily
 2. As a first time user; I want to be able to get ideas and inspiration for my wedding stationery.
 3. As a first time user; I want to see that the businesses values match my own.
 4. As a first time user; I want to find some wedding stationery that will set the tone of my wedding and give that ‘wow’ factor.
@@ -559,15 +556,16 @@ All devices were able to pass all tests.
 
 ### Testing user stories
 
-1. As a first time user; I want to be able to navigate the site and access the information easily.
+1. As a user I want to be able to contact the site owner easily
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Find Navigation bar on top right of each page       |      Click each link to desired page       | Site loads each page as clicked in same browser tab | Works as expected |
-| Find brand header logo in top left of each page  |   Click on header logo    | Navigates to home page in same browser tab | Works as expected |
+| Find message us button in bottom right page       |      Click button, fill form, click submit       | Modal loads over top of current page, contact form presents, acknowledgement on submit, page returns | Works as expected |
+| Find message us button in bottom right page  |   Click button, fill form AND/OR click close (x) button   | Navigates to home page in same browser tab | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="/docs/testing/user-story-1.png">
+<img src="/docs/testing/user-story-1a.png">
+<img src="/docs/testing/user-story-1b.png">
 </details>
 
 2. As a first time user; I want to be able to get ideas and inspiration for my wedding stationery.
