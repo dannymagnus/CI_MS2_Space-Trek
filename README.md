@@ -69,14 +69,14 @@
 ### User Stories
 
 #### First-time User 
-1. As a user I want to be able to contact the site owner easily
-2. As a first time user I want to be able to navigate the site quickly and easily
-3. As a first time user; I want to see that the businesses values match my own.
-4. As a first time user; I want to find some wedding stationery that will set the tone of my wedding and give that ‘wow’ factor.
-5. As a first time user; I want to be able to see some indication of prices and timescales so I know whether this product is right for me.
-6. As a first time user; I want to be able to contact the business if I have any initial queries easily. 
-7. As a first time user; I want to work with a brand that is trustworthy and credible as the wedding will be one of the most important days of my life.
-8. As a first time user; I want to be able to navigate back through the site structure in case of page not found without using the browser back button.
+1. As a first time user I want to be able to contact the site owner easily
+2. As a first time user, I want to be able to navigate the site quickly and easily
+3. As a first time user I want to be able to interactively increase my knowledge about space and the solar system.
+4. As a first time user, I want to find some wedding stationery that will set the tone of my wedding and give that ‘wow’ factor.
+5. As a first time user, I want to be able to see some indication of prices and timescales so I know whether this product is right for me.
+6. As a first time user, I want to be able to contact the business if I have any initial queries easily. 
+7. As a first time user, I want to work with a brand that is trustworthy and credible as the wedding will be one of the most important days of my life.
+8. As a first time user, I want to be able to navigate back through the site structure in case of page not found without using the browser back button.
 
 #### Returning User
 9. As a return visitor; I want an easy way to get in touch with the business to proceed with my purchase.
@@ -579,11 +579,11 @@ All devices were able to pass all tests.
 </details>
 
 
-3. As a first time user; I want to see that the businesses values match my own.
+3. As a first time user I want to be able to interactively increase my knowledge about space and the solar system.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Find link to About page in nav bar       |      Click link and scroll down      |To see images of artist and text about values | Works as expected |
+| Find link to About page in nav bar       |      Click link and find solar interactive iframe, click to launch      | iframe should launch interactive content (desktop only) | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user-story-3.png">
