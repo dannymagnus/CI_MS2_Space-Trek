@@ -2,6 +2,7 @@
 const toggleButton = document.getElementsByClassName('toggle-button')[0];
 const navbarLinks = document.getElementsByClassName('navbar-links')[0];
 
+//Event listener for nav bar toggle
 toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active');
 });
@@ -64,20 +65,22 @@ let ships = Array.from(document.querySelectorAll('.ship-container'));
 let shuffledQuestions = [];
 let currentQuestionIndex;
 
-// Function to remove and add start and question box //
-
+// Function to increment question
 function incrementQuestion(){
   currentQuestionIndex ++;
   nextQuestion();
 }
 
+//Function to take user details and feeback in HTML
   function registerUserShip(event){
+    //prevent default event
     event.preventDefault();
+    //fades contact form button as modal impacts game layout
     $('#contact-launch').fadeOut(1000);
-    console.log('register ship called');
+    //Grab user input for name and ship name
     userName = document.querySelector('#name-input').value;
     shipName = document.querySelector('#ship-input').value;
-    console.log(userName, shipName);
+    //HTML literal for welcome message
     quizWelcome.innerHTML = `
     <p>
       Welcome <strong>${userName}</strong>, captain of the <strong>USS ${shipName}</strong>
@@ -92,45 +95,54 @@ function incrementQuestion(){
       The rules? Simple.  For each correct answer, you damage his ship, for each incorrect, yours takes damage.
     </p>
     `;
+    //Hide quiz register and show quiz container
     quizRegister.classList.add('hidden');
     quizContainer.classList.remove('hidden');
+    //Show user ship image
     ships[0].classList.remove('hidden');
     scoresWrapper.firstElementChild.firstElementChild.innerText = "USS " + shipName;
   }  
 
+//Quiz start on button press
 function startQuiz(){
+  //Display both ship containers
   $ ( "#enemy-ship-img" ).fadeIn(1);
   $ ( "#your-ship-img" ).fadeIn(1);
   ships[1].classList.remove('hidden');
-  console.log("quiz-started");
+  //hide start button
   beginButton.classList.add('hidden');
+  //hide welcome div
   quizWelcome.classList.add('hidden');
+  //show scores wrapper
   scoresWrapper.classList.remove('hidden');
   scoresWrapper.classList.add('scores-wrapper');
+  //show question container
   quesContainer.classList.remove('hidden');
+  //add class of shiel-result to shield container
   yourShieldPercentContainer.className = 'shields-result';
   enemyShieldPercentContainer.className = 'shields-result';
+  //Call shuffle function
   shuffle();
-  console.log(shuffledQuestions[0].answer[0].option);
+  //Set current question index
   currentQuestionIndex = 0;
+  //Call next question function
   nextQuestion();
-  console.log('next question called');
+  //set shields values
   yourShields = 100;
   enemyShields = 100;
+  //set values for shields for use in case later
   yourShieldPercent.innerText = yourShields;
   enemyShieldPercent.innerText = enemyShields;
-
 }
 
 function nextQuestion(){
+  //clear all for quesion set
   clearState();
-  console.log(' function call recieved');
+  //call reveal function
   revealQuestion(shuffledQuestions[currentQuestionIndex]);
-  console.log(shuffledQuestions[currentQuestionIndex].question);
 }
 
 function revealQuestion(question){
-  console.log(question.question + "this is reveal question call");
   questionElement.innerText = question.question;
   for (let i = 0; i < question.answer.length; i++) {
     console.log(question.answer[i]);
