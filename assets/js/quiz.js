@@ -265,7 +265,7 @@ function shuffle() {
 //Question Bank
 
 let questions = [
-  {question: 'How far approximately is the earth from the sun?',
+  {question: 'How many miles approximately is the earth from the sun?',
   answer:[
   {option:'93 millon', correct:true},
   {option:'93 billion', correct:false},
@@ -337,7 +337,7 @@ let questions = [
   {option:'fire', correct:false},
   {option:'radio waves', correct:false},
   {option:'ice, dust, and organic materials', correct:true}]},
-  {question: 'What is distant source of radio waves noticed by astronomers?',
+  {question: 'What is a distant source of radio waves noticed by astronomers called?',
   answer:[
   {option:'Phasers', correct:false},
   {option:'Leptons', correct:false},
