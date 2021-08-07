@@ -80,17 +80,16 @@ function incrementQuestion(){
     console.log(userName, shipName);
     quizWelcome.innerHTML = `
     <p>
-    Welcome <strong>${userName}</strong>. You are now appointed as the captain of the <strong>USS ${shipName}</strong>
+      Welcome <strong>${userName}</strong>, captain of the <strong>USS ${shipName}</strong>
     </p>
     <p>
-    Khan <span class="sm">Noonien Singh</span> has escaped <span class="sm">from the planet you imprisoned him on</span> and is now ready to avenge
-    himself upon you!
+      An alien spacecraft has entered alied space and are staking a claim on our solar system.
     </p>
     <p>
-    He has challenged you to a battle of intellect on all things space and Star - Trek
+      To prove thier supremacy they have challenged you to a battle of intellect on all things space.
     </p>
     <p>
-    The rules? Simple.  For each correct answer, you damage his ship, for each incorrect, yours takes damage.
+      The rules? Simple.  For each correct answer, you damage his ship, for each incorrect, yours takes damage.
     </p>
     `;
     quizRegister.classList.add('hidden');

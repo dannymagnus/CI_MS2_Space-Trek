@@ -31,7 +31,7 @@
     --hue-sixty:250,183,51;
     --hue-fourty:255,142,21;
     --hue-twenty:255,78,17;
-    --hue-footer-icons:80,126,156;
+    --hue-footer-icons:48, 109, 150;
 }
 
 body {
@@ -213,9 +213,12 @@ h1 {
 /* Footer Styling */
 
 footer {
-    position: absolute;
     bottom: 0;
     width:100%;
+}
+
+.footer-outer {
+    position: absolute;
 }
 
 #footer-container {
