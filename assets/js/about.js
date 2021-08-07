@@ -94,5 +94,34 @@ function getID(event) {
 
 function figureModalContent(planet) {
   console.log(planet);
-  
+
+  switch(planet){
+    case 'sun':
+      console.log('this is the sun');
+      break;
+    case 'mercury':
+      yourShieldPercentContainer.classList.add('sixty');
+      break;
+    case 'venus':
+      yourShieldPercentContainer.classList.add('fourty');
+       break;
+    case 'earth':
+      yourShieldPercentContainer.classList.add('twenty');
+      break;
+    case 'mars':
+      yourShieldPercentContainer.classList.add('incorrect');
+      break;
+    case 'jupiter':
+      yourShieldPercentContainer.classList.add('incorrect');
+      break;
+    case 'saturn':
+      yourShieldPercentContainer.classList.add('incorrect');
+      break;
+    case 'uranus':
+      yourShieldPercentContainer.classList.add('incorrect');
+      break;
+      case 'neptune':
+      yourShieldPercentContainer.classList.add('incorrect');
+      break;
+  }
 }
