@@ -94,4 +94,5 @@ function getID(event) {
 
 function figureModalContent(planet) {
   console.log(planet);
+  
 }
