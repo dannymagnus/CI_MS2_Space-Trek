@@ -17,6 +17,9 @@ toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active');
 });
 
+//Modal review on planet select
+
+
 //Toggle to reveal self made modal
 contactLaunch.addEventListener('click', () => {
   $("#contact-form-outer").fadeIn(1000);
@@ -76,3 +79,19 @@ window.onload = function () {
     }
   });
 };
+
+
+
+$('#earth-container').click(getID);
+
+function getID(event) {
+  let planetElement = event.target;
+  console.log(planetElement);
+  let planetId = planetElement.id;
+  console.log(planetId);
+  figureModalContent (planetId);
+}
+
+function figureModalContent(planet) {
+  console.log(planet);
+}
