@@ -144,7 +144,22 @@ function figureModalContent(planet) {
       console.log(planetName, planetHTML);      
       break;
   }
+  assignModal(planetName,planetHTML);
+}
 
+function assignModal(name, text){
+  let planetModalTitle = document.querySelector('#planetModalTitle');
+  let planetModalBody = document.querySelector('#planetModalBody');
+
+  planetModalTitle.innerHTML = name;
+  planetModalBody.innerHTML = text;
+  console.log(planetModalTitle, planetModalBody);
+  showModal();
+}
+
+function showModal(){
+  $('.modal-backdrop').addClass('background-backdrop');
+  $('#planetModal').modal('show');
 }
 
 let planetArray = [
