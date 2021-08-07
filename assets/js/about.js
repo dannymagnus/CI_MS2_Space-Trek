@@ -80,7 +80,7 @@ window.onload = function () {
   });
 };
 
-
+let modalHeader = document.querySelector('.modalHeader');
 
 $('#earth-container').click(getID);
 
@@ -97,31 +97,31 @@ function figureModalContent(planet) {
 
   switch(planet){
     case 'sun':
-      console.log('this is the sun');
+      console.log(`this is the ${planet}`);
       break;
     case 'mercury':
-      yourShieldPercentContainer.classList.add('sixty');
+      console.log(`this is ${planet}`);
       break;
     case 'venus':
-      yourShieldPercentContainer.classList.add('fourty');
-       break;
+      console.log(`this is ${planet}`);
+      break;
     case 'earth':
-      yourShieldPercentContainer.classList.add('twenty');
+      console.log(`this is ${planet}`);
       break;
     case 'mars':
-      yourShieldPercentContainer.classList.add('incorrect');
+      console.log(`this is ${planet}`);
       break;
     case 'jupiter':
-      yourShieldPercentContainer.classList.add('incorrect');
+      console.log(`this is ${planet}`);
       break;
     case 'saturn':
-      yourShieldPercentContainer.classList.add('incorrect');
+      console.log(`this is ${planet}`);
       break;
     case 'uranus':
-      yourShieldPercentContainer.classList.add('incorrect');
+      console.log(`this is ${planet}`);
       break;
-      case 'neptune':
-      yourShieldPercentContainer.classList.add('incorrect');
+    case 'neptune':
+      console.log(`this is ${planet}`);
       break;
   }
 }
