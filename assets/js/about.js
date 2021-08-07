@@ -94,36 +94,57 @@ function getID(event) {
 
 function figureModalContent(planet) {
   console.log(planet);
+  let planetName;
+  let planetHTML;
 
   switch(planet){
     case 'sun':
-      console.log(`this is the ${planet}`);
+      planetName = planetArray[0].name;
+      planetHTML = planetArray[0].summary;
+      console.log(planetName, planetHTML);
       break;
     case 'mercury':
-      console.log(`this is ${planet}`);
+      planetName = planetArray[1].name;
+      planetHTML = planetArray[1].summary;
+      console.log(planetName, planetHTML);
       break;
     case 'venus':
-      console.log(`this is ${planet}`);
+      planetName = planetArray[2].name;
+      planetHTML = planetArray[2].summary;
+      console.log(planetName, planetHTML);      
       break;
     case 'earth':
-      console.log(`this is ${planet}`);
+      planetName = planetArray[3].name;
+      planetHTML = planetArray[3].summary;
+      console.log(planetName, planetHTML);      
       break;
     case 'mars':
-      console.log(`this is ${planet}`);
+      planetName = planetArray[4].name;
+      planetHTML = planetArray[4].summary;
+      console.log(planetName, planetHTML);      
       break;
     case 'jupiter':
-      console.log(`this is ${planet}`);
+      planetName = planetArray[5].name;
+      planetHTML = planetArray[5].summary;
+      console.log(planetName, planetHTML);      
       break;
     case 'saturn':
-      console.log(`this is ${planet}`);
+      planetName = planetArray[6].name;
+      planetHTML = planetArray[6].summary;
+      console.log(planetName, planetHTML);      
       break;
     case 'uranus':
-      console.log(`this is ${planet}`);
+      planetName = planetArray[7].name;
+      planetHTML = planetArray[7].summary;
+      console.log(planetName, planetHTML);      
       break;
     case 'neptune':
-      console.log(`this is ${planet}`);
+      planetName = planetArray[8].name;
+      planetHTML = planetArray[8].summary;
+      console.log(planetName, planetHTML);      
       break;
   }
+
 }
 
 let planetArray = [
@@ -149,11 +170,11 @@ let planetArray = [
     summary:
     `
     <p>Venus is the second planet from the Sun and is Earth’s closest planetary neighbor. It’s one of the four inner, terrestrial (or rocky) planets, and it’s often called Earth’s twin because it’s similar in size and density. These are not identical twins, however – there are radical differences between the two worlds.</p>
-    <p>Venus has a thick, toxic atmosphere filled with carbon dioxide and it’s perpetually shrouded in thick, yellowish clouds of sulfuric acid that trap heat, causing a runaway greenhouse effect. It’s the hottest planet in our solar system, even though Mercury is closer to the Sun. Surface temperatures on Venus are about 900 degrees Fahrenheit (475 degrees Celsius) – hot enough to melt lead. The surface is a rusty color and it’s peppered with intensely crunched mountains and thousands of large volcanoes. Scientists think it’s possible some volcanoes are still active.
+    <p>Venus has a thick, toxic atmosphere filled with carbon dioxide and it’s perpetually shrouded in thick, yellowish clouds of sulfuric acid that trap heat, causing a runaway greenhouse effect. It’s the hottest planet in our solar system, even though Mercury is closer to the Sun. Surface temperatures on Venus are about 900 degrees Fahrenheit (475 degrees Celsius) – hot enough to melt lead. The surface is a rusty color and it’s peppered with intensely crunched mountains and thousands of large volcanoes. Scientists think it’s possible some volcanoes are still active.</p>
 
-    Venus has crushing air pressure at its surface – more than 90 times that of Earth – similar to the pressure you'd encounter a mile below the ocean on Earth.
+    <p>Venus has crushing air pressure at its surface – more than 90 times that of Earth – similar to the pressure you'd encounter a mile below the ocean on Earth.</p>
     
-    Another big difference from Earth – Venus rotates on its axis backward, compared to most of the other planets in the solar system. This means that, on Venus, the Sun rises in the west and sets in the east, opposite to what we experience on Earth.</p>
+    <p>Another big difference from Earth – Venus rotates on its axis backward, compared to most of the other planets in the solar system. This means that, on Venus, the Sun rises in the west and sets in the east, opposite to what we experience on Earth.</p>
     `
   },
   {
@@ -161,9 +182,9 @@ let planetArray = [
     summary: 
     `
     <p>Our home planet is the third planet from the Sun, and the only place we know of so far that’s inhabited by living things.</p>
-    <p>While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun, all of which are made of rock and metal.
+    <p>While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun, all of which are made of rock and metal.</p>
 
-    The name Earth is at least 1,000 years old. All of the planets, except for Earth, were named after Greek and Roman gods and goddesses. However, the name Earth is a Germanic word, which simply means “the ground.”</p>
+    <p>The name Earth is at least 1,000 years old. All of the planets, except for Earth, were named after Greek and Roman gods and goddesses. However, the name Earth is a Germanic word, which simply means “the ground.”</p>
     `
   },
   {
@@ -179,9 +200,8 @@ let planetArray = [
     summary:
     `
     <p>Saturn is the sixth planet from the Sun and the second-largest planet in our solar system.</p>
-    <p>Adorned with thousands of beautiful ringlets, Saturn is unique among the planets. It is not the only planet to have rings – made of chunks of ice and rock – but none are as spectacular or as complicated as Saturn's.
-
-    Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.</p>
+    <p>Adorned with thousands of beautiful ringlets, Saturn is unique among the planets. It is not the only planet to have rings – made of chunks of ice and rock – but none are as spectacular or as complicated as Saturn's.</p>
+    <p>Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.</p>
     `
   },
   {
@@ -189,9 +209,8 @@ let planetArray = [
     summary:
     `
     <p>Saturn is the sixth planet from the Sun and the second-largest planet in our solar system.</p>
-    <p>Adorned with thousands of beautiful ringlets, Saturn is unique among the planets. It is not the only planet to have rings – made of chunks of ice and rock – but none are as spectacular or as complicated as Saturn's.
-
-    Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.</p>
+    <p>Adorned with thousands of beautiful ringlets, Saturn is unique among the planets. It is not the only planet to have rings – made of chunks of ice and rock – but none are as spectacular or as complicated as Saturn's.</p>
+    <p>Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.</p>
     `
   },
   {
