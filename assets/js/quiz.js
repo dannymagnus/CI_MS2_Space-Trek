@@ -279,10 +279,10 @@ let questions = [
   {option:'Neutron Star', correct:false}]},
   {question: 'What is the hottest planet in our solar system?',
   answer:[
-  {option:'Earl Gray Tea', correct:true},
-  {option:'Darjeeling Tea', correct:false},
-  {option:'Black Coffee', correct:false},
-  {option:'Cognac', correct:false}]},
+  {option:'Venus', correct:true},
+  {option:'Mercury', correct:false},
+  {option:'Earth', correct:false},
+  {option:'Jupiter', correct:false}]},
   {question: 'How many planets are named after greek gods?',
   answer:[
   {option:'5', correct:false},
