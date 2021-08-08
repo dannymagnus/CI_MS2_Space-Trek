@@ -28,11 +28,12 @@
 7. [Testing](#validation)
     1. [HTML Validation](#HTML-validation)
     2. [CSS Validation](#CSS-validation)
-    3. [Accessibility](#accessibility)
-    4. [Performance](#performance)
-    5. [Device testing](#performing-tests-on-various-devices)
-    6. [Browser compatibility](#browser-compatibility)
-    7. [Testing user stories](#testing-user-stories)
+    3. [JS Validation](#JS-validation)
+    4. [Accessibility](#accessibility)
+    5. [Performance](#performance)
+    6. [Device testing](#performing-tests-on-various-devices)
+    7. [Browser compatibility](#browser-compatibility)
+    8. [Testing user stories](#testing-user-stories)
 8. [Bugs](#Bugs)
 10. [Deployment](#deployment)
 11. [Credits](#credits)
@@ -466,6 +467,19 @@ Whole site validation returned 13 errors on third party resources and 6 errors o
 
 <details><summary>Whole site</summary>
 <img src="docs/validation/css-validation/css-validation-site.png">
+</details>
+
+### JS Validation
+The Javascript of the each page of the site was validated using [JSHint validation tool](https://jshint.com/).  All pages returned a pass with 0 errors and 0 warnings.
+
+<details><summary>Home</summary>
+<img src="docs/validation/js-validation/js-validation-index.png">
+</details>
+<details><summary>About</summary>
+<img src="docs/validation/js-validation/js-validation-about.png">
+</details>
+<details><summary>Quiz</summary>
+<img src="docs/validation/js-validation/js-validation-quiz.png">
 </details>
 
 ### Accessibility
