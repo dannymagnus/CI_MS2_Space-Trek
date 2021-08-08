@@ -129,20 +129,19 @@ These colours have been chosen as they fit with the images that will be used for
 <img src="docs/features/colour_pallette.png">
 
 ### Fonts
-My heading font is Cormorant Garamond from Google Fonts. I chose this font because:
-- The elegant and curved nature is similar to the fonts used in the products on display. 
-- It gives a contrast to the font used for the body text so the headers stand out.
+My first heading font is a custom font StarTrekEnterpriseFuture. I chose this font because it closley resembles the Linotype fonts used in the orginal Star-Trek TV show which inspired this site.<br>
+The second heading font is Rambla from Google Fonts.  This was chosen for the fact that is was recommended to be a space style font inkeeping with the main logo font.
 <br>
-My body font is Playfair Display from Google Fonts. I chose this font because:
-It contrasts well with the header font.
+My body font is Lato from Google Fonts. I chose this font because:
+It was suggested by Google to complement the header font.
 
 ### Structure
-The structure of the site is to contain five pages in order; 
+The structure of the site is to contain four pages in order; 
 - Home 
-- Products
 - About
-- Contact
+- Quiz
 - 404 (internal page for page not found errors)
+- Contact modal - not a page in itself but an overlay available from all page footers
 
 Each page contains the following structure
 
@@ -174,9 +173,10 @@ Each page contains the following structure
 </details>
 <details><summary>Contact</summary>
 <img src="docs/wireframes/contact-us-wireframe.png">
+<img src="docs/wireframes/contact-received-wireframe.png">
 </details>
 <details><summary>404</summary>
-<img src="docs/wireframes/404-wireframe.png">
+<img src="docs/wireframes/error-404-wireframe.png">
 </details>
 
 ## Technologies Used
@@ -184,6 +184,7 @@ Each page contains the following structure
 ### Languages
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JS ES6](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks & Tools
 1. [Git](https://git-scm.com/)
@@ -210,6 +211,8 @@ Each page contains the following structure
 - Google Maps was used for the iframe in contact information.
 12. [Favicon](www.favicon.io)
 - Favicon was used for the browser tab icon.
+13. [Jquery](https://jquery.com/)
+- Jquery was used for various jquery related methods throughout the application.
 
 ## Features
 
