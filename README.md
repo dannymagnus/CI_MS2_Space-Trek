@@ -92,37 +92,42 @@ The scope of the project in it’s first release is defined by the following fea
 - Responsive navigation bar mirrored across each page which enables users to navigate the site without user the browser buttons.
 - A footer across all pages with links to social media and button to message the owner. 
 - Modal where you can send a message to the site owner, including your contact details.
-- An about page where the user can interact to trigger dynamic information
-- Embedded map with pin to show company location.
-- Contact details with email address and business address for further correspondance and to provide more that one contact method. 
-- An as featured in section to incorporate badges to give business credibility. 
-- An about page to with information about the business and owner to build a personal connection and trust.
-- A products page with introduction to products on offer with entry price points.
-- Embedded video to show the creation process and increase interaction with the site.
-- An example image gallery for two off the shelf designs.
+- An about page where the user can interact to trigger dynamic information about planets in the solar system
+- Embedded iframe with iteractivity about the solar system.
+- For mobile devices - selectable planets on home page with summary information. 
+- A fully interactive quiz page
+- 
 - Favicon icon to help users identify the site.
 
 Features to be built in future releases: 
 
-- Further four designs with image galleries in customisable section. 
-- Links to downloadable price lists for each suite of options.
-- A page for 'on the day' stationery offerings, to include propositions such as menus, place cards, orders of service, signage.
+- Larger question bank. 
+- API for spotify for space exploration inspired soundtracks
+- Choose your own ship from a selection of images.
+- Random enemy ship images.
+- Selectable difficulty levels in the quiz.
 
 ## Design
 
 ### Design Choices
-My theme for the design came from the brand imagery. I wanted to create a website that would compliment but not overshadow the galleries to ensure they stand out to customers. 
-I wanted it to appear soft with romantic elements to match the target audience, which mostly consists of female brides, and I used inspiration from nature to compliment the products on offer.
+My theme for the website came originally came from retro space exploration TV shows. I wanted to create a website that would offer more majesty in its background than just stars and a black backgound so chose some with brighter highlights and subject matter such as planets. <br>
+So as to not distract from the foreground a dark overlay with gradient ws placed over the image.
 
-I wanted a site that was straightforward, with the information being concise and clear in a way that’s easy to navigate.
+I wanted a site that was straightforward, with the information being concise and clear in a way that’s easy to navigate so I kept the navigation limited as to three navigation buttons with the contact as a self made modal that would appear on selection.
+
+I wanted graphical additions to the quiz to increase visual appeal rather than just text and geometrical shapes.
+
+I used opacity of ovelaying objects to increase the premium feel of the site.
 
 ### Colour
-- Text headings - #383d41
-- Text Body - #383d41
-- Background colours - #fff
+- Text Logo and text hover - rgb(253, 252, 195)
+- Text Body and other headers - white
+- Button colors - rgb(45, 112, 147)
 - Modals and buttons - rgba(250, 218, 221, 0.5)
 
 These colours have been chosen as they fit with the images that will be used for background and for foreground images and are representative of the end product.  They must also be suitable for accessibility support.
+The hex values from the adobe pallette below were converted to rbg as listed above.<br>
+Correct and incorrect colors where on a scale of red to green within the quiz section, as was the color to show damage to the 'shield'.
 <br>
 
 <img src="docs/features/colour_pallette.png">
@@ -144,15 +149,15 @@ The structure of the site is to contain four pages in order;
 
 Each page contains the following structure
 
-*Brand logo text* - Clicking this will return the user to the landing page regardless from which page it is selected.
+*Site logo text* - Clicking this will return the user to the landing page regardless from which page it is selected.
 
-*Navbar* - A responsive navbar to be featured in the header of each page.  The links will be ordered from left to right in order of priority to the site and project goals and will link to each of the four pages listed above.  A modal enquiry button will also be featured unless on mobile devices for a quick enquiry form.
+*Navbar* - A responsive navbar to be featured in the header of each page.  The links will be ordered from left to right in order of priority to the site and project goals and will link to each of the three pages listed above.  
 
-*Title Banner* - to display current page on view.
+*Title Banner* - small spaceman icon will sit under the currently selected page to indicate what page the user is on.
 
-*Content Blocks* - The top most being the highest priority information flowing downwards to the lower tiers of priority. The structure will follow the law of thirds to make it visually appealing to users.  These blocks will contain call to action in each page, either inline or modal to contact the business and internal links following the sales progression where appropriate.
+*Content Blocks* - Each page will occupy the whole of the view port with little scrolling required.  The main content will be centered on the page.
 
-*Footer* - This will display image credits and link to other business partners eg wedding photography, it will have terms and conditions link as well as social media links.
+*Footer* - This will display social media links and a button to a modal contact form.
 
 ### Wireframes
 
