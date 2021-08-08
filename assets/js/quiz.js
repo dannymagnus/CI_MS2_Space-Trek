@@ -14,10 +14,6 @@ let quizRegister = document.getElementById('quiz-register');
 let quizForm = document.getElementById('quiz-form');
 quizForm.addEventListener('submit', registerUserShip);
 // To grab name input element for quiz page 
-let nameInput = document.getElementById('name-input');
-// To grab ship input element for quiz page 
-let shipInput = document.getElementById('ship-input');
-// To grab button on ship register
 let registerShipButton = document.getElementById('register-ship');
 registerShipButton.addEventListener('click', registerUserShip);
 // To grab whole text and question area
