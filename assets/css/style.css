@@ -217,7 +217,7 @@ footer {
     bottom: 0;
     width:100%;
 }
-/*Used to position footer on quiz page for smaller screens */
+/*Used to position footer on != 'quiz page' for smaller screens */
 .footer-outer {
     position: absolute;
 }
