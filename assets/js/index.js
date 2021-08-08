@@ -78,6 +78,7 @@ window.onload = function () {
   });
 };
 
+//Event listener/handler to close modal window
 modalClose.addEventListener('click', () => {
   "use strict";
   $("#contact-form-outer").fadeOut(1000);

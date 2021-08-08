@@ -142,42 +142,61 @@ function nextQuestion(){
   revealQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
+//function to reveal next question
 function revealQuestion(question){
+  //Takes question value from the object
   questionElement.innerText = question.question;
   for (let i = 0; i < question.answer.length; i++) {
-    console.log(question.answer[i]);
+    //For each answer in the object, create a button
     var button = document.createElement('button');
+    // Set button text as the answer text
     button.innerText = question.answer[i].option;
+    // Add syling classes to the buttons
     button.classList.add('btn-quiz', 'btn');
+    // Add listeners with the chooseAnswer function
     button.addEventListener('click', chooseAnswer);
+    //Add dataset item on element that has true (data set used and dont want to change boolean values)
     if(question.answer[i].correct === true){
       button.dataset.correct = question.answer[i].correct;
     }
+    //Apend each buttons to anwers element
     answersHTMLElement.appendChild(button);
   }
-  console.log(answersHTMLElement);
 }
 
+//Function to reset question/answer space
 function clearState(){
+  //Reset background to neutral
   quizOuter.classList.remove('correct');
   quizOuter.classList.remove('incorrect');
+  //Reveal the next question button
   shootButton.classList.add('hidden');
+  //Clear the content from the answers element
   answersHTMLElement.innerHTML = '';
 }
 
+//Event listener function from select answer
 function chooseAnswer(event){
+    //Captures users selection
     selectedButton = event.target;
+    //Compares user selection to true value stored in dataset and capture as boolean
     correct = selectedButton.dataset.correct;
+    //If statement to reduce shields
     if (correct){
       enemyShields -= 20;
     }else{yourShields -= 20;
     }
+    //Function to set color of outer background
     setStatusClass(quizOuter, correct);
+    //Function to set color of buttons
     Array.from(answersHTMLElement.children).forEach(button => {
       setStatusClass(button, button.dataset.correct);
     });
+    //Function to set color of you shield bubble
     changeYourShieldColor();
+    //Function to set color of enemy shield bubble
     changeEnemyShieldColor();
+    //If statement if your shields are 0 - game over
     if (yourShields <= 0 ){
       beginButton.classList.remove('hidden');
       beginButton.innerText = 'Play again';
@@ -189,6 +208,7 @@ function chooseAnswer(event){
       quesContainer.classList.add('hidden');
       $ ( "#your-ship-img" ).fadeOut(1000);
     }
+    //if enemy shields are 0 - you win
     else if(enemyShields <= 0){
       beginButton.classList.remove('hidden');
       beginButton.innerText = 'Play again';
@@ -200,6 +220,7 @@ function chooseAnswer(event){
       quesContainer.classList.add('hidden');
       $ ( "#enemy-ship-img" ).fadeOut(1000);
     }
+    //game continue if shields !==0
     else{shootButton.classList.remove('hidden');
   }
     yourShieldPercent.innerText = yourShields;
@@ -247,7 +268,7 @@ function changeEnemyShieldColor(){
   }
 }
 
-//
+// Function to add css classes and change color of background and buttons
 function setStatusClass(element,correct) {
   element.classList.remove('correct');
   element.classList.remove('incorrect');
@@ -257,8 +278,6 @@ function setStatusClass(element,correct) {
     element.classList.add('incorrect');
   }
 }
-
-// Function to create buttons for answers //
 
 //Question Randomiser //
 

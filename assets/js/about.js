@@ -80,20 +80,19 @@ window.onload = function () {
   });
 };
 
-let modalHeader = document.querySelector('.modalHeader');
 
+//listener in jquery to get ID of target
 $('#earth-container').click(getID);
-
+//Fuction to process ID
 function getID(event) {
   let planetElement = event.target;
-  console.log(planetElement);
   let planetId = planetElement.id;
-  console.log(planetId);
+  //Pass id to figureModalContent function
   figureModalContent (planetId);
 }
-
+//Function to set variable based on switch
 function figureModalContent(planet) {
-  console.log(planet);
+  //declare variables
   let planetName;
   let planetHTML;
 
@@ -144,24 +143,28 @@ function figureModalContent(planet) {
       console.log(planetName, planetHTML);      
       break;
   }
+  //Call function to assign modal content
   assignModal(planetName,planetHTML);
 }
-
+// Function to assign modal content
 function assignModal(name, text){
+  // declare variables
   let planetModalTitle = document.querySelector('#planetModalTitle');
   let planetModalBody = document.querySelector('#planetModalBody');
-
+  // set modal content
   planetModalTitle.innerHTML = name;
   planetModalBody.innerHTML = text;
-  console.log(planetModalTitle, planetModalBody);
+  // call function
   showModal();
 }
 
+//Function to show modal
 function showModal(){
-  $('.modal-backdrop').addClass('background-backdrop');
   $('#planetModal').modal('show');
 }
 
+//Object to hold planet data for mobile devices
+//Text data taken from NASA website https://solarsystem.nasa.gov/
 let planetArray = [
   {
     name:'Sun',
