@@ -627,7 +627,7 @@ All devices were able to pass all tests.
 | Quiz page       |      User shields OR ememy shields = 0  |  Quiz ends with success or defeat message  |  Works as expected  |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-13.png">
+<img src="docs/testing/user-story-8.png">
 </details>
 
 9. As a return visitor; I want an easy way to get in touch with the business to proceed with my purchase.
