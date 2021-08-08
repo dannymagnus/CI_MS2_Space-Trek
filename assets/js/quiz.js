@@ -71,6 +71,11 @@ function incrementQuestion(){
   function registerUserShip(event){
     //prevent default event
     event.preventDefault();
+    let namefield = document.forms["quiz-form"]["name-input"].value;
+    let shipfield = document.forms["quiz-form"]["ship-input"].value;
+    if (namefield == "" || shipfield == "") {
+    alert("All fields must be filled out");
+    return false;}
     //fades contact form button as modal impacts game layout
     $('#contact-launch').fadeOut(1000);
     //Grab user input for name and ship name
