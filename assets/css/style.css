@@ -372,13 +372,13 @@ footer {
     gap:10px;
     margin: 20px 0;
 }
-
+/*Change grid layout on small screens */
 @media (min-width: 560px){
     .answers-grid{
         grid-template-columns: repeat(2,auto);
     }
 }
-
+/*Hide content on small screens */
 @media (max-width: 560px){
     .sm{
         display:none;
@@ -404,17 +404,17 @@ footer {
 .btn-quiz.incorrect {
     --hue: var(--hue-incorrect);
 }
-
+/*Wrapper for begin and nex buttons*/
 .controls-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+/*Class to hide and show buttons dynamically through quiz*/
 .hidden {
     display:none;
 }
-
+/*Styling for 404 page*/
 ._404-outer {
     display: flex;
     align-items:center;
@@ -449,7 +449,7 @@ footer {
     background-position-x: center;
     background-repeat: no-repeat;
 }
-
+/*Contact modal header*/
 #contact-form-outer h1 {
     font-family: 'Star Trek Enterprise Future';
     color: var(--off-yellow);
@@ -523,11 +523,11 @@ footer {
     max-width: 30%;
     margin:0 35%;
 }
-
+/*Hide iframe on small devices*/
 #iframe-holder {
     display:none;
 }
-
+/*To change content for desktop devices */
 @media (min-width:769px){
     #earth-holder {
         display:none;
@@ -536,7 +536,7 @@ footer {
         display:flex;
     }
 }
-
+/*Main section*/
 #about-main-container {
     display: flex;
     justify-content: center;
@@ -548,7 +548,7 @@ footer {
     width:560px;
     max-width:80%;
 }
-
+/*To wrap iframe and planets*/
 .sol-container {
     display: flex;
     flex-flow: row nowrap;
@@ -573,14 +573,7 @@ footer {
     width: 600px;
     height:500px
 }
-/*To wrap iframe for responsive sizing*/
-.imgwrap iframe {
-    display: block;
-     width: 100%;
-     max-width: 800px; /*actual image width*/
-     height: auto; /* maintain aspect ratio*/
-     margin: auto; /*optional centering of image*/
-}
+
 /* To hide text reference on large screen about*/
 @media (min-width: 768px) {
     .large {
