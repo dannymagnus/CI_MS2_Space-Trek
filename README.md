@@ -206,17 +206,19 @@ Each page contains the following structure
 7. [Bootstrap v5.02](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - Bootstrap was used for the landing carousel, responsive nav bar, contact form modal, privacy policy and general terms and conditions modals.
 8. [Am I Responsive](http://ami.responsivedesign.is/)
-- The mockup image was created using Am I Responsive
+- The mockup image was created using Am I Responsive.
 9. [transfonter](https://transfonter.org/)
 - transfonter was used to convert the Logo text to fontface.
 10. [Visual Studio Code (VSCode)](https://code.visualstudio.com/)
 - VSCode was the IDE used to write the remainder of the project code.
-11. [Google Maps](https://www.google.co.uk/maps)
-- Google Maps was used for the iframe in contact information.
+11. [Mailjs](https://www.mailjs.com/)
+- Mailjs was used to send mail via email from contact form.
 12. [Favicon](www.favicon.io)
 - Favicon was used for the browser tab icon.
 13. [Jquery](https://jquery.com/)
 - Jquery was used for various jquery related methods throughout the application.
+14. [Solar System Scope](www.solarsystemscope.com)
+- Solar System Scope was used for the iframe on the about site.
 
 ## Features
 
@@ -226,69 +228,9 @@ The website consists of four pages and 8 features.
 
 ### Feature 1: home page
 
-The sections of the home page include:
+The home page gives the visitor an overview of what they can expect from visiting the site, and gives an introduction to the quiz.
 
-1. The main feature of the home page is the slideshow which plays on entry to the site.
-2. A ‘why us’ section which aims to build trust with potential customers.
-3. A ‘featured’ section to build brand credibility.
-4. A ‘testimonials’ section to build trust with potential customers.
-5. A modal pop up form to enable customers to contact the business easily.
-6. A footer which contains links to social media to provide additional inspiration for visitors.
-
-The site is fully responsive and tested on tablet on mobile. The copy is partially written by myself in addition to copy given by RRweddings. Permission has been granted in all cases.
-
-*Section 1 – Slideshow:*
-
-The slideshow is the first impression that the business gets to make on the visitor. I chose 3 images all with a cohesive theme in terms of the colour palette and the styling. It plays automatically to add some movement to the page.
-
-![Hero image](https://github.com/dannymagnus/wedding-company/blob/master/assets/images/slide1.webp)
-
-*Section 2 – Why Us:*
-
-The why us section has text and images with a call to action. The imagery shows the business owner which aims to build trust with potential customers. The call to action provides an easy way for customers to get in touch quickly.
-
-![Why Choose Us](https://github.com/dannymagnus/wedding-company/blob/master/docs/features/why-choose-us.png)
-
-*Section 3 – Featured:*
-
-The featured section shows the business logos of high profile wedding businesses which the brand has been featured in. This aims to show credibility and to show customers that the products on offer are of a high standard.
-
-![Featured](https://github.com/dannymagnus/wedding-company/blob/master/docs/features/featured.png)
-
-*Section 4 – Testimonials:*
-
-The testominals section is comprised of text boxes with previous customers reviews. This is important to have visible on the first page to help build trust with prospective customers.
-
-![Testimonials](https://github.com/dannymagnus/wedding-company/blob/master/docs/features/kind-words.png)
-
-*Section 5 – Modal pop up form:*
-
-The pop up form appears when a visitor chooses 'Enquire Now' or 'Get in Touch'. For more information see feature 7.
-
-![Modal pop up](https://github.com/dannymagnus/wedding-company/blob/master/docs/features/modal-pop-up.png)
-
-*Section 6 – footer:*
-
-The footer is a feature across all pages but is important to allow customers to explore other areas of the business and gain more inspiration. For more information about the footer see feature 6.
-
-![Footer](https://github.com/dannymagnus/wedding-company/blob/master/docs/features/footer.png)
-
-**The home page features highlight the following user stories:**
-
-*2. As a first time user; I want to be able to get ideas and inspiration for my wedding stationery.*
-
-*3. As a first time user; I want to see that the businesses values match my own.*
-
-*4. As a first time user; I want to find some wedding stationery that will set the tone of my wedding and give that ‘wow’ factor.*
-
-*6. As a first time user; I want to be able to contact the business if I have any initial queries easily.*
-
-*7. As a first time user; I want to work with a brand that is trustworthy and credible as the wedding will be one of the most important days of my life.*
-
-*9. As a return visitor; I want an easy way to get in touch with the business to proceed with my purchase.*
-
-*11. As a site owner; I want prospective customers to be able to get in touch with me easily with any queries.*
-
+![Home page](docs/features/feature-home-page.png)
 ### Feature 2: Products
 
 The sections of home page include:
