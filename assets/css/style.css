@@ -420,7 +420,6 @@ footer {
     display: flex;
     align-items:center;
     justify-content: center;
-    height:90vh;
 }
 
 ._404-container{
@@ -430,7 +429,15 @@ footer {
 
 ._404-container p, ._404-container h2 {
     padding: 50px 0;
-    font-size: 1.5rem;
+}
+
+@media(min-width:767px){
+    ._404-container p, ._404-container h2{
+        font-size: 1.5rem;
+    }
+    ._404-outer {
+        min-height: 80vh;
+    }
 }
 
 /* Contact form */
@@ -544,7 +551,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items:center;
-    height:80vh;
+    min-height:80vh;
     padding: 50px 10px;
 }
 
