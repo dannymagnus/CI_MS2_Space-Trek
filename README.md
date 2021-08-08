@@ -75,7 +75,7 @@
 4. As a first time user I want to be able to play a test my knowledge quiz
 5. As a first time user, I want be able to add a username and shipname so that my experience will be personalised.
 6. As a first time user, As a user I want to be able to select an answer to the multiple choice question and get feedback on whether I am correct.
-7. As a first time user, I want to work with a brand that is trustworthy and credible as the wedding will be one of the most important days of my life.
+7. As a first time user, I want to be able to view my progress on the quiz.
 8. As a first time user, I want to be able to navigate back through the site structure in case of page not found without using the browser back button.
 
 #### Returning User
@@ -610,11 +610,11 @@ All devices were able to pass all tests.
 <img src="docs/testing/user-story-6.png">
 </details>
 
-7. As a first time user; I want to work with a brand that is trustworthy and credible as the wedding will be one of the most important days of my life.
+7. As a first time user; As a first time user, I want to be able to view my progress on the quiz.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Testimonials and 'As Featured in'      |      Scroll down in home page     |To see as featured in section with 8 badges and then testimonials section | Works as expected |
+| Site quiz scores area      |      Answer questions and progress through quiz     |'Shield' percentage will update depending on number of answers correct / incorrect | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user-story-7.png">
