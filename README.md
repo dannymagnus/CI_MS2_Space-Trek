@@ -158,19 +158,24 @@ Each page contains the following structure
 ### Wireframes
 
 <details><summary>Home</summary>
-<img src="docs/wireframes/home_wireframe.png">
+<img src="docs/wireframes/home-wireframe.png">
 </details>
-<details><summary>Products</summary>
-<img src="docs/wireframes/product_wireframe.png">
+<details><summary>About</summary>
+<img src="docs/wireframes/about-wireframe.png">
+<img src="docs/wireframes/ipad-about-wireframe.png">
 </details>
-<details><summary>About Us</summary>
-<img src="docs/wireframes/about_wireframe.png">
+<details><summary>Quiz</summary>
+<img src="docs/wireframes/quiz-page-wireframe.png">
+<img src="docs/wireframes/quiz-begin-wireframe.png">
+<img src="docs/wireframes/quiz-question-wireframe.png">
+<img src="docs/wireframes/quiz-defeat-wireframe.png">
+<img src="docs/wireframes/quiz-victory-wireframe.png">
 </details>
 <details><summary>Contact</summary>
-<img src="docs/wireframes/contact_wireframe.png">
+<img src="docs/wireframes/contact-us-wireframe.png">
 </details>
 <details><summary>404</summary>
-<img src="docs/wireframes/404_wireframe.png">
+<img src="docs/wireframes/404-wireframe.png">
 </details>
 
 ## Technologies Used
