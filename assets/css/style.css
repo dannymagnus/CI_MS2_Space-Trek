@@ -23,7 +23,7 @@
     background-color: black;
     --logo-font: "Star Trek Enterprise Future";
     --heading-font: 'Rambla', sans-serif;
-    --off-yellow: rgb(252, 252, 189);
+    --off-yellow: rgb(253, 252, 195);
     --light-grey:light gray;
     --hue-correct: 7,200,0;
     --hue-incorrect:224,0,0;
@@ -32,7 +32,7 @@
     --hue-sixty:250,183,51;
     --hue-fourty:255,142,21;
     --hue-twenty:255,78,17;
-    --hue-footer-icons:48, 109, 150;
+    --hue-footer-icons:45, 112, 147;
 }
 
 /* Body default styling */

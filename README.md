@@ -44,7 +44,7 @@
 ### User Goals
 - Play a fun and engaging space theme microsite with quiz
 - Explore fun Earth and Surrounding planet facts
-- Test your Star_Trek and general space knowledge.
+- Test your general space knowledge.
 
 ### Site Owner Goals
 - Create an fun and interactive space-adventure microsite
@@ -54,7 +54,7 @@
 ## User Experience
 
 ### Target Audience
-- Star-Trek and Space enthusiasts
+- Space enthusiasts
 - Casual gamers
 
 ### User Requirements and Expectations
@@ -90,10 +90,9 @@
 The scope of the project in it’s first release is defined by the following features: 
 
 - Responsive navigation bar mirrored across each page which enables users to navigate the site without user the browser buttons.
-- A footer across all pages with links to social media, terms and conditions with pricing, links and credits to partners. 
-- Modal where you can book an intial enquiry with the site owner/company.
-- Pricing page which communicates the costs of the different products and packages simply. 
-- Contact form where the customer can send an enquiry, when all fields are populated.
+- A footer across all pages with links to social media and button to message the owner. 
+- Modal where you can send a message to the site owner, including your contact details.
+- An about page where the user can interact to trigger dynamic information
 - Embedded map with pin to show company location.
 - Contact details with email address and business address for further correspondance and to provide more that one contact method. 
 - An as featured in section to incorporate badges to give business credibility. 
