@@ -77,6 +77,7 @@
 6. As a first time user, As a user I want to be able to select an answer to the multiple choice question and get feedback on whether I am correct.
 7. As a first time user, I want to be able to view my progress on the quiz.
 8. As a first time user, I want feedback on whether I have successfully completed the quiz or not.
+9. As a first time user, I want to be able to play the quiz again.
 
 #### Returning User
 9. As a return visitor; I want an easy way to get in touch with the business to proceed with my purchase.
@@ -630,16 +631,14 @@ All devices were able to pass all tests.
 <img src="docs/testing/user-story-8.png">
 </details>
 
-9. As a return visitor; I want an easy way to get in touch with the business to proceed with my purchase.
+9. As a first time user, I want to be able to play the quiz again.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Find Enquire now Modal in nav bar      |      Click link, complete all fields and press submit OR close button     |Form submits and closes OR closes without submission.  If all fields not filled correctly, higlights error to user | Works as expected |
-| Find Get in touch button | Click button, complete all fields and click submit OR close icon | Form submits and closes OR closes without submission.  If all fields not filled correctly, higlights error to user | Works as expected |
-| Find internal get in touch OR email me links   |   Click on link   | Redirects to Contact page | Works as expected |
+| Quiz restart      |      Complete quiz and click play again     | Quiz restarts with out user needing to re-register |  Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-6-8-10-11.png">
+<img src="docs/testing/user-story-9.png">
 </details>
 
 10. As a site owner; I want potential clients to be able to be able to view imagery to inspire and attract them to book or purchase.
