@@ -74,7 +74,7 @@
 3. As a first time user I want to be able to interactively increase my knowledge about space and the solar system.
 4. As a first time user I want to be able to play a test my knowledge quiz
 5. As a first time user, I want be able to add a username and shipname so that my experience will be personalised.
-6. As a first time user, I want to be able to contact the business if I have any initial queries easily. 
+6. As a first time user, As a user I want to be able to select an answer to the multiple choice question and get feedback on whether I am correct.
 7. As a first time user, I want to work with a brand that is trustworthy and credible as the wedding will be one of the most important days of my life.
 8. As a first time user, I want to be able to navigate back through the site structure in case of page not found without using the browser back button.
 
@@ -600,16 +600,14 @@ All devices were able to pass all tests.
 <img src="docs/testing/user-story-5.png">
 </details>
 
-6. As a first time user; I want to be able to contact the business if I have any initial queries easily. 
+6. As a first time user, As a user I want to be able to select an answer to the multiple choice question and get feedback on whether I am correct.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
- Find Enquire now Modal in nav bar      |      Click link, complete all fields and press submit OR close button     |Form submits and closes OR closes without submission.  If all fields not filled correctly, higlights error to user | Works as expected |
-| Find Get in touch button | Click button, complete all fields and click submit OR close icon | Form submits and closes OR closes without submission.  If all fields not filled correctly, higlights error to user | Works as expected |
-| Find internal get in touch OR email me links   |   Click on link   | Redirects to Contact page | Works as expected |
+ Quiz page      |      Begin quiz and select answer     |User is presented with a question and multiple options which give feeback on true or false | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-6-8-10-11.png">
+<img src="docs/testing/user-story-6.png">
 </details>
 
 7. As a first time user; I want to work with a brand that is trustworthy and credible as the wedding will be one of the most important days of my life.
