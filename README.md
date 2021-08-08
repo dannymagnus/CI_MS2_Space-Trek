@@ -697,6 +697,8 @@ All devices were able to pass all tests.
 | Message us modal broke quiz display once started |
 | Hide message us button once quiz starts | Custom font does not display on IOS devices |
 | No fix at this time | Setting body as vh caused footer overlap as position absolute  |  Update absolute to not apply to quiz page |
+Clicking the answer buttons after the first selection depletes shields for each press | Bug unresolved |
+In the case listed above on sheilds reaching 0 both next and play again are listed |  Bug unresolved |
 ## Deployment
 
 ### GitHub Pages
