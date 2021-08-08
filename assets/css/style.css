@@ -456,13 +456,14 @@ footer {
     font-size: 50px;
     text-decoration: underline;
 }
-
+/*Contact form inner text and image container*/
 #contact-inner {
     display:flex;
     align-items: center;
     justify-content: center;
 }
 
+/*Container for communicator image*/
 #contact-img-container {
     background-image: url(../images/star-trek-communicator.webp);
     width:300px;
@@ -473,12 +474,12 @@ footer {
     height:500px;
     background-size: contain;
 }
-
+/*Modal contact form*/
 #contact-form {
     width:280px;
     font-size: 1.5rem;
 }
-
+/*Button styling contact form*/
 #contact-launch {
     --hue: var(--hue-footer-icons);
     background-color:rgb(var(--hue));
@@ -489,13 +490,13 @@ footer {
     background-color:grey;
     color: var(--off-yellow);
 }
-
+/*Hide communicator on small screens*/
 @media (max-width: 768px) {
     #contact-img-container {
         display: none;
 }
 }
-
+/*Flex container for buttons*/
 .form-buttons{
     display:flex;
     justify-content: space-between;
