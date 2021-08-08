@@ -79,9 +79,6 @@
 8. As a first time user, I want feedback on whether I have successfully completed the quiz or not.
 9. As a first time user, I want to be able to play the quiz again.
 
-#### Returning User
-9. As a return visitor; I want an easy way to get in touch with the business to proceed with my purchase.
-
 #### Site Owner 
 10. As a site owner; I want potential clients to be able to view imagery to inspire and attract them to book or purchase.
 11. As a site owner; I want prospective customers to be able to get in touch with me easily with any queries.
