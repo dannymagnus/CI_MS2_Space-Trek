@@ -42,7 +42,7 @@
 ## Project Goals 
 
 ### User Goals
-- Play a fun and engaging Star-Trek and Space Quiz
+- Play a fun and engaging space theme microsite with quiz
 - Explore fun Earth and Surrounding planet facts
 - Test your Star_Trek and general space knowledge.
 
