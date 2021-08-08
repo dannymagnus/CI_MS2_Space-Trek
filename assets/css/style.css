@@ -18,6 +18,7 @@
     box-sizing: border-box;
 }
 
+/* Set root values for body and quiz items */
 :root {
     background-color: black;
     --logo-font: "Star Trek Enterprise Future";
@@ -34,6 +35,7 @@
     --hue-footer-icons:48, 109, 150;
 }
 
+/* Body default styling */
 body {
     background-color: var(--off-white);
     font-family: 'Lato', sans-serif;
@@ -51,7 +53,7 @@ body {
     position:relative;
 }
 
-
+/* Set default heading fonts */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     text-transform: uppercase;
@@ -81,7 +83,7 @@ h1 {
     margin: 0;
     padding: 0;
 }
-
+/* Remove list style */
 .navbar-links li {
     list-style: none;
 }
@@ -117,7 +119,7 @@ h1 {
     background-color: var(--off-yellow);
     border-radius: 10px;
 }
-
+/* To display spaceman on current page */
 .active:after{
     display: block;
     text-align: center;
@@ -129,6 +131,7 @@ h1 {
     background-repeat:no-repeat;
     content:'';
 }
+/* Media query to diplay burger on smaller screens */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -173,7 +176,6 @@ h1 {
     }
 }
 /*Styling Logo text*/
-
 #logo a {
     font-family: var(--logo-font);
     font-size: 50px;
@@ -183,7 +185,6 @@ h1 {
 }
 
 /* Main Text */
-
 #main-container {
     display: flex;
     justify-content: center;
@@ -191,12 +192,12 @@ h1 {
     padding: 50px 10px;
     height:80vh;
 }
-
+/* Centered box for main text */
 #main-content {
     width: 320px;
     max-width: 80%;
 }
-
+/* Media query for smaller screens */
 @media (min-width:768px) {
 #main-content {
     width: 600px;
@@ -216,11 +217,11 @@ footer {
     bottom: 0;
     width:100%;
 }
-
+/*Used to position footer on quiz page for smaller screens */
 .footer-outer {
     position: absolute;
 }
-
+/*Flex container for footer */
 #footer-container {
     width: 90%;
     display: flex;
@@ -229,6 +230,7 @@ footer {
     padding:10px;
 }
 
+/* Flex to diplay list horizontally */
 .social-media ul {
     display: flex;
     list-style-type: none;
@@ -238,6 +240,7 @@ footer {
     width: 120px;
 }
 
+/* Set coloring for social icons */
 .social-media a {
     text-decoration: none;
     --hue: var(--hue-footer-icons);    
@@ -263,7 +266,7 @@ footer {
     padding:20px;
 }
 
-
+/* Ship start hidden - changed dynamically with js */
 .ship-container {
     display:none;
     align-items: center;
@@ -301,14 +304,14 @@ footer {
     border-radius: 20px;
     padding: 20px;
 }
-
+/*Container for scores*/
 .scores-wrapper {
     width: 100%;
     display: flex;
     margin:0 auto 25px;
     justify-content: space-between;
 }
-
+/*Styling for scores inner */
 .your-score-inner {
     display: flex;
     flex-direction: column;
@@ -329,6 +332,7 @@ footer {
     text-align:right;
 }
 
+/*Classes for shields to change dynamically with js by class append*/
 .shields-result {
     height: 50px;
     width: 50px;
@@ -362,7 +366,7 @@ footer {
 .shields-result.incorrect{
     --hue: var(--hue-incorrect);
 }
-
+/*grid to hold answer buttons created by js quiz */
 .answers-grid{
     display:grid;
     gap:10px;
@@ -552,35 +556,24 @@ footer {
     margin: 0;
 }
 
-.planet-holder {
-    display: grid;
-    width: 100%;
-    max-width: 800px; /*actual image width*/
-    height: auto;; /* maintain aspect ratio*/
-    max-height: 260px;
-    margin: auto; /*optional centering of image*/
-    background-image: url(../images/solar-black.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
+/* Wrap images to size properly*/
 .planet {
     flex: 1 1 40%;  /*grow | shrink | basis */
     display:relative;
 }
-
+/*To size images to be resposive on resize*/
 .planet img {
     display: block;
     width: 100%;
     height: auto; /* maintain aspect ratio*/
     margin: auto; /*optional centering of image*/
 }
-
+/*used to reload modal after modal popup interrupt*/
 #reload {
     width: 600px;
     height:500px
 }
-
+/*To wrap iframe for responsive sizing*/
 .imgwrap iframe {
     display: block;
      width: 100%;
@@ -588,17 +581,13 @@ footer {
      height: auto; /* maintain aspect ratio*/
      margin: auto; /*optional centering of image*/
 }
-
+/* To hide text reference on large screen about*/
 @media (min-width: 768px) {
     .large {
         display:none;
     }
 }
-
+/*Overide bootstrap styles*/
 .modal-content {
     background-color: rgb(46, 44, 44);
-}
-
-.modal-dialog.planet-dialog {
-    background-color: darkgrey;
 }
