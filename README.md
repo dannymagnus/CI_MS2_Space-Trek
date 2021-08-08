@@ -72,7 +72,7 @@
 1. As a first time user I want to be able to contact the site owner easily
 2. As a first time user, I want to be able to navigate the site quickly and easily
 3. As a first time user I want to be able to interactively increase my knowledge about space and the solar system.
-4. As a first time user, I want to find some wedding stationery that will set the tone of my wedding and give that ‘wow’ factor.
+4. As a first time user I want to be able to play a test my knowledge quiz
 5. As a first time user, I want to be able to see some indication of prices and timescales so I know whether this product is right for me.
 6. As a first time user, I want to be able to contact the business if I have any initial queries easily. 
 7. As a first time user, I want to work with a brand that is trustworthy and credible as the wedding will be one of the most important days of my life.
@@ -574,20 +574,20 @@ All devices were able to pass all tests.
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
 | Find link to About page in nav bar       |      Click link and find solar interactive iframe, click to launch      | iframe should launch interactive content (desktop only) | Works as expected |
+| Find link to About page in nav bar       |      Click link and find solar interactive planet selection, click a planet to launch      | modal should launch interactive content (desktop only) | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user-story-3.png">
 </details>
 
-4. As a first time user; I want to find some wedding stationery that will set the tone of my wedding and give that ‘wow’ factor.
+4. As a first time user I want to be able to play a test my knowledge quiz.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Find link to products page in nav bar       |      Click link and scroll page peony and anemone gallery |To see images of stationery designs | Works as expected |
-| Find links to Pinterest and Instagram in page footer  |   Click on link   | Opens Pinterest board for RR Weddings or RRWeddings Instagram respectively | Works as expected |
+| Find link to quiz page in nav bar       |      Click link  |  Quiz page appears | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-4-9.png">
+<img src="docs/testing/user-story-4.png">
 </details>
 
 5. As a first time user; I want to be able to see some indication of prices and timescales so I know whether this product is right for me.
