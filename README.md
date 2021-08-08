@@ -479,10 +479,10 @@ The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/ was
 <details><summary>About</summary>
 <img src="docs/validation/wave-validation/wave-validation-about.png">
 </details>
-<details><summary>Products</summary>
+<details><summary>Quiz</summary>
 <img src="docs/validation/wave-validation/wave-validation-quiz.png">
 </details>
-<details><summary>Contact</summary>
+<details><summary>404</summary>
 <img src="docs/validation/wave-validation/wave-validation-404.png">
 </details>
 
