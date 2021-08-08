@@ -516,18 +516,16 @@ The website was tested on the following browsers:
 1. Navigation toggle expands sub menu with no errors, resizing changes nav bar to burger icon.
 2. Navigation link work properly and redirect to appropriate pages with no broken links.
 3. Clicking the header logo directs users back to the home page on all pages.
-2. All internal anchor and outbound links tested to ensure correct redirect behavior with no broken links
-3. The enquire modal opens correctly on each page from both header and inline in index, able to populate and closes when submitted or close selected.
-4. The modal or contact form will not submit umless the user has sumbitted a name and email, phone remains optional.
-5. The footer modals; privacy policy and terms and conditions, are scrollable and close when close icons are selected.
-6. The bespoke video plays on each device and is able to be controlled and expanded to full screen.
-7. Images and text collapse into a column view when view on mobile devices.
-9. The google map has a location pin and is responsive to show company location.
-11. Inline anchor in product page direct customer to contact page.
-12. All pages are responsive and no text or image cut off in mobile views
-13. Designated items and text do not show in mobile layout.
-14. All copy is clear and legible.
-15. Flexbox and direction and breakpoints checked on browser resizing.
+4. All internal anchor and outbound links tested to ensure correct redirect behavior with no broken links
+5. The message us... modal opens correctly on each page able to populate and closes when submitted or close selected.
+6. The modal or contact form will not submit umless the user has sumbitted a name and email, phone remains optional.
+7. On contact form submission, success feedback message is given.
+8. Images and text collapse into a column view when view on mobile devices.
+9. About section switches from iframe to planet selection on small devices
+10. All pages are responsive and no text or image cut off in mobile views
+11. Designated items and text do not show in mobile layout.
+12. All copy is clear and legible.
+13. Flexbox and direction and breakpoints checked on browser resizing.
 
 #### Results: 
 
