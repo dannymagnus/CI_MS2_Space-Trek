@@ -31,6 +31,13 @@ window.onload = function () {
   document.getElementById('contact-form').addEventListener('submit', function (event) {
     // prevent default action
     event.preventDefault();
+    //Form validation to prevent empty field submission
+    let name = document.forms["contact-form"]["contact-name"].value;
+    let email = document.forms["contact-form"]["contact-email"].value;
+    let message = document.forms["contact-form"]["contact-message"].value;
+    if (name == "" || email == "" || message == "") {
+    alert("All fields must be filled out");
+    return false;}
     emailjs.init("user_mrJgfpy8vz9l8LqeGGrjA");
     // these IDs from the previous steps
     emailjs.sendForm('service_y7rgdam', 'dans_template', this)
@@ -80,7 +87,6 @@ window.onload = function () {
   });
 };
 
-
 //listener in jquery to get ID of target
 $('#earth-container').click(getID);
 //Fuction to process ID
@@ -90,7 +96,9 @@ function getID(event) {
   //Pass id to figureModalContent function
   figureModalContent (planetId);
 }
-//Function to set variable based on switch
+/*Function to set variable based on switch
+@param planet []
+*/
 function figureModalContent(planet) {
   //declare variables
   let planetName;

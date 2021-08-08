@@ -84,6 +84,7 @@
 10. As a site owner; I want users to be able to send us messages.
 11. As a site owner; I want users to be able to find us on social media.
 12. As a site owner; I want the site to be fully responsive and reactive across mobile, tablet and desktop devices.
+13. As a site owner; I want all form fields validated as to not have any empty values.
 
 ## Scope
 
@@ -528,6 +529,12 @@ All devices were able to pass all tests.
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
 | Whole site      |      Test above user stories across mobile, tablet and desktop devices | Site should be fully responsive and work without major errors| Works as expected |
+
+13. As a site owner; I want all form fields to be validated to not have any empty values.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  Message us modal form    |      Attempt to submit with any field as an empty value | Alert window should show prompting user to populate all fields | Works as expected |
 
 ## Bugs
 
