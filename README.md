@@ -82,9 +82,7 @@
 #### Site Owner 
 10. As a site owner; I want users to be able to send us messages.
 11. As a site owner; I want users to be able to find us on social media.
-12. As a site owner; I want prospective customers to be able to contact me via email alternatively to book their wedding stationery or for follow up queries.
-13. As a site owner; I want customers to be able to find information about my products easily to help them find the best design package to suit their needs.
-14. As a site owner; I want the site to be fully responsive across mobile, tablet and desktop devices.
+12. As a site owner; I want the site to be fully responsive and reactive across mobile, tablet and desktop devices.
 
 ## Scope
 
@@ -660,60 +658,28 @@ All devices were able to pass all tests.
 <img src="docs/testing/user-story-11.png">
 </details>
 
-12. As a site owner; I want prospective customers to be able to contact me via email alternatively to book their wedding stationery or for follow up queries.
+12. As a site owner; I want the site to be fully responsive and reactive across mobile, tablet and desktop devices.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Find Enquire now Modal in nav bar      |      Click link, complete all fields and press submit OR close button     |Form submits and closes OR closes without submission.  If all fields not filled correctly, highlights error to user | Works as expected |
-| Find Get in touch button | Click button, complete all fields and click submit OR close icon | Form submits and closes OR closes without submission.  If all fields not filled correctly, highlights error to user | Works as expected |
-| Find internal get in touch OR email me links   |   Click on link   | Redirects to Contact page | Works as expected |
-
-<details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-6-8-10-11.png">
-</details>
-
-13. As a site owner; I want customers to be able to find information about my products easily to help them find the best design package to suit their needs.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| Find Products page       |      Click product page link in nav bar, scroll down page OR click links in products page for Bespoke and Customisable  |  To see video and images of stationery and description of service  |  Works as expected  |
-
-<details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-12.png">
-</details>
-
-14. As a site owner; I want the site to be fully responsive across mobile, tablet and desktop devices.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| Site responsiveness     |      Use website inspector in Firefox OR Chrome for mobile (320px min), tablet, desktop MDPI, desktop HDPI |  Site should work and display correctly with no major errors/defects  |  Works as expected  |
-
-<details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-14a.png">
-<img src="docs/testing/user-story-14b.png">
-<img src="docs/testing/user-story-14c.png">
-</details>
+| Whole site      |      Test above user stories across mobile, tablet and desktop devices | Site should be fully responsive and work without major errors| Works as expected |
 
 ## Bugs
 
 | **Bug** | **Fix** |
 | ----------- | ----------- |
-| Text in about me main landing overhangs the container on resize | Change text size to vw to be responsive |
-| The user can submit a contact form input without a message | Add required attribute to message input field |
-| Footer logo does not display in flex container | Set explicit	width and height for image |
-| Footer icons fail accessibility checks | Add font awesome sr class and aria-hidden=“true” |
-| Link to modal fails on selecting ‘Get in touch’ button on home when Nav bar in toggle display | Change location of modal from header to get in touch for home page|
-|Body and Header were failing accessibility contrast | Change font colour|
-Modal submit button had no effect | Button was in modal footer outside of form, moved inside form |
-| Modal submit did not submit form | Update correct form dump path |
-| 404 link to about us didn't work | Corrected .html file name in anchor |
+| Modal close button greyed out and unresponsive | Removed 'disabled' attribute |
+| Unable to set overlaying div on solar system background in about small devices | Use individual img instead |
+| Message us modal broke quiz display once started |
+| Hide message us button once quiz starts | Custom font does not display on IOS devices |
+| No fix at this time | Setting body as vh caused footer overlap as position absolute  |  Update absolute to not apply to quiz page |
 ## Deployment
 
 ### GitHub Pages
 
 This website has been deployed using GitHub pages. To do the same...
 
-1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/wedding-company). 
+1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/CI_MS2_Space-Trek). 
 2. Click on 'Settings' in the repository. 
 3. Click 'Pages' in the left-hand menu once you're in Settings. 
 4. Click 'Source'.
@@ -725,13 +691,13 @@ This website has been deployed using GitHub pages. To do the same...
 
 By forking this GitHub repository you are making a copy of the original to view or make changes without affecting the original. You can do this by following these steps...
 
-1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/wedding-company).
+1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/CI_MS2_Space-Trek).
 2. Click 'Fork' (last button on the top right of the repository page).
 3. You will then have a copy of the repository in your own GitHub account. 
 
 ### Making a Local Clone
 
-1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/wedding-company).
+1. Log into your GitHub account and find the [repository](https://github.com/dannymagnus/CI_MS2_Space-Trek).
 2. Click on the 'Code' button (next to 'Add file'). 
 3. To clone the repository using HTTPS, under clone with HTTPS, copy the link.
 4. Then open Git Bash.
@@ -746,27 +712,25 @@ By forking this GitHub repository you are making a copy of the original to view 
 
 ### Code
 
-- **WebDev Simplified** - for [Flexbox](https://www.youtube.com/watch?v=fYq5PXgSsbE&t=363s) and [Units](https://www.youtube.com/watch?v=-GR52czEd-0). Youtuber for understanding flexbox and implementing testimonials, units, implementing responsive navbar.
-- **Frontend Paathshala** - [Modal Forms](https://https://www.youtube.com/watch?v=29ENlVMuTHs)
-- **CSS Tricks** - for [Flexbox](https://www.youtube.com/watch?v=29ENlVMuTHs)
-- **W3C Schools** - for [Breakpoints](https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp) in making each page responsive on different devices.
+- **WebDev Simplified** - for [Flexbox](https://www.youtube.com/watch?v=fYq5PXgSsbE&t=363s) and [Grid](https://www.youtube.com/watch?v=9zBsdzdE4sM) learning about quiz concepts.
+- **CSS Tricks** - for [Scaleable Divs](https://css-tricks.com/aspect-ratio-boxes/) for scaleable divs
+- **W3C Schools** - for [jquery](https://jquery.com/) FadeIn and FadeOut methods.
 - **Google Fonts** - for [Importing Fonts](https://fonts.google.com/)
-- **Bootstrap** - for [Landing Carousel and Modals](https://getbootstrap.com/docs/5.0/getting-started/introduction/). Bootstrap was used for the landing carousel, responsive nav bar, contact form modal, privacy policy and general terms and conditions modals.
+- **Bootstrap** - for [Modals](https://getbootstrap.com/docs/5.0/getting-started/introduction/). Bootstrap was used for the responsive nav bar, some button styles and modals in the about page for planets.
 - **Font Awesome** - for [Social Media Icons](https://fontawesome.com/)
 - **Favicon** - for [Browser icon](www.favicon.io)
-- **Google Maps** - for [iframe](https://www.google.co.uk/maps)
+- **Solar System Scope** - for [iframe](https://www.solarsystemscope.com/)
+- **Font Space** - for [Star-Trek Theme Font](https://www.fontspace.com/category/star-trek)
+- **Transfonter** - for [Font conversion](https://transfonter.org/)
+
 ### Media
 
 Media from the following artists was used throughout the site.
 
-- [The Brand Studio](https://www.thebrandstudio.co/)
-- [Rebecca Carpenter Photography](https://rebeccacarpenterphotography.com/)
-- [Pierra Photography](https://pierragphotography.com/)
-- [Stott Weddings](https://www.stottweddings.com/)
-- [Anna Rousos](https://annaroussos.com/)
-- [Katherine Yiannaki](https://katherineyiannaki.com/)
-- [David Boyton Photography](https://davidboyntonweddingphotography.pixieset.com/)
-- [Rebecca Richards Designs](https://www.instagram.com/accounts/login/?next=/rebeccarichardsdesigns/)
+- [Adobe Stock Images](www.stock.adobe.com)
+- [NASA](https://solarsystem.nasa.gov/planets/)
+- [Solar System Scope](https://www.solarsystemscope.com/)
+- [envatotutsplus](https://design.tutsplus.com/tutorials/create-a-star-trek-style-communicator-in-photoshop--psd-13545)
 
 
 ### Acknowledgements: 
@@ -774,3 +738,4 @@ Media from the following artists was used throughout the site.
 - To my wife Rebecca Richards for her testing, support, feedback, permissions for content and images on this project. 
 - To my mentor Mo Shami for his invaluable guidance and direction.
 - To the Code Institute slack community of students.
+- To the Code Institute Tutors

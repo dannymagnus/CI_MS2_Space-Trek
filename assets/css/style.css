@@ -466,6 +466,7 @@ footer {
 
 /*Container for communicator image*/
 #contact-img-container {
+    /* image credit envatotuts+ */
     background-image: url(../images/star-trek-communicator.webp);
     width:300px;
     background-position: center center;
