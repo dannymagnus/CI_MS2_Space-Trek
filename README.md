@@ -490,13 +490,10 @@ The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/ was
 <img src="docs/validation/lighthouse-validation/lighthouse-validation-index.png">
 </details>
 <details><summary>About</summary>
-<img src="docs/validation/lighthouse-validation/lighthouse-validation-about_us.png">
+<img src="docs/validation/lighthouse-validation/lighthouse-validation-about.png">
 </details>
-<details><summary>Products</summary>
-<img src="docs/validation/lighthouse-validation/lighthouse-validation-products.png">
-</details>
-<details><summary>Contact</summary>
-<img src="docs/validation/lighthouse-validation/lighthouse-validation-contact.png">
+<details><summary>Quiz</summary>
+<img src="docs/validation/lighthouse-validation/lighthouse-validation-quiz.png">
 </details>
 <details><summary>404</summary>
 <img src="docs/validation/lighthouse-validation/lighthouse-validation-404.png">
