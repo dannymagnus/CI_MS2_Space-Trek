@@ -130,7 +130,7 @@ The hex values from the adobe pallette below were converted to rbg as listed abo
 Correct and incorrect colors where on a scale of red to green within the quiz section, as was the color to show damage to the 'shield'.
 <br>
 
-<img src="docs/features/colour_pallette.png">
+<img src="docs/features/colour_palette.png">
 
 ### Fonts
 My first heading font is a custom font StarTrekEnterpriseFuture. I chose this font because it closley resembles the Linotype fonts used in the orginal Star-Trek TV show which inspired this site.<br>
