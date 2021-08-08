@@ -76,7 +76,7 @@
 5. As a first time user, I want be able to add a username and shipname so that my experience will be personalised.
 6. As a first time user, As a user I want to be able to select an answer to the multiple choice question and get feedback on whether I am correct.
 7. As a first time user, I want to be able to view my progress on the quiz.
-8. As a first time user, I want to be able to navigate back through the site structure in case of page not found without using the browser back button.
+8. As a first time user, I want feedback on whether I have successfully completed the quiz or not.
 
 #### Returning User
 9. As a return visitor; I want an easy way to get in touch with the business to proceed with my purchase.
@@ -620,12 +620,11 @@ All devices were able to pass all tests.
 <img src="docs/testing/user-story-7.png">
 </details>
 
-8. The user should be able to navigate back through the site structure in case of page not found without using the browser back button.
+8. As a first time user, I want feedback on whether I have successfully completed the quiz or not.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| 404 Page       |      Enter invalid site extension eg /products.htmll  |  redirected to internal error 404 page  |  Works as expected  |
-| 404 Page     | Click links from 404 page text  |  Redirects to valid site pages   |   Works as expected  |
+| Quiz page       |      User shields OR ememy shields = 0  |  Quiz ends with success or defeat message  |  Works as expected  |
 
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user-story-13.png">
