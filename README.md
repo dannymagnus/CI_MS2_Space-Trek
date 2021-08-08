@@ -632,23 +632,22 @@ All devices were able to pass all tests.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Find message us button in bottom right page       |      Click button, fill form, click submit       | Modal loads over top of current page, contact form presents, acknowledgement on submit, page returns | Works as expected |
-| Find message us button in bottom right page  |   Click button, fill form AND/OR click close (x) button   | Navigates to home page in same browser tab | Works as expected |
+| Quiz restart      |      Complete quiz and click play again     | Quiz restarts with out user needing to re-register |  Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="/docs/testing/user-story-10a.png">
-<img src="/docs/testing/user-story-10b.png">
+<img src="docs/testing/user-story-9.png">
 </details>
 
 10. As a site owner; I want users to be able to send us messages.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Find link to products page in nav bar       |      Click link and scroll page peony and anemone gallery |To see images of stationery designs | Works as expected |
-| Find links to Pinterest and Instagram in page footer  |   Click on link   | Opens Pinterest board for RR Weddings or RRWeddings Instagram respectively | Works as expected |
+| Find message us button in bottom right page       |      Click button, fill form, click submit       | Modal loads over top of current page, contact form presents, acknowledgement on submit, page returns | Works as expected |
+| Find message us button in bottom right page  |   Click button, fill form AND/OR click close (x) button   | Navigates to home page in same browser tab | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-4-9.png">
+<img src="/docs/testing/user-story-10a.png">
+<img src="/docs/testing/user-story-10b.png">
 </details>
 
 11. As a site owner; I want prospective customers to be able to get in touch with me easily with any queries.
