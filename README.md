@@ -81,7 +81,7 @@
 
 #### Site Owner 
 10. As a site owner; I want users to be able to send us messages.
-11. As a site owner; I want prospective customers to be able to get in touch with me easily with any queries.
+11. As a site owner; I want users to be able to find us on social media.
 12. As a site owner; I want prospective customers to be able to contact me via email alternatively to book their wedding stationery or for follow up queries.
 13. As a site owner; I want customers to be able to find information about my products easily to help them find the best design package to suit their needs.
 14. As a site owner; I want the site to be fully responsive across mobile, tablet and desktop devices.
@@ -650,16 +650,14 @@ All devices were able to pass all tests.
 <img src="/docs/testing/user-story-10b.png">
 </details>
 
-11. As a site owner; I want prospective customers to be able to get in touch with me easily with any queries.
+11. As a site owner; I want users to be able to find us on social media.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Find Enquire now Modal in nav bar      |      Click link, complete all fields and press submit OR close button     | Form submits and closes OR closes without submission.  If all fields not filled correctly, highlights error to user | Works as expected |
-| Find Get in touch button | Click button, complete all fields and click submit OR close icon | Form submits and closes OR closes without submission.  If all fields not filled correctly, highlights error to user | Works as expected |
-| Find internal get in touch OR email me links   |   Click on link   | Redirects to Contact page | Works as expected |
+| Find social media icon links in page footer      |      Click link    | Social media page opens in separate tab | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-6-8-10-11.png">
+<img src="docs/testing/user-story-11.png">
 </details>
 
 12. As a site owner; I want prospective customers to be able to contact me via email alternatively to book their wedding stationery or for follow up queries.
