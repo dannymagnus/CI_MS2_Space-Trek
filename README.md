@@ -80,7 +80,7 @@
 9. As a first time user, I want to be able to play the quiz again.
 
 #### Site Owner 
-10. As a site owner; I want potential clients to be able to view imagery to inspire and attract them to book or purchase.
+10. As a site owner; I want users to be able to send us messages.
 11. As a site owner; I want prospective customers to be able to get in touch with me easily with any queries.
 12. As a site owner; I want prospective customers to be able to contact me via email alternatively to book their wedding stationery or for follow up queries.
 13. As a site owner; I want customers to be able to find information about my products easily to help them find the best design package to suit their needs.
@@ -632,13 +632,15 @@ All devices were able to pass all tests.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Quiz restart      |      Complete quiz and click play again     | Quiz restarts with out user needing to re-register |  Works as expected |
+| Find message us button in bottom right page       |      Click button, fill form, click submit       | Modal loads over top of current page, contact form presents, acknowledgement on submit, page returns | Works as expected |
+| Find message us button in bottom right page  |   Click button, fill form AND/OR click close (x) button   | Navigates to home page in same browser tab | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-9.png">
+<img src="/docs/testing/user-story-10a.png">
+<img src="/docs/testing/user-story-10b.png">
 </details>
 
-10. As a site owner; I want potential clients to be able to be able to view imagery to inspire and attract them to book or purchase.
+10. As a site owner; I want users to be able to send us messages.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
