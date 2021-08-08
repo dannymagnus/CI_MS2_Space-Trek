@@ -73,7 +73,7 @@
 2. As a first time user, I want to be able to navigate the site quickly and easily
 3. As a first time user I want to be able to interactively increase my knowledge about space and the solar system.
 4. As a first time user I want to be able to play a test my knowledge quiz
-5. As a first time user, I want to be able to see some indication of prices and timescales so I know whether this product is right for me.
+5. As a first time user, I want be able to add a username and shipname so that my experience will be personalised.
 6. As a first time user, I want to be able to contact the business if I have any initial queries easily. 
 7. As a first time user, I want to work with a brand that is trustworthy and credible as the wedding will be one of the most important days of my life.
 8. As a first time user, I want to be able to navigate back through the site structure in case of page not found without using the browser back button.
@@ -590,12 +590,11 @@ All devices were able to pass all tests.
 <img src="docs/testing/user-story-4.png">
 </details>
 
-5. As a first time user; I want to be able to see some indication of prices and timescales so I know whether this product is right for me.
+5. As a first time user, I want be able to add a username and shipname so that my experience will be personalised.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Find link to products page in nav bar       |      Click link and scroll down to Bespoke and Customisable sections      |Entry price points and timescales in text | Works as expected |
-| Find Terms and Conditions link in footer  |   Click on link and scroll open dialogue | Opens modal with scollable text with prices and timings| Works as expected |
+| Find link to quiz page in nav bar       |      Click link and enter details and click begin  |Welcome message is displayed with user details| Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user-story-5.png">
