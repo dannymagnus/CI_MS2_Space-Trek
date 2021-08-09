@@ -20,7 +20,7 @@
 
 /* Set root values for body and quiz items */
 :root {
-    background-color: black;
+    background-color: #383831;
     --logo-font: "Star Trek Enterprise Future";
     --heading-font: 'Rambla', sans-serif;
     --off-yellow: rgb(253, 252, 195);
@@ -594,4 +594,9 @@ footer {
 /*Overide bootstrap styles*/
 .modal-content {
     background-color: rgb(46, 44, 44);
+}
+
+.swal2-title,
+.swal2-content {
+  color: white !important;
 }

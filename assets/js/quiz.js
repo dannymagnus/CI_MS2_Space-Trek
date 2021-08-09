@@ -6,6 +6,9 @@ const navbarLinks = document.getElementsByClassName('navbar-links')[0];
 toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active');
 });
+//For modal close button
+const modalClose = document.querySelector('#modal-close');
+
 
 //Variable declarations for quiz page //
 // Variable to grab quiz form
@@ -74,7 +77,18 @@ function incrementQuestion(){
     let namefield = document.forms["quiz-form"]["name-input"].value;
     let shipfield = document.forms["quiz-form"]["ship-input"].value;
     if (namefield == "" || shipfield == "") {
-    alert("All fields must be filled out");
+      Swal.fire({
+        title: 'Please complete all fields',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        },
+        background: '#383838',
+        confirmButtonColor: 'rgb(45,112,147)',
+        color:'white',
+      });
     return false;}
     //fades contact form button as modal impacts game layout
     $('#contact-launch').fadeOut(1000);
@@ -434,7 +448,18 @@ window.onload = function () {
     let email = document.forms["contact-form"]["contact-email"].value;
     let message = document.forms["contact-form"]["contact-message"].value;
     if (name == "" || email == "" || message == "") {
-    alert("All fields must be filled out");
+      Swal.fire({
+        title: 'Please complete all fields',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        },
+        background: '#383838',
+        confirmButtonColor: 'rgb(45,112,147)',
+        color:'white',
+      });
     return false;}
     emailjs.init("user_mrJgfpy8vz9l8LqeGGrjA");
     // these IDs from the previous steps
@@ -481,3 +506,9 @@ window.onload = function () {
     }
   });
 };
+
+//Event listener/handler to close modal window
+modalClose.addEventListener('click', () => {
+  "use strict";
+  $("#contact-form-outer").fadeOut(1000);
+});

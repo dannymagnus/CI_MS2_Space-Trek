@@ -11,6 +11,7 @@ const mainContent = document.getElementById('about-main-content');
 const mainContainer = document.getElementById('about-main-container');
 //To use variable with Jquery to hide and reveal main content
 const mainContentId = mainContent.getAttribute('id');
+const modalClose = document.querySelector('#modal-close');
 
 //Toggle for main nav bar
 toggleButton.addEventListener('click', () => {
@@ -36,7 +37,18 @@ window.onload = function () {
     let email = document.forms["contact-form"]["contact-email"].value;
     let message = document.forms["contact-form"]["contact-message"].value;
     if (name == "" || email == "" || message == "") {
-    alert("All fields must be filled out");
+      Swal.fire({
+        title: 'Please complete all fields',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        },
+        background: '#383838',
+        confirmButtonColor: 'rgb(45,112,147)',
+        color:'white',
+      });
     return false;}
     emailjs.init("user_mrJgfpy8vz9l8LqeGGrjA");
     // these IDs from the previous steps
@@ -86,7 +98,11 @@ window.onload = function () {
     }
   });
 };
-
+//Event listener/handler to close modal window
+modalClose.addEventListener('click', () => {
+  "use strict";
+  $("#contact-form-outer").fadeOut(1000);
+});
 //listener in jquery to get ID of target
 $('#earth-container').click(getID);
 //Fuction to process ID

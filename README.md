@@ -131,7 +131,7 @@ The hex values from the adobe pallette below were converted to rbg as listed abo
 Correct and incorrect colors where on a scale of red to green within the quiz section, as was the color to show damage to the 'shield'.
 <br>
 
-<img src="docs/features/colour_palette.png">
+<img src="docs/features/colour-palette.png">
 
 ### Fonts
 My first heading font is a custom font StarTrekEnterpriseFuture. I chose this font because it closley resembles the Linotype fonts used in the orginal Star-Trek TV show which inspired this site.<br>
@@ -528,7 +528,11 @@ Point to note:  On IOS devices.  The custom font StarTrekEnterpriseFuture did no
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|  Message us modal form    |      Attempt to submit with any field as an empty value | Alert window should show prompting user to populate all fields | Works as expected |
+|  Message us modal form    |      Attempt to submit with any field as an empty value | Alert window shown prompting user to populate all fields | Works as expected |  Ship registration form  |  Attempt to submit with any field as an empty value | Alert window shown prompting user to populate all fields |  Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-13.png">
+</details>
 
 ## Bugs
 
