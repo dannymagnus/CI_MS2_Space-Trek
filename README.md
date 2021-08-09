@@ -397,14 +397,8 @@ The website was tested on the following browsers:
 
 #### Results: 
 
-All devices were able to pass all tests.
-
-### Browser compatability
-
-- **Microsoft Edge**: Website and user stories work as expected. 
-- **Google Chrome**: Website and user stories work as expected. 
-- **Safari**:  Website and user stories work as expected. 
-- **Firefox**: Website and user stories work as expected. 
+All functional tests were passed.
+Point to note:  On IOS devices.  The custom font StarTrekEnterpriseFuture did not display correctly.  This remains as custom fonts on IOS in not in scope for this project.
 
 ### Testing user stories
 
