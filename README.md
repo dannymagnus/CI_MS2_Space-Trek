@@ -229,12 +229,33 @@ The website consists of four pages and eleven features.
 
 ### Current Features
 
-### Feature 1: home page
+### Feature 1: Home page
+![Home page](docs/features/feature-home-page.png)
 
 The home page gives the visitor an overview of what they can expect from visiting the site, and gives an introduction to the quiz.
 
-![Home page](docs/features/feature-home-page.png)
-### Feature 2: Quiz
+
+
+### Feature 2: About Page
+![About page](docs/features/feature-about-page.png)
+The about page consists of the following features:
+
+#### Fully interactive 3D iframe
+
+![About page](docs/features/feature-about-iframe.png)
+
+On desktop versions the visitor sees an iframe with a fully interactive solar system model where users can interact and explore the 3D model gaining knowledge about all the planets and moon in the solar system.
+
+#### Solar System Planet model
+![About page](docs/features/feature-about-planet-tool.png)
+
+-	On mobile devices the visitor sees an interactive solar system model with pop out modals containing planet information.  Any planet can be selected and a modal will pop up with interesting planet facts.
+
+**Thess screen covers the following user stories:**
+
+*3. As a first time user I want to be able to interactively increase my knowledge about space and the solar system.*
+
+### Feature 3: Quiz
 
 The quiz page contains the following features:
 1. The registration screen
@@ -298,6 +319,7 @@ The victory screen consists of 4 sections:
 *9. As a first time user, I want to be able to play the quiz again.*
 
 #### Defeat screen
+![Victory Screen](docs/features/feature-victory-screen.png)
 - The defeat screen consists of 4 sections:
 - The enemy ship is visible and the player’s ship fades off the screen
 - The score of the players ship and the enemy ship.
@@ -306,14 +328,8 @@ The victory screen consists of 4 sections:
 
 **This screen covers the following user stories:**
 
-
-### About Page
-The about page consists of the following features:
--	On desktop versions the visitor sees an iframe with a fully interactive solar system model.
--	On mobile devices the visitor sees an interactive solar system model.
-
-**This screen covers the following user stories:**
-
+8. As a first time user, I want feedback on whether I have successfully completed the quiz or not.
+9. As a first time user, I want to be able to play the quiz again.
 
 ### Contact page
 The contact page consists of the following features:
