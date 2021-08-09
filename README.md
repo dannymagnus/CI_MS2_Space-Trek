@@ -257,12 +257,19 @@ The Registration screen covers the following user stories:
 
 *5. As a first time user, I want be able to add a username and shipname so that my experience will be personalised.*
 #### Game start screen
+![Registration screen](docs/features/feature-game-start-screen.png)
 The game start screen consists of three sections. <br>
 - The image of the ship shows at this point and is continued throughout the quiz.
 - The other section consists of the rules of the quiz, as well as a brief story set up to engage visitors.
 - The button to begin the quiz
 
+**This screen covers the following user stories:**
+
+*5. As a first time user, I want be able to add a username and shipname so that my experience will be personalised.*
+
 #### Question screen
+![Question Screen](docs/features/feature-question-screen.png)
+
 The question screen consists of 5 sections:
 - The image of the visitors ship is displayed along with an enemy ship.
 - The score for the player, the scoring system is displayed as a percentage. For each correct answer the enemy ship score decreases by 20%, for each incorrect answer the player’s ship score decreases by 20%. The colour starts at green for both, and will decrease down to amber then red for correct and incorrect answers.
@@ -270,12 +277,25 @@ The question screen consists of 5 sections:
 - The container box which starts off blue, when the correct answer is chosen it turns green, when an incorrect answer is chosen it turns red.
 - The next button goes to the next question.
 
+**This screen covers the following user stories:**
+
+*6. As a first time user, As a user I want to be able to select an answer to the multiple choice question and get feedback on whether I am correct.*
+
+*7. As a first time user, I want to be able to view my progress on the quiz.*
+
 #### Victory screen
+![Victory Screen](docs/features/feature-victory-screen.png)
 The victory screen consists of 4 sections:
 - The player’s ship is visible and the enemy ship fades off the screen
 - The score of the players ship and the enemy ship.
 - A ‘play again’ button which restarts the quiz.
 - The container box which will turn green.
+
+**This screen covers the following user stories:**
+
+*8. As a first time user, I want feedback on whether I have successfully completed the quiz or not.*
+
+*9. As a first time user, I want to be able to play the quiz again.*
 
 #### Defeat screen
 - The defeat screen consists of 4 sections:
@@ -284,18 +304,30 @@ The victory screen consists of 4 sections:
 - A ‘play again’ button which restarts the quiz.
 - The container box which will turn red.
 
+**This screen covers the following user stories:**
+
+
 ### About Page
 The about page consists of the following features:
 -	On desktop versions the visitor sees an iframe with a fully interactive solar system model.
 -	On mobile devices the visitor sees an interactive solar system model.
+
+**This screen covers the following user stories:**
+
 
 ### Contact page
 The contact page consists of the following features:
 - A modal for the visitor to send a message.
 - An image of a receiver to continue the space theme across all pages.
 
+**This screen covers the following user stories:**
+
+
 ### Contact received page
 The contact received page shows the user their message has been received and a button which takes the visitor back to their last visited page.
+
+**This screen covers the following user stories:**
+
 
 ### Error 404 page
 
