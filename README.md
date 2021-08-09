@@ -220,10 +220,12 @@ Each page contains the following structure
 - Jquery was used for various jquery related methods throughout the application.
 14. [Solar System Scope](www.solarsystemscope.com)
 - Solar System Scope was used for the iframe on the about site.
+15. [SweetAlert](https://sweetalert2.github.io/)
+- SweetAlert was used for the form validation alerts
 
 ## Features
 
-The website consists of four pages and 8 features.
+The website consists of four pages and eleven features.
 
 ### Current Features
 
@@ -242,40 +244,54 @@ The quiz page contains the following features:
 5. The defeat screen
 
 #### Registration Screen
+![Registration screen](docs/features/registration-screen.png)
 The game start screen consists of two sections. 
 This text boxes are there to gather user details to be used in the subsequent game screens. This encourages user interaction as they are able to personalise their game.
 The button will sign the user up to the quiz with the information they have just inputted.
+The form contains Javascript validation to prevent empty values from being entered.
 
 #### Game start screen
-The game start screen consists of three sections. 
-The image of the ship shows at this point and is continued throughout the quiz.
-The other section consists of the rules of the quiz, as well as a brief story set up to engage visitors.
-The button to begin the quiz
+The game start screen consists of three sections. <br>
+- The image of the ship shows at this point and is continued throughout the quiz.
+- The other section consists of the rules of the quiz, as well as a brief story set up to engage visitors.
+- The button to begin the quiz
 
 #### Question screen
 The question screen consists of 5 sections:
-The image of the visitors ship is displayed along with an enemy ship
-The score for the player, the scoring system is displayed as a percentage. For each correct answer the enemy ship score decreases by 20%, for each incorrect answer the player’s ship score decreases by 20%. The colour starts at green for both, and will decrease down to amber then red for correct and incorrect answers.
-The question box including four answer choices. Once selected the correct answer is highlighted in green, the incorrect in red.
-The container box which starts off blue, when the correct answer is chosen it turns green, when an incorrect answer is chosen it turns red.
-The next button goes to the next question.
+- The image of the visitors ship is displayed along with an enemy ship.
+- The score for the player, the scoring system is displayed as a percentage. For each correct answer the enemy ship score decreases by 20%, for each incorrect answer the player’s ship score decreases by 20%. The colour starts at green for both, and will decrease down to amber then red for correct and incorrect answers.
+- The question box including four answer choices. Once selected the correct answer is highlighted in green, the incorrect in red.
+- The container box which starts off blue, when the correct answer is chosen it turns green, when an incorrect answer is chosen it turns red.
+- The next button goes to the next question.
 
 #### Victory screen
 The victory screen consists of 4 sections:
-The player’s ship is visible and the enemy ship fades off the screen
-The score of the players ship and the enemy ship.
-A ‘play again’ button which restarts the quiz.
-The container box which will turn green.
+- The player’s ship is visible and the enemy ship fades off the screen
+- The score of the players ship and the enemy ship.
+- A ‘play again’ button which restarts the quiz.
+- The container box which will turn green.
 
 #### Defeat screen
-The defeat screen consists of 4 sections:
-The enemy ship is visible and the player’s ship fades off the screen
-The score of the players ship and the enemy ship.
-A ‘play again’ button which restarts the quiz.
-The container box which will turn red.
+- The defeat screen consists of 4 sections:
+- The enemy ship is visible and the player’s ship fades off the screen
+- The score of the players ship and the enemy ship.
+- A ‘play again’ button which restarts the quiz.
+- The container box which will turn red.
 
+### About Page
+The about page consists of the following features:
+-	On desktop versions the visitor sees an iframe with a fully interactive solar system model.
+-	On mobile devices the visitor sees an interactive solar system model.
 
-## Feature 8: 404
+### Contact page
+The contact page consists of the following features:
+- A modal for the visitor to send a message.
+- An image of a receiver to continue the space theme across all pages.
+
+### Contact received page
+The contact received page shows the user their message has been received and a button which takes the visitor back to their last visited page.
+
+### Error 404 page
 
 This feature redirects the user back to any of the valid links rather than the user using browser controls.
 
