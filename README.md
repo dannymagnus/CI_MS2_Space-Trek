@@ -244,12 +244,18 @@ The quiz page contains the following features:
 5. The defeat screen
 
 #### Registration Screen
-![Registration screen](docs/features/registration-screen.png)
+
+![Registration screen](docs/features/feature-registration-screen.png)
 The game start screen consists of two sections. 
 This text boxes are there to gather user details to be used in the subsequent game screens. This encourages user interaction as they are able to personalise their game.
 The button will sign the user up to the quiz with the information they have just inputted.
 The form contains Javascript validation to prevent empty values from being entered.
 
+The Registration screen covers the following user stories:
+
+*4. As a first time user I want to be able to play a test my knowledge quiz*
+
+*5. As a first time user, I want be able to add a username and shipname so that my experience will be personalised.*
 #### Game start screen
 The game start screen consists of three sections. <br>
 - The image of the ship shows at this point and is continued throughout the quiz.
