@@ -9,7 +9,6 @@ toggleButton.addEventListener('click', () => {
 //For modal close button
 const modalClose = document.querySelector('#modal-close');
 
-
 //Variable declarations for quiz page //
 // Variable to grab quiz form
 let quizRegister = document.getElementById('quiz-register');
@@ -64,13 +63,26 @@ let ships = Array.from(document.querySelectorAll('.ship-container'));
 let shuffledQuestions = [];
 let currentQuestionIndex;
 
-// Function to increment question
+/*
+* Function to increment question
+* Increments the question index then calls next question
+*/
 function incrementQuestion(){
   currentQuestionIndex ++;
   nextQuestion();
 }
 
-//Function to take user details and feeback in HTML
+/**
+* Function to take username and ship name
+* Takes the user submitted values and returns them in HTML within the quiz welcome message
+* Generates HTML text for the quiz rules
+* Contains form validation with sweetalert2 popup on error credit https://sweetalert2.github.io/
+* Fades out the message us... button as selecting this causes errors when the game is in play
+* Hides the quiz welcome message
+* Displays the player's ship
+* Adds the ship name to the scores wrapper
+* @param {event} event - the user click event
+*/
   function registerUserShip(event){
     //prevent default event
     event.preventDefault();
@@ -118,7 +130,15 @@ function incrementQuestion(){
     scoresWrapper.firstElementChild.firstElementChild.innerText = "USS " + shipName;
   }  
 
-//Quiz start on button press
+/**
+* Function starts the quiz
+* Displays both player and ship images
+* Hides the start button and welcome messages
+* Shows the scores and question area
+* Sets the shield values
+* Sets the current question
+* Inserts sheild values into the DOM
+*/
 function startQuiz(){
   //Display both ship containers
   $ ( "#enemy-ship-img" ).fadeIn(1);
@@ -133,7 +153,7 @@ function startQuiz(){
   scoresWrapper.classList.add('scores-wrapper');
   //show question container
   quesContainer.classList.remove('hidden');
-  //add class of shiel-result to shield container
+  //add class of shield-result to shield container
   yourShieldPercentContainer.className = 'shields-result';
   enemyShieldPercentContainer.className = 'shields-result';
   //Call shuffle function
@@ -150,6 +170,11 @@ function startQuiz(){
   enemyShieldPercent.innerText = enemyShields;
 }
 
+/**
+ * Function to call the next question
+ * Calls clear state
+ * Calls revealQuestion
+ */ 
 function nextQuestion(){
   //clear all for quesion set
   clearState();
@@ -157,7 +182,14 @@ function nextQuestion(){
   revealQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
-//function to reveal next question
+/**
+ * Function to create the answer buttons, set question text and append to the DOM
+ * A loop to creat buttons for each answer
+ * Adds stlying to buttons and eventListeners for click events
+ * Sets dataset for true answer (not to change boolean)
+ * Appends the DOM structure
+ * @param {Object} question - question object from the shuffled question array
+ */
 function revealQuestion(question){
   //Takes question value from the object
   questionElement.innerText = question.question;
@@ -179,7 +211,10 @@ function revealQuestion(question){
   }
 }
 
-//Function to reset question/answer space
+/**
+ * Function to reset question/answer space
+ *  Resets classes and inner HTML
+ */ 
 function clearState(){
   //Reset background to neutral
   quizOuter.classList.remove('correct');
@@ -190,7 +225,11 @@ function clearState(){
   answersHTMLElement.innerHTML = '';
 }
 
-//Event listener function from select answer
+/*
+ * Function to capture user answer selection
+ * 
+ * @param {click} event - click of user answer selection
+ */
 function chooseAnswer(event){
     //Captures users selection
     selectedButton = event.target;
@@ -208,9 +247,9 @@ function chooseAnswer(event){
       setStatusClass(button, button.dataset.correct);
     });
     //Function to set color of you shield bubble
-    changeYourShieldColor();
+    changeYourShieldColor(yourShields);
     //Function to set color of enemy shield bubble
-    changeEnemyShieldColor();
+    changeEnemyShieldColor(enemyShields);
     //If statement if your shields are 0 - game over
     if (yourShields <= 0 ){
       beginButton.classList.remove('hidden');
@@ -241,9 +280,13 @@ function chooseAnswer(event){
     yourShieldPercent.innerText = yourShields;
     enemyShieldPercent.innerText = enemyShields;
 }
-//Function to switch shields color (you)
-function changeYourShieldColor(){
-  switch(yourShields){
+/*
+ * Function to change the color of the your shield bubble based on answer result
+ * Dependant on Shield value appends css class to container class
+ * @param {Number} damage - the current shield value
+*/
+function changeYourShieldColor(damage){
+  switch(damage){
     case 80:
       yourShieldPercentContainer.classList.add('eighty');
       break;
@@ -262,9 +305,13 @@ function changeYourShieldColor(){
   }
 }
 
-//Function to switch shields color (enemy)
-function changeEnemyShieldColor(){
-  switch(enemyShields){
+/*
+* Function to change the color of the enemy shield bubble based on answer result
+* Dependant on Shield value appends css class to container class
+* @param {Number} damage - the current shield value
+*/
+function changeEnemyShieldColor(damage){
+  switch(damage){
     case 80:
       enemyShieldPercentContainer.classList.add('eighty');
       break;
@@ -283,7 +330,13 @@ function changeEnemyShieldColor(){
   }
 }
 
-// Function to add css classes and change color of background and buttons
+/*
+* Function to set classes based on boolean values
+* This sets red or green background colors to buttons and outer div based on correct/incorrect answers
+* The classes for correct and incorrect are removed before the boolean is checked then the correct classes assigned
+* @ param {Object} element - the DOM element (button and div in this case)
+* @ param {Boolean} correct - whether the boolean for the element is true/false
+*/
 function setStatusClass(element,correct) {
   element.classList.remove('correct');
   element.classList.remove('incorrect');
@@ -293,12 +346,11 @@ function setStatusClass(element,correct) {
     element.classList.add('incorrect');
   }
 }
-
-//Question Randomiser //
-
+/*
+* Function to shuffle main question bank
+*/
 function shuffle() {
   let cloneQuestions = Array.from(questions);
-
   for (let i=0; i < cloneQuestions.length ; i++){
       let randomIndex = Math.floor(Math.random() * cloneQuestions.length);
       shuffledQuestions[i] = cloneQuestions[randomIndex];
@@ -306,7 +358,9 @@ function shuffle() {
   }
 }
 
-//Question Bank
+/*
+* Question Bank for the quiz
+*/
 
 let questions = [
   {question: 'How many miles approximately is the earth from the sun?',
