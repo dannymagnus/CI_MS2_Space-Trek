@@ -42,12 +42,12 @@
 ## Project Goals 
 
 ### User Goals
-- Play a fun and engaging space theme microsite with quiz
-- Explore fun Earth and Surrounding planet facts
+- Explore a fun and engaging space themed microsite with quiz.
+- Learn about the solar system and find out detailed planet facts.
 - Test your general space knowledge.
 
 ### Site Owner Goals
-- Create an fun and interactive space-adventure microsite
+- Create an fun and interactive space-adventure microsite.
 - The site quiz and about page should be interactive and responsive across devices.
 - The game should encourage user interaction by providing feedback to the user.
 
@@ -64,16 +64,16 @@
 - No broken links.
 - Responsive and visually appealing on all devices.
 - Easy way to contact site owner.
-- Fun to play, interactive and engaging.
+- Fun and easy to play, interactive and engaging.
 - Accessibility.
 
 ### User Stories
 
 #### First-time User 
-1. As a first time user I want to be able to contact the site owner easily
-2. As a first time user, I want to be able to navigate the site quickly and easily
+1. As a first time user I want to be able to contact the site owner easily.
+2. As a first time user, I want to be able to navigate the site quickly and easily.
 3. As a first time user I want to be able to interactively increase my knowledge about space and the solar system.
-4. As a first time user I want to be able to play a test my knowledge quiz
+4. As a first time user I want to be able to play a test my knowledge quiz.
 5. As a first time user, I want be able to add a username and shipname so that my experience will be personalised.
 6. As a first time user, As a user I want to be able to select an answer to the multiple choice question and get feedback on whether I am correct.
 7. As a first time user, I want to be able to view my progress on the quiz.
@@ -96,7 +96,7 @@ The scope of the project in it’s first release is defined by the following fea
 - An about page where the user can interact to trigger dynamic information about planets in the solar system
 - Embedded iframe with iteractivity about the solar system.
 - For mobile devices - selectable planets on home page with summary information. 
-- A fully interactive quiz page
+- A fully interactive quiz page.
 - 
 - Favicon icon to help users identify the site.
 
@@ -112,13 +112,13 @@ Features to be built in future releases:
 
 ### Design Choices
 My theme for the website came originally came from retro space exploration TV shows. I wanted to create a website that would offer more majesty in its background than just stars and a black backgound so chose some with brighter highlights and subject matter such as planets. <br>
-So as to not distract from the foreground a dark overlay with gradient ws placed over the image.
+So as to not distract from the foreground a dark overlay with gradient was placed over the image.
 
-I wanted a site that was straightforward, with the information being concise and clear in a way that’s easy to navigate so I kept the navigation limited as to three navigation buttons with the contact as a self made modal that would appear on selection.
+I wanted a site that was straightforward, with the information being concise and clear in a way that’s easy to navigate. I kept the navigation limited as to three navigation buttons with the contact as a self made modal that would appear on selection.
 
 I wanted graphical additions to the quiz to increase visual appeal rather than just text and geometrical shapes.
 
-I used opacity of ovelaying objects to increase the premium feel of the site.
+I used opacity of overlaying objects to increase the premium feel of the site.
 
 ### Colour
 - Text Logo and text hover - rgb(253, 252, 195)
@@ -126,7 +126,7 @@ I used opacity of ovelaying objects to increase the premium feel of the site.
 - Button colors - rgb(45, 112, 147)
 - Modals and buttons - rgba(250, 218, 221, 0.5)
 
-These colours have been chosen as they fit with the images that will be used for background and for foreground images and are representative of the end product.  They must also be suitable for accessibility support.
+These colours have been chosen as they match the image colours that will be used for background and foreground images, and are representative of the end product.  They must also be suitable for accessibility support.
 The hex values from the adobe pallette below were converted to rbg as listed above.<br>
 Correct and incorrect colors where on a scale of red to green within the quiz section, as was the color to show damage to the 'shield'.
 <br>
@@ -238,7 +238,7 @@ The home page gives the visitor an overview of what they can expect from visitin
 
 ### Feature 2: About Page
 ![About page](docs/features/feature-about-page.png)
-The about page consists of the following features:
+The about page introduces the user to some fun and interesting space facts via an interactive iframe on the desktop site and a modal on a mobile site, these engage the user when they are exploring the site so there is more to the site than just a quiz. The page consists of the following features:
 
 #### Fully interactive 3D iframe
 
@@ -267,9 +267,9 @@ The quiz page contains the following features:
 #### Registration Screen
 
 ![Registration screen](docs/features/feature-registration-screen.png)
-The game start screen consists of two sections. 
-This text boxes are there to gather user details to be used in the subsequent game screens. This encourages user interaction as they are able to personalise their game.
-The button will sign the user up to the quiz with the information they have just inputted.
+The game start screen consists of two sections:
+- The text boxes are there to gather user details to be used in the subsequent game screens. This encourages user interaction as they are able to personalise their game.
+- A button will sign the user up to the quiz with the information they have just inputted.
 The form contains Javascript validation to prevent empty values from being entered.
 
 The Registration screen covers the following user stories:
@@ -277,12 +277,16 @@ The Registration screen covers the following user stories:
 *4. As a first time user I want to be able to play a test my knowledge quiz*
 
 *5. As a first time user, I want be able to add a username and shipname so that my experience will be personalised.*
+
+*13. As a site owner; I want all form fields validated as to not have any empty values.*
+
 #### Game start screen
 ![Registration screen](docs/features/feature-game-start-screen.png)
+
 The game start screen consists of three sections. <br>
 - The image of the ship shows at this point and is continued throughout the quiz.
 - The other section consists of the rules of the quiz, as well as a brief story set up to engage visitors.
-- The button to begin the quiz
+- The button to begin the quiz.
 
 **This screen covers the following user stories:**
 
@@ -300,14 +304,17 @@ The question screen consists of 5 sections:
 
 **This screen covers the following user stories:**
 
+*3. As a first time user I want to be able to interactively increase my knowledge about space and the solar system.*
+
 *6. As a first time user, As a user I want to be able to select an answer to the multiple choice question and get feedback on whether I am correct.*
 
 *7. As a first time user, I want to be able to view my progress on the quiz.*
 
 #### Victory screen
 ![Victory Screen](docs/features/feature-victory-screen.png)
+
 The victory screen consists of 4 sections:
-- The player’s ship is visible and the enemy ship fades off the screen
+- The player’s ship is visible and the enemy ship fades off the screen.
 - The score of the players ship and the enemy ship.
 - A ‘play again’ button which restarts the quiz.
 - The container box which will turn green.
@@ -320,30 +327,41 @@ The victory screen consists of 4 sections:
 
 #### Defeat screen
 ![Victory Screen](docs/features/feature-victory-screen.png)
+
 - The defeat screen consists of 4 sections:
-- The enemy ship is visible and the player’s ship fades off the screen
+- The enemy ship is visible and the player’s ship fades off the screen.
 - The score of the players ship and the enemy ship.
 - A ‘play again’ button which restarts the quiz.
 - The container box which will turn red.
 
 **This screen covers the following user stories:**
 
-8. As a first time user, I want feedback on whether I have successfully completed the quiz or not.
-9. As a first time user, I want to be able to play the quiz again.
+*8. As a first time user, I want feedback on whether I have successfully completed the quiz or not.*
+
+*9. As a first time user, I want to be able to play the quiz again.*
 
 ### Contact page
 The contact page consists of the following features:
+![Contact Page](docs/features/feature-contact-page.png)
+
 - A modal for the visitor to send a message.
 - An image of a receiver to continue the space theme across all pages.
 
 **This screen covers the following user stories:**
 
+*1. As a first time user I want to be able to contact the site owner easily.*
+
+*10. As a site owner; I want users to be able to send us messages.*
 
 ### Contact received page
 The contact received page shows the user their message has been received and a button which takes the visitor back to their last visited page.
+![Contact Received Page](docs/features/feature-contact-received.png)
 
 **This screen covers the following user stories:**
 
+*1. As a first time user I want to be able to contact the site owner easily.*
+
+*10. As a site owner; I want users to be able to send us messages.*
 
 ### Error 404 page
 
