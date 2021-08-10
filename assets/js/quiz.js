@@ -229,6 +229,7 @@ function clearState(){
  * Function to capture and process user answer selection
  * Compares user selected answer against correct answer
  * Reduces player or enemy shield value
+ * Removes event listener so only one answer can be selected
  * Set color of background and buttons based on true/false
  * If shields are 0 for either create success or defeat message and display
  * @param {click} event - click of user answer selection
@@ -238,6 +239,11 @@ function chooseAnswer(event){
     selectedButton = event.target;
     //Compares user selection to true value stored in dataset and capture as boolean
     correct = selectedButton.dataset.correct;
+    let buttons = Array.from(answersHTMLElement.children);
+    console.log(buttons);
+    for (let i = 0;  i < buttons.length; i++) {
+      buttons[i].removeEventListener('click',chooseAnswer);
+    }
     //If statement to reduce shields
     if (correct){
       enemyShields -= 20;

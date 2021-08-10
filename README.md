@@ -633,8 +633,8 @@ Point to note:  On IOS devices.  The custom font StarTrekEnterpriseFuture did no
 | Unable to set overlaying div on solar system background in about small devices | Use individual img instead |
 | Message us modal broke quiz display once started | Hide message us button once quiz starts | Custom font does not display on IOS devices |
 | No fix at this time | Setting body as vh caused footer overlap as position absolute  |  Update absolute to not apply to quiz page |
-Clicking the answer buttons after the first selection depletes shields for each press | Bug unresolved |
-In the case listed above on sheilds reaching 0 both next and play again are listed |  Bug unresolved |
+Clicking the answer buttons after the first selection depletes shields for each press | Removed event listener with for loop |
+In the case listed above on sheilds reaching 0 both next and play again are listed |  Removed event listener with for loop |
 ## Deployment
 
 ### GitHub Pages
