@@ -225,9 +225,12 @@ function clearState(){
   answersHTMLElement.innerHTML = '';
 }
 
-/*
- * Function to capture user answer selection
- * 
+/**
+ * Function to capture and process user answer selection
+ * Compares user selected answer against correct answer
+ * Reduces player or enemy shield value
+ * Set color of background and buttons based on true/false
+ * If shields are 0 for either create success or defeat message and display
  * @param {click} event - click of user answer selection
  */
 function chooseAnswer(event){
