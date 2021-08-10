@@ -112,22 +112,32 @@ window.onload = function () {
     }
   });
 };
-//Event listener/handler to close modal window
+
+/*
+* Event lister with arrow function to fade contact form modal and return previous content if close button clicked
+*/
 modalClose.addEventListener('click', () => {
   "use strict";
   $("#contact-form-outer").fadeOut(1000);
 });
+
 //listener in jquery to get ID of target
 $('#earth-container').click(getID);
-//Fuction to process ID
+
+/**
+ * Fuction to get id of the clicked planet
+ * @param {click} event - click event of planet select
+ */
 function getID(event) {
   let planetElement = event.target;
   let planetId = planetElement.id;
   //Pass id to figureModalContent function
   figureModalContent (planetId);
 }
-/*Function to set variable based on switch
-@param planet []
+/**
+* Function to set variable based on switch
+* Sets the planetName and planet HTML from the planetArray
+* @param planet {string} planet - the id of the element
 */
 function figureModalContent(planet) {
   //declare variables
@@ -175,7 +185,12 @@ function figureModalContent(planet) {
   //Call function to assign modal content
   assignModal(planetName,planetHTML);
 }
-// Function to assign modal content
+
+/**
+ * Function set the modal content
+ * @param {string} name - name of the planet
+ * @param {string} text - text summary of the planet
+ */
 function assignModal(name, text){
   // declare variables
   let planetModalTitle = document.querySelector('#planetModalTitle');
@@ -187,13 +202,17 @@ function assignModal(name, text){
   showModal();
 }
 
-//Function to show modal
+/**
+ * Function to show modal
+ */ 
 function showModal(){
   $('#planetModal').modal('show');
 }
 
-//Object to hold planet data for mobile devices
-//Text data taken from NASA website https://solarsystem.nasa.gov/
+/**
+ * Object to hold planet data for mobile devices
+ * Text data taken from NASA website https://solarsystem.nasa.gov/
+ */
 let planetArray = [
   {
     name:'Sun',
