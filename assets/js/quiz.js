@@ -432,13 +432,18 @@ const mainContainer = document.getElementById('quiz-outer');
 const mainContentId = mainContent.getAttribute('id');
 
 
-//Toggle to reveal self made modal
+/*
+* Event listener with function to reveal self made modal of contact form
+*/
 contactLaunch.addEventListener('click', () => {
+  "use strict";
   $("#contact-form-outer").fadeIn(1000);
   contactFormOuter.style.display = 'flex';
 });
 
-//for contact form button and use mailjs API
+/*
+* Function to prevent default form submission and send completed form values to email credit www.mailjs.com
+*/
 window.onload = function () {
   document.getElementById('contact-form').addEventListener('submit', function (event) {
     // prevent default action
@@ -448,6 +453,9 @@ window.onload = function () {
     let email = document.forms["contact-form"]["contact-email"].value;
     let message = document.forms["contact-form"]["contact-message"].value;
     if (name == "" || email == "" || message == "") {
+      /*
+      Swal give alert box style modal with error message to user.  Credit https://sweetalert2.github.io/
+      */
       Swal.fire({
         title: 'Please complete all fields',
         showClass: {
@@ -462,7 +470,6 @@ window.onload = function () {
       });
     return false;}
     emailjs.init("user_mrJgfpy8vz9l8LqeGGrjA");
-    // these IDs from the previous steps
     emailjs.sendForm('service_y7rgdam', 'dans_template', this)
       .then(function () {
         console.log('SUCCESS!');
@@ -471,9 +478,17 @@ window.onload = function () {
       });
     //On complete fade out modal
     $("#contact-form-outer").fadeOut(1000);
-    //Call function display success message pass variables from grab at page top
     createSuccessMessage(mainContainer, mainContent);
-    //Function to create success message and append to body
+
+    /*
+    * Function to display success message
+    * It creates a div element
+    * It sets attributes and styles to the div element
+    * It creates the inner HTML content and appends it to the DOM
+    * It hides the inner body of the existing content then fades in the new div
+    * @param {Object} outer - Outer div DOMElement
+    * @param {Object} message - Inner div DOMElement
+    */
     function createSuccessMessage(outer, inner) {
       var contactSuccessElement = document.createElement('div');
       contactSuccessElement.setAttribute('id', 'contact-success');
@@ -489,12 +504,18 @@ window.onload = function () {
       contactSuccessElement.innerHTML = contactSuccessHTML;
       outer.appendChild(contactSuccessElement);
       inner.style.display = 'none';
+      /*
+      * Delay to fade in message sent confirmation
+      * Fades in the confirmation message after a delay of 1 second
+      */
       setTimeout(function () {
         $('#contact-success').fadeIn(1000);
-        //your code to be executed after 1 second
       }, 1000);
-      // Add event listener to acknowledge button to fade and remove div and return previous
       const ackBtn = document.querySelector('#ack-btn');
+      /* 
+      * Event listener with function to close form submission success message and return main page content
+      * It fades out the contact success message then fades in the main content after delay
+      */
       ackBtn.addEventListener('click', () => {
         $('#contact-success').fadeOut(1000);
         const contactSuccessElement = document.querySelector('#contact-success');
@@ -507,7 +528,9 @@ window.onload = function () {
   });
 };
 
-//Event listener/handler to close modal window
+/*
+* Event lister with arrow function to fade contact form modal and return previous content if close button clicked
+*/
 modalClose.addEventListener('click', () => {
   "use strict";
   $("#contact-form-outer").fadeOut(1000);
