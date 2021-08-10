@@ -62,9 +62,7 @@ window.onload = function () {
     emailjs.init("user_mrJgfpy8vz9l8LqeGGrjA");
     emailjs.sendForm('service_y7rgdam', 'dans_template', this)
       .then(function () {
-        console.log('SUCCESS!');
       }, function (error) {
-        console.log('FAILED...', error);
       });
     //On complete fade out modal
     $("#contact-form-outer").fadeOut(1000);
