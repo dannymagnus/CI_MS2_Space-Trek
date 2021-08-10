@@ -418,6 +418,9 @@ The Javascript of the each page of the site was validated using [JSHint validati
 <details><summary>Quiz</summary>
 <img src="docs/validation/js-validation/js-validation-quiz.png">
 </details>
+<details><summary>404</summary>
+<img src="docs/validation/js-validation/js-validation-_404.png">
+</details>
 
 ### Accessibility
 The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/ was used to ensure the website met high accessibility standards. All pages returned 0 errors.
