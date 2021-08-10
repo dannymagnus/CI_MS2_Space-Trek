@@ -432,8 +432,11 @@ const mainContainer = document.getElementById('quiz-outer');
 const mainContentId = mainContent.getAttribute('id');
 
 
-//Toggle to reveal self made modal
+/*
+* Event listener with function to reveal self made modal of contact form
+*/
 contactLaunch.addEventListener('click', () => {
+  "use strict";
   $("#contact-form-outer").fadeIn(1000);
   contactFormOuter.style.display = 'flex';
 });
