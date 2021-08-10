@@ -326,7 +326,7 @@ The victory screen consists of 4 sections:
 *9. As a first time user, I want to be able to play the quiz again.*
 
 #### Defeat screen
-![Victory Screen](docs/features/feature-victory-screen.png)
+![Defeat Screen](docs/features/feature-defeat-screen.png)
 
 - The defeat screen consists of 4 sections:
 - The enemy ship is visible and the player’s ship fades off the screen.
@@ -478,7 +478,7 @@ The website was tested on the following browsers:
 7. On contact form submission, success feedback message is given.
 8. Images and text collapse into a column view when view on mobile devices.
 9. About section switches from iframe to planet selection on small devices
-10. All pages are responsive and no text or image cut off in mobile views
+10. All pages are responsive and no text or image cut off in mobile views.
 11. Designated items and text do not show in mobile layout.
 12. All copy is clear and legible.
 13. Flexbox and direction and breakpoints checked on browser resizing.
