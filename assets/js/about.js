@@ -56,6 +56,10 @@ window.onload = function () {
         color:'white',
       });
     return false;}
+    let vmail = validateEmail(email);
+    if (vmail == false) {
+      return false;
+    }
     emailjs.init("user_mrJgfpy8vz9l8LqeGGrjA");
     emailjs.sendForm('service_y7rgdam', 'dans_template', this)
       .then(function () {
@@ -125,6 +129,35 @@ modalClose.addEventListener('click', () => {
 $('#earth-container').click(getID);
 
 /**
+ * Function to check whether email address entered is a valid format
+ * @param {string} email - email string value from user input on form
+ * return {boolean} - returns true or false based on match to correct format
+ */
+ function validateEmail(inputText) {
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (inputText.match(mailformat)) {
+    return true;
+  } else {
+    /**
+     * Swal give alert box style modal with error message to user.  Credit https://sweetalert2.github.io/
+     */
+    Swal.fire({
+      title: 'Please enter a valid email address',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      },
+      background: '#383838',
+      confirmButtonColor: 'rgb(45,112,147)',
+      color: 'white',
+    });
+    return false;
+  }
+}
+
+/**
  * Fuction to get id of the clicked planet
  * @param {click} event - click event of planet select
  */
@@ -134,6 +167,7 @@ function getID(event) {
   //Pass id to figureModalContent function
   figureModalContent (planetId);
 }
+
 /**
 * Function to set variable based on switch
 * Sets the planetName and planet HTML from the planetArray
@@ -143,7 +177,6 @@ function figureModalContent(planet) {
   //declare variables
   let planetName;
   let planetHTML;
-
   switch(planet){
     case 'sun':
       planetName = planetArray[0].name;

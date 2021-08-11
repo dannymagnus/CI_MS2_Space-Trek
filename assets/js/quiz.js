@@ -532,6 +532,10 @@ window.onload = function () {
         color:'white',
       });
     return false;}
+    let vmail = validateEmail(email);
+    if (vmail == false) {
+      return false;
+    }
     emailjs.init("user_mrJgfpy8vz9l8LqeGGrjA");
     emailjs.sendForm('service_y7rgdam', 'dans_template', this)
       .then(function () {
@@ -596,3 +600,32 @@ modalClose.addEventListener('click', () => {
   "use strict";
   $("#contact-form-outer").fadeOut(1000);
 });
+
+/**
+ * Function to check whether email address entered is a valid format
+ * @param {string} email - email string value from user input on form
+ * return {boolean} - returns true or false based on match to correct format
+ */
+ function validateEmail(inputText) {
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (inputText.match(mailformat)) {
+    return true;
+  } else {
+    /**
+     * Swal give alert box style modal with error message to user.  Credit https://sweetalert2.github.io/
+     */
+    Swal.fire({
+      title: 'Please enter a valid email address',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      },
+      background: '#383838',
+      confirmButtonColor: 'rgb(45,112,147)',
+      color: 'white',
+    });
+    return false;
+  }
+}
