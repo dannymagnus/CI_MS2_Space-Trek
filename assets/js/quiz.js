@@ -64,10 +64,8 @@ let ships = Array.from(document.querySelectorAll('.ship-container'));
 // Declare  variables to be used for random question generation in function//
 let shuffledQuestions = [];
 let currentQuestionIndex;
-
-let answeredArray = [];//testing 
-let answeredArrayIndex = 0;//testing
-let reportCard = document.getElementById('report-card');//testing
+let answeredArray = [];
+let answeredArrayIndex = 0;
 
 /**
 * Function to increment question
@@ -75,7 +73,7 @@ let reportCard = document.getElementById('report-card');//testing
 */
 function incrementQuestion(){
   currentQuestionIndex ++;
-  answeredArrayIndex ++; //testing
+  answeredArrayIndex ++;
   nextQuestion();
 }
 
@@ -169,8 +167,8 @@ function startQuiz(){
   shuffle();
   //Set current question index
   currentQuestionIndex = 0;
-  answeredArrayIndex = 0; //Testing
-  answeredArray = []; //Testing
+  answeredArrayIndex = 0; 
+  answeredArray = []; 
   //Call next question function
   nextQuestion();
   //set shields values
@@ -202,8 +200,8 @@ function nextQuestion(){
  * @param {Object} question - question object from the shuffled question array
  */
 function revealQuestion(question){
-  let answeredObject = {question: question.question};//testing
-  answeredArray.push(answeredObject); //testing
+  let answeredObject = {question: question.question};
+  answeredArray.push(answeredObject); 
   //Takes question value from the object
   questionElement.innerText = question.question;
   for (let i = 0; i < question.answer.length; i++) {
