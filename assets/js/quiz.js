@@ -583,7 +583,6 @@ let questions = [
   {option:'9', correct:false}]}
 ];
 
-
 //To add launch button for own modal
 const contactLaunch = document.querySelector('#contact-launch');
 //To add listener for own modal
@@ -594,7 +593,6 @@ const mainContent = document.getElementById('quiz-register');
 const mainContainer = document.getElementById('quiz-outer');
 //To use variable with Jquery to hide and reveal main content
 const mainContentId = mainContent.getAttribute('id');
-
 
 /**
 * Event listener with function to reveal self made modal of contact form
@@ -704,6 +702,7 @@ modalClose.addEventListener('click', () => {
 
 /**
  * Function to check whether email address entered is a valid format
+ * credit w3resource.com
  * @param {string} email - email string value from user input on form
  * return {boolean} - returns true or false based on match to correct format
  */
