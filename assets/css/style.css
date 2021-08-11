@@ -212,15 +212,16 @@ h1 {
 }
 
 /* Footer Styling */
-
 footer {
     bottom: 0;
     width:100%;
 }
+
 /*Used to position footer on != 'quiz page' for smaller screens */
 .footer-outer {
     position: absolute;
 }
+
 /*Flex container for footer */
 #footer-container {
     width: 90%;
@@ -305,6 +306,7 @@ footer {
     padding: 20px;
     color:black;
 }
+
 /*Container for scores*/
 .scores-wrapper {
     width: 100%;
@@ -312,6 +314,7 @@ footer {
     margin:0 auto 25px;
     justify-content: space-between;
 }
+
 /*Styling for scores inner */
 .your-score-inner {
     display: flex;
@@ -457,6 +460,7 @@ footer {
     background-position-x: center;
     background-repeat: no-repeat;
 }
+
 /*Contact modal header*/
 #contact-form-outer h1 {
     font-family: 'Star Trek Enterprise Future';
@@ -464,6 +468,7 @@ footer {
     font-size: 50px;
     text-decoration: underline;
 }
+
 /*Contact form inner text and image container*/
 #contact-inner {
     display:flex;
@@ -483,11 +488,13 @@ footer {
     height:500px;
     background-size: contain;
 }
+
 /*Modal contact form*/
 #contact-form {
     width:280px;
     font-size: 1.5rem;
 }
+
 /*Button styling contact form*/
 #contact-launch {
     --hue: var(--hue-footer-icons);
@@ -505,6 +512,7 @@ footer {
         display: none;
 }
 }
+
 /*Flex container for buttons*/
 .form-buttons{
     display:flex;
@@ -533,10 +541,12 @@ footer {
     max-width: 30%;
     margin:0 35%;
 }
+
 /*Hide iframe on small devices*/
 #iframe-holder {
     display:none;
 }
+
 /*To change content for desktop devices */
 @media (min-width:769px){
     #earth-holder {
@@ -546,6 +556,7 @@ footer {
         display:flex;
     }
 }
+
 /*Main section*/
 #about-main-container {
     display: flex;
@@ -559,6 +570,7 @@ footer {
     width:560px;
     max-width:80%;
 }
+
 /*To wrap iframe and planets*/
 .sol-container {
     display: flex;
@@ -572,6 +584,7 @@ footer {
     flex: 1 1 40%;  /*grow | shrink | basis */
     display:relative;
 }
+
 /*To size images to be resposive on resize*/
 .planet img {
     display: block;
@@ -579,6 +592,7 @@ footer {
     height: auto; /* maintain aspect ratio*/
     margin: auto; /*optional centering of image*/
 }
+
 /*used to reload modal after modal popup interrupt*/
 #reload {
     width: 600px;
@@ -591,11 +605,13 @@ footer {
         display:none;
     }
 }
+
 /*Overide bootstrap styles*/
 .modal-content {
     background-color: rgb(46, 44, 44);
 }
 
+/* Sweet alert style overide*/
 .swal2-title,
 .swal2-content {
   color: white !important;
