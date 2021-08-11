@@ -1,3 +1,6 @@
+let reportBtn = document.getElementById('report-btn')
+
+
 // For navbar toggle//
 const toggleButton = document.getElementsByClassName('toggle-button')[0];
 const navbarLinks = document.getElementsByClassName('navbar-links')[0];
@@ -63,12 +66,17 @@ let ships = Array.from(document.querySelectorAll('.ship-container'));
 let shuffledQuestions = [];
 let currentQuestionIndex;
 
+let answeredArray = [];//testing 
+let answeredArrayIndex = 0;//testing
+let reportCard = document.getElementById('report-card');//testing
+
 /**
 * Function to increment question
 * Increments the question index then calls next question
 */
 function incrementQuestion(){
   currentQuestionIndex ++;
+  answeredArrayIndex ++; //testing
   nextQuestion();
 }
 
@@ -160,6 +168,8 @@ function startQuiz(){
   shuffle();
   //Set current question index
   currentQuestionIndex = 0;
+  answeredArrayIndex = 0; //Testing
+  answeredArray = []; //Testing
   //Call next question function
   nextQuestion();
   //set shields values
@@ -191,6 +201,8 @@ function nextQuestion(){
  * @param {Object} question - question object from the shuffled question array
  */
 function revealQuestion(question){
+  let answeredObject = {question: question.question};//testing
+  answeredArray.push(answeredObject); //testing
   //Takes question value from the object
   questionElement.innerText = question.question;
   for (let i = 0; i < question.answer.length; i++) {
@@ -205,10 +217,12 @@ function revealQuestion(question){
     //Add dataset item on element that has true (data set used and dont want to change boolean values)
     if(question.answer[i].correct === true){
       button.dataset.correct = question.answer[i].correct;
+      answeredArray[answeredArrayIndex].answer = question.answer[i].option;//testing
     }
     //Apend each buttons to anwers element
     answersHTMLElement.appendChild(button);
   }
+  console.log(answeredArray);//testing
 }
 
 /**
@@ -239,8 +253,11 @@ function chooseAnswer(event){
     selectedButton = event.target;
     //Compares user selection to true value stored in dataset and capture as boolean
     correct = selectedButton.dataset.correct;
+    let selected = selectedButton.innerText;//testing
+    console.log(selected);//testing
+    answeredArray[answeredArrayIndex].guess = selected;//testing
+    console.log(answeredArray);//testing
     let buttons = Array.from(answersHTMLElement.children);
-    console.log(buttons);
     for (let i = 0;  i < buttons.length; i++) {
       buttons[i].removeEventListener('click',chooseAnswer);
     }
@@ -263,6 +280,9 @@ function chooseAnswer(event){
     if (yourShields <= 0 ){
       beginButton.classList.remove('hidden');
       beginButton.innerText = 'Play again';
+
+      reportBtn.classList.remove('hidden');
+
       quizWelcome.innerHTML = `
       <p>You are defeated.. ${userName}!</p>
       <p>Your legacy will be a mere whisper through space, as your adversary tosses your bones across the cosmos.</p>
@@ -275,6 +295,9 @@ function chooseAnswer(event){
     else if(enemyShields <= 0){
       beginButton.classList.remove('hidden');
       beginButton.innerText = 'Play again';
+
+      reportBtn.classList.remove('hidden');
+
       quizWelcome.innerHTML = `
       <p>Congratulations ${userName}!</p>
       <p>You have successfully dispatched your enemy and rid the universe of this no good space filth!</p>
@@ -366,6 +389,61 @@ function shuffle() {
       cloneQuestions.splice(randomIndex,1);
   }
 }
+
+/**
+ * Event listener for end of game field report
+ */
+ reportBtn.addEventListener('click',() => {
+  seeResults(answeredArray);
+});
+
+/**
+ * This function creates a table from the user submitted answers and gives feedback at the end of the game
+ * It shows the questions throughout the quiz, the users choices vs the correct answers
+ * It creates a table and inserts within the modal then shows it
+ * It adds click events to the modal buttons and hides the report option once viewed.
+ * @param {array} results - array containing quiz questions, user answers and correct answers
+ */
+function seeResults(results) {
+  let resultsBody = document.getElementById('report-body');
+  let resultsHTML = 
+  `
+  <table>
+  <thead>
+  <tr>
+  <th>Question</th>
+  <th>Your Answer</th>
+  <th>Correct Answer</th>
+  </tr>
+  </thead>
+  <tbody>
+  `;
+  for (let i = 0; i < results.length; i++) {
+    resultsHTML += 
+    `
+    <tr>
+    <td>${results[i].question}</td>
+    <td>${results[i].answer}</td>
+    <td>${results[i].guess}</td>
+    </tr>
+    `;
+  }
+  resultsHTML += 
+  `
+  </tbody>
+  </table>
+  `;
+  resultsBody.innerHTML = resultsHTML;
+  $('#reportModal').modal('show');
+  $('#report-close').click(function() {
+    $('#reportModal').modal('hide');
+    $('#report-btn').addClass('hidden');
+  });
+  $( "#reportTopClose" ).click(function() {
+    $( "#report-close" ).click();
+  });
+}
+
 
 /**
 * Question Bank for the quiz
@@ -629,3 +707,4 @@ modalClose.addEventListener('click', () => {
     return false;
   }
 }
+
