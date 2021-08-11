@@ -77,7 +77,7 @@
 5. As a first time user, I want be able to add a username and shipname so that my experience will be personalised.
 6. As a first time user, As a user I want to be able to select an answer to the multiple choice question and get feedback on whether I am correct.
 7. As a first time user, I want to be able to view my progress on the quiz.
-8. As a first time user, I want feedback on whether I have successfully completed the quiz or not.
+8. As a first time user, I want feedback on whether I have successfully completed the quiz or not and feedback on my quiz performance and answers.
 9. As a first time user, I want to be able to play the quiz again.
 
 #### Site Owner 
@@ -263,6 +263,7 @@ The quiz page contains the following features:
 3. The question screen
 4. The victory screen
 5. The defeat screen
+6. The quiz feedback screen
 
 #### Registration Screen
 
@@ -313,32 +314,48 @@ The question screen consists of 5 sections:
 #### Victory screen
 ![Victory Screen](docs/features/feature-victory-screen.png)
 
-The victory screen consists of 4 sections:
+The victory screen consists of 5 sections:
 - The player’s ship is visible and the enemy ship fades off the screen.
 - The score of the players ship and the enemy ship.
 - A ‘play again’ button which restarts the quiz.
 - The container box which will turn green.
+- A 'field report' button which open the quiz feedback screen.
 
 **This screen covers the following user stories:**
 
-*8. As a first time user, I want feedback on whether I have successfully completed the quiz or not.*
+*8. As a first time user, I want feedback on whether I have successfully completed the quiz or not and feedback on my quiz performance and answers.*
 
 *9. As a first time user, I want to be able to play the quiz again.*
 
 #### Defeat screen
 ![Defeat Screen](docs/features/feature-defeat-screen.png)
 
-- The defeat screen consists of 4 sections:
+The defeat screen consists of 5 sections:
 - The enemy ship is visible and the player’s ship fades off the screen.
 - The score of the players ship and the enemy ship.
 - A ‘play again’ button which restarts the quiz.
 - The container box which will turn red.
+- A 'field report' button which open the quiz feedback screen.
 
 **This screen covers the following user stories:**
 
-*8. As a first time user, I want feedback on whether I have successfully completed the quiz or not.*
+*8. As a first time user, I want feedback on whether I have successfully completed the quiz or not and feedback on my quiz performance and answers..*
 
 *9. As a first time user, I want to be able to play the quiz again.*
+
+ #### Quiz feedback screen
+![Defeat Screen](docs/features/feature-quiz-feedback.png)
+
+The quiz feedback screen is a modal that appears when the user selects the field report button. It provides feedback on the user's quiz performance, giving a rank based on how many questions were answered correctly and also providing the user with correct answers.
+
+**This screen covers the following user stories:**
+
+*6. As a first time user, As a user I want to be able to select an answer to the multiple choice question and get feedback on whether I am correct.*
+
+*7. As a first time user, I want to be able to view my progress on the quiz.*
+
+*8. As a first time user, I want feedback on whether I have successfully completed the quiz or not and feedback on my quiz performance and answers..*
+
 
 ### Contact page
 The contact page consists of the following features:
@@ -567,7 +584,7 @@ Point to note:  On IOS devices.  The custom font StarTrekEnterpriseFuture did no
 <img src="docs/testing/user-story-7.png">
 </details>
 
-8. As a first time user, I want feedback on whether I have successfully completed the quiz or not.
+8. As a first time user, I want feedback on whether I have successfully completed the quiz or not and feedback on my quiz performance and answers.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
