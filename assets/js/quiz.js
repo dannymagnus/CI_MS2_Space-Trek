@@ -63,7 +63,7 @@ let ships = Array.from(document.querySelectorAll('.ship-container'));
 let shuffledQuestions = [];
 let currentQuestionIndex;
 
-/*
+/**
 * Function to increment question
 * Increments the question index then calls next question
 */
@@ -289,11 +289,11 @@ function chooseAnswer(event){
     yourShieldPercent.innerText = yourShields;
     enemyShieldPercent.innerText = enemyShields;
 }
-/*
+/**
  * Function to change the color of the your shield bubble based on answer result
  * Dependant on Shield value appends css class to container class
  * @param {Number} damage - the current shield value
-*/
+ */
 function changeYourShieldColor(damage){
   switch(damage){
     case 80:
@@ -314,7 +314,7 @@ function changeYourShieldColor(damage){
   }
 }
 
-/*
+/**
 * Function to change the color of the enemy shield bubble based on answer result
 * Dependant on Shield value appends css class to container class
 * @param {Number} damage - the current shield value
@@ -339,7 +339,7 @@ function changeEnemyShieldColor(damage){
   }
 }
 
-/*
+/**
 * Function to set classes based on boolean values
 * This sets red or green background colors to buttons and outer div based on correct/incorrect answers
 * The classes for correct and incorrect are removed before the boolean is checked then the correct classes assigned
@@ -355,7 +355,7 @@ function setStatusClass(element,correct) {
     element.classList.add('incorrect');
   }
 }
-/*
+/**
 * Function to shuffle main question bank
 */
 function shuffle() {
@@ -367,7 +367,7 @@ function shuffle() {
   }
 }
 
-/*
+/**
 * Question Bank for the quiz
 */
 
@@ -495,7 +495,7 @@ const mainContainer = document.getElementById('quiz-outer');
 const mainContentId = mainContent.getAttribute('id');
 
 
-/*
+/**
 * Event listener with function to reveal self made modal of contact form
 */
 contactLaunch.addEventListener('click', () => {
@@ -504,7 +504,7 @@ contactLaunch.addEventListener('click', () => {
   contactFormOuter.style.display = 'flex';
 });
 
-/*
+/**
 * Function to prevent default form submission and send completed form values to email credit www.mailjs.com
 */
 window.onload = function () {
@@ -541,7 +541,7 @@ window.onload = function () {
     $("#contact-form-outer").fadeOut(1000);
     createSuccessMessage(mainContainer, mainContent);
 
-    /*
+    /**
     * Function to display success message
     * It creates a div element
     * It sets attributes and styles to the div element
@@ -565,7 +565,7 @@ window.onload = function () {
       contactSuccessElement.innerHTML = contactSuccessHTML;
       outer.appendChild(contactSuccessElement);
       inner.style.display = 'none';
-      /*
+      /**
       * Delay to fade in message sent confirmation
       * Fades in the confirmation message after a delay of 1 second
       */
@@ -573,7 +573,7 @@ window.onload = function () {
         $('#contact-success').fadeIn(1000);
       }, 1000);
       const ackBtn = document.querySelector('#ack-btn');
-      /* 
+      /** 
       * Event listener with function to close form submission success message and return main page content
       * It fades out the contact success message then fades in the main content after delay
       */
@@ -589,7 +589,7 @@ window.onload = function () {
   });
 };
 
-/*
+/**
 * Event lister with arrow function to fade contact form modal and return previous content if close button clicked
 */
 modalClose.addEventListener('click', () => {

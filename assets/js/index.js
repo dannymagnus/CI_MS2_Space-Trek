@@ -14,7 +14,7 @@ const mainContentId = mainContent.getAttribute('id');
 const modalClose = document.querySelector('#modal-close');
 
 
-/* 
+/**
 * Event listener with function to toggle responsive navbar burger icon
 */
 toggleButton.addEventListener('click', () => {
@@ -22,7 +22,7 @@ toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active');
 });
 
-/*
+/**
 * Event listener with function to reveal self made modal of contact form
 */
 contactLaunch.addEventListener('click', () => {
@@ -31,7 +31,7 @@ contactLaunch.addEventListener('click', () => {
   contactFormOuter.style.display = 'flex';
 });
 
-/*
+/**
 * Function to prevent default form submission and send completed form values to email credit www.mailjs.com
 */
 window.onload = function () {
@@ -43,7 +43,7 @@ window.onload = function () {
     let email = document.forms["contact-form"]["contact-email"].value;
     let message = document.forms["contact-form"]["contact-message"].value;
     if (name == "" || email == "" || message == "") {
-      /*
+      /**
       Swal give alert box style modal with error message to user.  Credit https://sweetalert2.github.io/
       */
       Swal.fire({
@@ -68,7 +68,7 @@ window.onload = function () {
     $("#contact-form-outer").fadeOut(1000);
     createSuccessMessage(mainContainer, mainContent);
 
-    /*
+    /**
     * Function to display success message
     * It creates a div element
     * It sets attributes and styles to the div element
@@ -92,7 +92,7 @@ window.onload = function () {
       contactSuccessElement.innerHTML = contactSuccessHTML;
       outer.appendChild(contactSuccessElement);
       inner.style.display = 'none';
-      /*
+      /**
       * Delay to fade in message sent confirmation
       * Fades in the confirmation message after a delay of 1 second
       */
@@ -100,7 +100,7 @@ window.onload = function () {
         $('#contact-success').fadeIn(1000);
       }, 1000);
       const ackBtn = document.querySelector('#ack-btn');
-      /* 
+      /** 
       * Event listener with function to close form submission success message and return main page content
       * It fades out the contact success message then fades in the main content after delay
       */
@@ -116,7 +116,7 @@ window.onload = function () {
   });
 };
 
-/*
+/**
 * Event lister with arrow function to fade contact form modal and return previous content if close button clicked
 */
 modalClose.addEventListener('click', () => {
