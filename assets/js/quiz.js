@@ -1,6 +1,3 @@
-let reportBtn = document.getElementById('report-btn')
-
-
 // For navbar toggle//
 const toggleButton = document.getElementsByClassName('toggle-button')[0];
 const navbarLinks = document.getElementsByClassName('navbar-links')[0];
@@ -26,6 +23,8 @@ let quizContainer = document.getElementById('quiz-container');
 // To grab start button
 let beginButton = document.getElementById('begin-btn');
 beginButton.addEventListener('click', startQuiz);
+// To grab report button
+let reportBtn = document.getElementById('report-btn');
 // To grab next button
 let shootButton = document.querySelector('#shoot-btn');
 shootButton.addEventListener('click', incrementQuestion);
@@ -39,7 +38,7 @@ let answersHTMLElement = document.getElementById('answers');
 let quizWelcome= document.getElementById('quiz-welcome');
 //To grab scores and hide during intro
 let scoresWrapper = document.getElementById('scores-wrapper');
-//Used for 
+//Used for grabbing quiz outer div
 let quizOuter = document.querySelector('#quiz-outer');
 // Used for chooseAnswer function
 let selectedButton;
@@ -217,12 +216,11 @@ function revealQuestion(question){
     //Add dataset item on element that has true (data set used and dont want to change boolean values)
     if(question.answer[i].correct === true){
       button.dataset.correct = question.answer[i].correct;
-      answeredArray[answeredArrayIndex].answer = question.answer[i].option;//testing
+      answeredArray[answeredArrayIndex].answer = question.answer[i].option;
     }
     //Apend each buttons to anwers element
     answersHTMLElement.appendChild(button);
   }
-  console.log(answeredArray);//testing
 }
 
 /**
@@ -253,10 +251,8 @@ function chooseAnswer(event){
     selectedButton = event.target;
     //Compares user selection to true value stored in dataset and capture as boolean
     correct = selectedButton.dataset.correct;
-    let selected = selectedButton.innerText;//testing
-    console.log(selected);//testing
-    answeredArray[answeredArrayIndex].guess = selected;//testing
-    console.log(answeredArray);//testing
+    let selected = selectedButton.innerText;
+    answeredArray[answeredArrayIndex].guess = selected;
     let buttons = Array.from(answersHTMLElement.children);
     for (let i = 0;  i < buttons.length; i++) {
       buttons[i].removeEventListener('click',chooseAnswer);
@@ -280,9 +276,7 @@ function chooseAnswer(event){
     if (yourShields <= 0 ){
       beginButton.classList.remove('hidden');
       beginButton.innerText = 'Play again';
-
       reportBtn.classList.remove('hidden');
-
       quizWelcome.innerHTML = `
       <p>You are defeated.. ${userName}!</p>
       <p>Your legacy will be a mere whisper through space, as your adversary tosses your bones across the cosmos.</p>
@@ -295,9 +289,7 @@ function chooseAnswer(event){
     else if(enemyShields <= 0){
       beginButton.classList.remove('hidden');
       beginButton.innerText = 'Play again';
-
       reportBtn.classList.remove('hidden');
-
       quizWelcome.innerHTML = `
       <p>Congratulations ${userName}!</p>
       <p>You have successfully dispatched your enemy and rid the universe of this no good space filth!</p>
@@ -312,6 +304,7 @@ function chooseAnswer(event){
     yourShieldPercent.innerText = yourShields;
     enemyShieldPercent.innerText = enemyShields;
 }
+
 /**
  * Function to change the color of the your shield bubble based on answer result
  * Dependant on Shield value appends css class to container class
@@ -401,6 +394,7 @@ function shuffle() {
  * This function creates a table from the user submitted answers and gives feedback at the end of the game
  * It shows the questions throughout the quiz, the users choices vs the correct answers
  * It creates a table and inserts within the modal then shows it
+ * It assigns the users rank based on performance
  * It adds click events to the modal buttons and hides the report option once viewed.
  * @param {array} results - array containing quiz questions, user answers and correct answers
  */
@@ -433,10 +427,7 @@ function seeResults(results) {
   </tbody>
   </table>
   `;
-
   let rank = playerRank(yourShields);
-  console.log(rank);
-
   resultsHTML +=`<br><h5>You have earned the rank of ${rank}</h5>`;
   resultsBody.innerHTML = resultsHTML;
   $('#reportModal').modal('show');
@@ -449,6 +440,11 @@ function seeResults(results) {
   });
 }
 
+/**
+ * Function that takes the users remaining shields and applies a rank in the field report at end of game
+ * @param {number} score - player shield value on completing the quiz
+ * @returns {string} rank - players rank based on sheilds remaining
+ */
 function playerRank(score){
   let rank;
   switch(score){
@@ -466,6 +462,7 @@ function playerRank(score){
       break;
     case 80:
       rank = 'Commodore';
+      break;
     case 100:
       rank = 'Admiral';
       break;
@@ -476,7 +473,6 @@ function playerRank(score){
 /**
 * Question Bank for the quiz
 */
-
 let questions = [
   {question: 'How many miles approximately is the earth from the sun?',
   answer:[
