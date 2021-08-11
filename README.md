@@ -588,10 +588,12 @@ Point to note:  On IOS devices.  The custom font StarTrekEnterpriseFuture did no
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Quiz page       |      User shields OR ememy shields = 0  |  Quiz ends with success or defeat message  |  Works as expected  |
+| Quiz page       |      User shields OR ememy shields = 0  |  Quiz ends with success or defeat message  |  Works as expected  | Quiz page  |  Complete quiz and click field report button  |  Modal displays with questions and answers compared to users selection and also a rank based on how well you did  |  Works as expected  |
 
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user-story-8.png">
+<img src="docs/testing/user-story-8b.png">
+
 </details>
 
 9. As a first time user, I want to be able to play the quiz again.
