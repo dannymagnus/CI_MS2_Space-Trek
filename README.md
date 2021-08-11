@@ -91,7 +91,7 @@
 
 The scope of the project in it’s first release is defined by the following features: 
 
-- Responsive navigation bar mirrored across each page which enables users to navigate the site without user the browser buttons.
+- Responsive navigation bar mirrored across each page which enables users to navigate the site without using the browser buttons.
 - A footer across all pages with links to social media and button to message the owner. 
 - Modal where you can send a message to the site owner, including your contact details.
 - An about page where the user can interact to trigger dynamic information about planets in the solar system
