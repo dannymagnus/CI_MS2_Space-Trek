@@ -654,6 +654,7 @@ Point to note:  On IOS devices.  The custom font StarTrekEnterpriseFuture did no
 | No fix at this time | Setting body as vh caused footer overlap as position absolute  |  Update absolute to not apply to quiz page |
 Clicking the answer buttons after the first selection depletes shields for each press | Removed event listener with for loop |
 In the case listed above on sheilds reaching 0 both next and play again are listed |  Removed event listener with for loop |
+Field report button did not hide on play again  |  
 ## Deployment
 
 ### GitHub Pages
