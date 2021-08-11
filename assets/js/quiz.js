@@ -147,6 +147,8 @@ function incrementQuestion(){
 * Inserts sheild values into the DOM
 */
 function startQuiz(){
+  //Hide report button for play again scenario
+  $('#report-btn').addClass('hidden');
   //Display both ship containers
   $ ( "#enemy-ship-img" ).fadeIn(1);
   $ ( "#your-ship-img" ).fadeIn(1);
@@ -433,7 +435,6 @@ function seeResults(results) {
   $('#reportModal').modal('show');
   $('#report-close').click(function() {
     $('#reportModal').modal('hide');
-    $('#report-btn').addClass('hidden');
   });
   $( "#reportTopClose" ).click(function() {
     $( "#report-close" ).click();
