@@ -433,6 +433,11 @@ function seeResults(results) {
   </tbody>
   </table>
   `;
+
+  let rank = playerRank(yourShields);
+  console.log(rank);
+
+  resultsHTML +=`<br><h5>You have earned the rank of ${rank}</h5>`;
   resultsBody.innerHTML = resultsHTML;
   $('#reportModal').modal('show');
   $('#report-close').click(function() {
@@ -444,6 +449,29 @@ function seeResults(results) {
   });
 }
 
+function playerRank(score){
+  let rank;
+  switch(score){
+    case 0:
+      rank = 'Corpse';
+      break;
+    case 20:
+      rank = 'Mangled Chicken';
+      break;
+    case 40:
+      rank = 'Cadet';
+      break;
+    case 60:
+      rank = 'Captian';
+      break;
+    case 80:
+      rank = 'Commodore';
+    case 100:
+      rank = 'Admiral';
+      break;
+  }
+  return rank;
+}
 
 /**
 * Question Bank for the quiz
