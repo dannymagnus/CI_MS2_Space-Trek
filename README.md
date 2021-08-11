@@ -97,7 +97,6 @@ The scope of the project in it’s first release is defined by the following fea
 - Embedded iframe with iteractivity about the solar system.
 - For mobile devices - selectable planets on home page with summary information. 
 - A fully interactive quiz page.
-- 
 - Favicon icon to help users identify the site.
 
 Features to be built in future releases: 
@@ -114,7 +113,7 @@ Features to be built in future releases:
 My theme for the website came originally came from retro space exploration TV shows. I wanted to create a website that would offer more majesty in its background than just stars and a black backgound so chose some with brighter highlights and subject matter such as planets. <br>
 So as to not distract from the foreground a dark overlay with gradient was placed over the image.
 
-I wanted a site that was straightforward, with the information being concise and clear in a way that’s easy to navigate. I kept the navigation limited as to three navigation buttons with the contact as a self made modal that would appear on selection.
+I wanted a site that was straightforward, with the information being concise and clear in a way that’s easy to navigate. I kept the navigation limited to three navigation buttons with the contact as a self made modal that would appear on selection.
 
 I wanted graphical additions to the quiz to increase visual appeal rather than just text and geometrical shapes.
 
@@ -238,13 +237,13 @@ The home page gives the visitor an overview of what they can expect from visitin
 
 ### Feature 2: About Page
 ![About page](docs/features/feature-about-page.png)
-The about page introduces the user to some fun and interesting space facts via an interactive iframe on the desktop site and a modal on a mobile site, these engage the user when they are exploring the site so there is more to the site than just a quiz. The page consists of the following features:
+The about page introduces the user to some fun and interesting space facts via an interactive iframe on the desktop site and a modal on a mobile site, these engage the user when they are exploring the site so there is more to the user experience than just a quiz. The about page consists of the following features:
 
 #### Fully interactive 3D iframe
 
 ![About page](docs/features/feature-about-iframe.png)
 
-On desktop versions the visitor sees an iframe with a fully interactive solar system model where users can interact and explore the 3D model gaining knowledge about all the planets and moon in the solar system.
+- On desktop versions the visitor sees an iframe with a fully interactive solar system model where users can interact and explore the 3D model gaining knowledge about all the planets and moon in the solar system.
 
 #### Solar System Planet model
 ![About page](docs/features/feature-about-planet-tool.png)
