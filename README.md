@@ -94,9 +94,9 @@ The scope of the project in it’s first release is defined by the following fea
 - Responsive navigation bar mirrored across each page which enables users to navigate the site without using the browser buttons.
 - A footer across all pages with links to social media and a button to message the owner. 
 - Modal where you can send a message to the site owner, including your contact details.
-- An about page where the user can interact to trigger dynamic information about planets in the solar system
-- Embedded iframe with iteractivity about the solar system.
-- For mobile devices - selectable planets on home page with summary information. 
+- An about page where the user can interact to trigger dynamic information about planets in the solar system.
+- Embedded iframe with interactivity about the solar system.
+- For mobile devices - selectable planets on about page with summary information. 
 - A fully interactive quiz page.
 - Favicon icon to help users identify the site.
 
@@ -225,18 +225,16 @@ Each page contains the following structure
 
 ## Features
 
-The website consists of four pages and eleven features.
+The website consists of four pages and fourteen features.
 
 ### Current Features
 
-### Feature 1: Home page
+### Home page
 ![Home page](docs/features/feature-home-page.png)
 
 The home page gives the visitor an overview of what they can expect from visiting the site, and gives an introduction to the quiz.
 
-
-
-### Feature 2: About Page
+### About Page
 ![About page](docs/features/feature-about-page.png)
 The about page introduces the user to some fun and interesting space facts via an interactive iframe on the desktop site and a modal on a mobile site, these engage the user when they are exploring the site so there is more to the user experience than just a quiz. The about page consists of the following features:
 
@@ -244,18 +242,18 @@ The about page introduces the user to some fun and interesting space facts via a
 
 ![About page](docs/features/feature-about-iframe.png)
 
-- On desktop versions the visitor sees an iframe with a fully interactive solar system model where users can interact and explore the 3D model gaining knowledge about all the planets and moon in the solar system.
+- On desktop versions, the visitor sees an iframe with a fully interactive solar system model where users can interact and explore the 3D model gaining knowledge about all the planets and moons in the solar system.
 
 #### Solar System Planet model
 ![About page](docs/features/feature-about-planet-tool.png)
 
 -	On mobile devices the visitor sees an interactive solar system model with pop out modals containing planet information.  Any planet can be selected and a modal will pop up with interesting planet facts.
 
-**Thess screen covers the following user stories:**
+**This screen covers the following user stories:**
 
 *3. As a first time user I want to be able to interactively increase my knowledge about space and the solar system.*
 
-### Feature 3: Quiz
+### Quiz
 
 The quiz page contains the following features:
 1. The registration screen
@@ -284,7 +282,8 @@ The Registration screen covers the following user stories:
 #### Game start screen
 ![Registration screen](docs/features/feature-game-start-screen.png)
 
-The game start screen consists of three sections. <br>
+The game start screen consists of three sections.
+
 - The image of the ship shows at this point and is continued throughout the quiz.
 - The other section consists of the rules of the quiz, as well as a brief story set up to engage visitors.
 - The button to begin the quiz.
@@ -299,7 +298,7 @@ The game start screen consists of three sections. <br>
 The question screen consists of 5 sections:
 - The image of the visitors ship is displayed along with an enemy ship.
 - The score for the player, the scoring system is displayed as a percentage. For each correct answer the enemy ship score decreases by 20%, for each incorrect answer the player’s ship score decreases by 20%. The colour starts at green for both, and will decrease down to amber then red for correct and incorrect answers.
-- The question box including four answer choices. Once selected the correct answer is highlighted in green, the incorrect in red.
+- The question box includes four answer choices. Once selected the correct answer is highlighted in green, the incorrect in red.
 - The container box which starts off blue, when the correct answer is chosen it turns green, when an incorrect answer is chosen it turns red.
 - The next button goes to the next question.
 
@@ -316,10 +315,11 @@ The question screen consists of 5 sections:
 
 The victory screen consists of 5 sections:
 - The player’s ship is visible and the enemy ship fades off the screen.
+- The centre box updates with a victory message.
 - The score of the players ship and the enemy ship.
 - A ‘play again’ button which restarts the quiz.
 - The container box which will turn green.
-- A 'field report' button which open the quiz feedback screen.
+- A 'field report' button which opens the quiz feedback screen.
 
 **This screen covers the following user stories:**
 
@@ -332,6 +332,7 @@ The victory screen consists of 5 sections:
 
 The defeat screen consists of 5 sections:
 - The enemy ship is visible and the player’s ship fades off the screen.
+- The centre box updates with a defeat message.
 - The score of the players ship and the enemy ship.
 - A ‘play again’ button which restarts the quiz.
 - The container box which will turn red.
@@ -344,9 +345,9 @@ The defeat screen consists of 5 sections:
 *9. As a first time user, I want to be able to play the quiz again.*
 
  #### Quiz feedback screen
-![Defeat Screen](docs/features/feature-quiz-feedback.png)
+![Feedback Screen](docs/features/feature-quiz-feedback.png)
 
-The quiz feedback screen is a modal that appears when the user selects the field report button. It provides feedback on the user's quiz performance, giving a rank based on how many questions were answered correctly and also providing the user with correct answers.
+The quiz feedback screen is a modal that appears when the user selects the field report button. It provides feedback on the user's quiz performance, giving a rank based on how many questions were answered incorrectly and also providing the user with correct answers.
 
 **This screen covers the following user stories:**
 
@@ -363,6 +364,7 @@ The contact page consists of the following features:
 
 - A modal for the visitor to send a message.
 - An image of a receiver to continue the space theme across all pages.
+- JavaScript validation is used to ensure the boxes are filled with the correct data types
 
 **This screen covers the following user stories:**
 
@@ -380,7 +382,7 @@ The contact received page shows the user their message has been received and a b
 
 *10. As a site owner; I want users to be able to send us messages.*
 
-### Error 404 page
+### Page 4: Error 404 page
 
 This feature redirects the user back to any of the valid links rather than the user using browser controls.
 
@@ -412,13 +414,13 @@ The HTML of the each page of the site was validated using [W3C Markup Validation
 ### CSS Validation
 The [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/validator) was used to validate the CSS of the website. 
 
-The custom CSS file passed with 0 errors
+The custom CSS file for the site passed with 0 errors.
 
 <details><summary>Custom CSS file</summary>
 <img src="docs/validation/css-validation/css-validation.png">
 </details>
 
-Whole site validation returned 13 errors on third party resources and 6 errors on my custom css where variables have been used to change background and foreground colors dynamically with my js in the quiz.  Given that the implementation works without fault, that the file validation returned no errors, and following constultation with CI tutor, the css was not changed as to prevent functional failure with the site, as this would likely be issue with the validator, not the code itself.. 
+Whole site validation returned 13 errors on third party resources and 6 errors on my custom css where variables have been used to change background and foreground colors dynamically with my js in the quiz.  Given that the implementation works without fault, that the file validation returned no errors, and following constultation with CI tutor, the recommended action was that the css was not changed as to prevent functional failure with the site, as this would likely be issue with the validator, not the code itself.
 
 <details><summary>Whole site</summary>
 <img src="docs/validation/css-validation/css-validation-site.png">
