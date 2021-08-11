@@ -85,6 +85,7 @@
 11. As a site owner; I want users to be able to find us on social media.
 12. As a site owner; I want the site to be fully responsive and reactive across mobile, tablet and desktop devices.
 13. As a site owner; I want all form fields validated as to not have any empty values.
+14. As a site owner; I want a 404 page that enables users to be able to return to valid areas of the site without using browser controls
 
 ## Scope
 
@@ -388,6 +389,7 @@ This feature redirects the user back to any of the valid links rather than the u
 **The 404 page highlights the following user stories**
 
 *8. The user should be able to navigate back through the site structure in case of page not found without using the browser back button.*
+*14. As a site owner; I want a 404 page that enables users to be able to return to valid areas of the site without using browser controls.*
 
 ## Validation
 
@@ -642,6 +644,17 @@ Point to note:  On IOS devices.  The custom font StarTrekEnterpriseFuture did no
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user-story-13.png">
 </details>
+
+14. As a site owner; I want a 404 page that enables users to be able to return to valid areas of the site without using browser controls.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Error 404 page  |   Enter incorrect suffix in main site address  |  Site directs to custom 404 page  |  Works as expected  |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-14.png">
+</details>
+
 
 ## Bugs
 
